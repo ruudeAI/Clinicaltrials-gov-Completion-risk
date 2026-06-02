@@ -1,0 +1,55 @@
+# ==============================================================================
+# .gitignore for Clinical Trials Completion Risk Predictor
+# ==============================================================================
+# Prevents large files, secrets, and generated artifacts from being uploaded
+# to GitHub. The sample/ data IS tracked so reviewers can demo the project.
+# ==============================================================================
+
+# --- Large Data Files ---
+# Raw API responses can be tens of MB; processed CSVs can also be large.
+# We keep data/sample/ tracked (small demo dataset).
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --- Trained Model Files ---
+# .joblib files can be large; retrain from source instead.
+models/*
+!models/.gitkeep
+
+# --- Python Virtual Environments ---
+venv/
+env/
+.venv/
+.env/
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints/
+
+# --- IDE / Editor Files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Distribution / Packaging ---
+dist/
+build/
+*.egg-info/
+*.egg
+
+# --- Misc ---
+*.log
+.pytest_cache/
