@@ -34,6 +34,11 @@ import requests
 import pandas as pd
 from tqdm import tqdm
 
+# Ensure project root is in sys.path
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 # Ensure stdout handles UTF-8 (emojis, etc.) on Windows terminals
 if sys.platform.startswith("win"):
     try:
@@ -41,7 +46,15 @@ if sys.platform.startswith("win"):
     except AttributeError:
         pass
 
-
+# Import settings and paths from config.py
+from src.config import (
+    SEARCH_QUERIES,
+    TRIALS_PER_CONDITION,
+    DRUG_RAW_CSV_PATH as RAW_CSV_PATH,
+    DRUG_SAMPLE_CSV_PATH as SAMPLE_CSV_PATH,
+    API_RATE_LIMIT_SECONDS as RATE_LIMIT_SECONDS,
+    RANDOM_SEED
+)
 
 # ==============================================================================
 # CONSTANTS
@@ -49,15 +62,6 @@ if sys.platform.startswith("win"):
 # API endpoint for ClinicalTrials.gov v2
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/studies"
 
-# File paths (relative to project root — run this script from the project root)
-RAW_CSV_PATH = os.path.join("data", "raw", "cancer_trials_raw.csv")
-SAMPLE_CSV_PATH = os.path.join("data", "sample", "cancer_trials_sample.csv")
-
-# Rate limiting: seconds to wait between API requests (be a good citizen!)
-RATE_LIMIT_SECONDS = 0.5
-
-# Random seed for reproducible sampling
-RANDOM_SEED = 42
 
 
 # ==============================================================================
@@ -402,7 +406,9 @@ def flatten_study(study):
         "countries": countries,
         "brief_summary": brief_summary,
         "primary_outcome_measures": primary_outcome_measures,
+        "search_query_source": study.get("search_query_source", "user_input"),
     }
+
 
 
 # ==============================================================================
@@ -450,11 +456,12 @@ def studies_to_dataframe(studies):
 def main():
     """
     Main function that runs the full data collection pipeline:
-    1. Fetch studies from the API
+    1. Fetch studies from the API for all configured search queries
     2. Flatten into a DataFrame
-    3. Save raw CSV
-    4. Save sample CSV
-    5. Print summary statistics
+    3. Filter to keep only trials with DRUG intervention
+    4. Save raw CSV
+    5. Save sample CSV
+    6. Print summary statistics
     """
     print("=" * 60)
     print("  🏥 Clinical Trials Data Collection Pipeline")
@@ -463,23 +470,39 @@ def main():
     print("  This project is for educational/portfolio purposes only.\n")
 
     # ------------------------------------------------------------------
-    # Step 1: Fetch studies from the API
+    # Step 1: Fetch studies from the API across all queries
     # ------------------------------------------------------------------
-    studies = fetch_studies(
-        query_term="cancer",
-        page_size=100,
-        max_pages=10,
-    )
+    all_studies = []
+    page_size = 100
+    max_pages = max(1, TRIALS_PER_CONDITION // page_size)
 
-    if not studies:
+    for term in SEARCH_QUERIES:
+        print(f"\n--- Fetching trials for query: '{term}' ---")
+        studies = fetch_studies(
+            query_term=term,
+            page_size=page_size,
+            max_pages=max_pages,
+        )
+        for s in studies:
+            s["search_query_source"] = term
+        all_studies.extend(studies)
+
+    if not all_studies:
         print("  ❌ No studies fetched. Check your internet connection.")
         return
 
     # ------------------------------------------------------------------
     # Step 2: Flatten into a DataFrame
     # ------------------------------------------------------------------
-    df = studies_to_dataframe(studies)
-    print(f"\n  ✓ DataFrame shape: {df.shape[0]} rows × {df.shape[1]} columns")
+    df = studies_to_dataframe(all_studies)
+    print(f"\n  ✓ Combined DataFrame shape: {df.shape[0]} rows × {df.shape[1]} columns")
+
+    # Keep only trials where intervention_types contains 'DRUG' (case-insensitive)
+    before_drug_filter = len(df)
+    df = df[df["intervention_types"].fillna("").str.upper().str.contains("DRUG")].copy()
+    after_drug_filter = len(df)
+    print(f"  ✓ Filtered by DRUG intervention: kept {after_drug_filter:,} trials "
+          f"(dropped {before_drug_filter - after_drug_filter:,} non-drug trials)")
 
     # ------------------------------------------------------------------
     # Step 3: Save the full raw CSV
@@ -510,6 +533,12 @@ def main():
 
     print(f"\n  Unique trials collected: {df['nct_id'].nunique()}")
 
+    print(f"\n  Search Query Source Distribution:")
+    if "search_query_source" in df.columns:
+        source_counts = df["search_query_source"].value_counts()
+        for src, count in source_counts.items():
+            print(f"    {src:<30s} {count:>5,}")
+
     print(f"\n  Overall Status Distribution:")
     status_counts = df["overall_status"].value_counts()
     for status, count in status_counts.items():
@@ -532,6 +561,7 @@ def main():
     print("=" * 60)
 
     return df
+
 
 
 # ==============================================================================

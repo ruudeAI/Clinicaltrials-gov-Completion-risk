@@ -14,46 +14,46 @@ regulatory approval, or investment value.
 
 | Metric | Value |
 |--------|-------|
-| Total trials | 532 |
-| Training set | 425 |
-| Test set | 107 |
-| Completed (class 1) | 426 (80.1%) |
-| At Risk (class 0) | 106 (19.9%) |
+| Total trials | 881 |
+| Training set | 704 |
+| Test set | 177 |
+| Completed (class 1) | 705 (80.0%) |
+| At Risk (class 0) | 176 (20.0%) |
 
 ## Model Performance
 
 | Metric | Score |
 |--------|-------|
-| **Accuracy** | 0.7477 |
-| **Precision** | 0.8933 |
-| **Recall** | 0.7791 |
-| **F1-Score** | 0.8323 |
-| **ROC-AUC** | 0.7658 |
+| **Accuracy** | 0.6893 |
+| **Precision** | 0.8595 |
+| **Recall** | 0.7324 |
+| **F1-Score** | 0.7909 |
+| **ROC-AUC** | 0.6899 |
 
 ## Confusion Matrix
 
 |  | Predicted: At Risk | Predicted: Completed |
 |--|-------------------|---------------------|
-| **Actual: At Risk** | 13 | 8 |
-| **Actual: Completed** | 19 | 67 |
+| **Actual: At Risk** | 18 | 17 |
+| **Actual: Completed** | 38 | 104 |
 
 ## Classification Report
 
 ```
               precision    recall  f1-score   support
 
-           0       0.41      0.62      0.49        21
-           1       0.89      0.78      0.83        86
+           0       0.32      0.51      0.40        35
+           1       0.86      0.73      0.79       142
 
-    accuracy                           0.75       107
-   macro avg       0.65      0.70      0.66       107
-weighted avg       0.80      0.75      0.77       107
+    accuracy                           0.69       177
+   macro avg       0.59      0.62      0.59       177
+weighted avg       0.75      0.69      0.71       177
 
 ```
 
 ## Features Used
 
-### Categorical (11)
+### Categorical (12)
 - `study_type`
 - `phases`
 - `sponsor_class`
@@ -65,6 +65,7 @@ weighted avg       0.80      0.75      0.77       107
 - `primary_purpose`
 - `sex`
 - `healthy_volunteers`
+- `search_query_source`
 
 ### Numeric (3)
 - `enrollment_count`

@@ -41,6 +41,11 @@ import os
 import sys
 import pandas as pd
 
+# Ensure project root is in sys.path
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 # Ensure stdout handles UTF-8 (emojis, etc.) on Windows terminals
 if sys.platform.startswith("win"):
     try:
@@ -48,15 +53,12 @@ if sys.platform.startswith("win"):
     except AttributeError:
         pass
 
+# Import settings and paths from config.py
+from src.config import (
+    DRUG_RAW_CSV_PATH as RAW_CSV_PATH,
+    DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH
+)
 
-
-# ==============================================================================
-# CONSTANTS
-# ==============================================================================
-
-# Input / output file paths (relative to project root)
-RAW_CSV_PATH = os.path.join("data", "raw", "cancer_trials_raw.csv")
-PROCESSED_CSV_PATH = os.path.join("data", "processed", "cancer_trials_processed.csv")
 
 # These are the ONLY statuses we keep for training.
 # They represent trials with a KNOWN final outcome.

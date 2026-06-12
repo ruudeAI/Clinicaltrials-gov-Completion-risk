@@ -25,7 +25,7 @@ with real-world clinical trial data.
 - Researchers exploring ClinicalTrials.gov data
 
 ### Use Cases
-- Estimating completion probability for a cancer clinical trial
+- Estimating completion probability for a drug-related clinical trial
 - Exploring which trial characteristics are associated with completion risk
 - Demonstrating an end-to-end ML pipeline with real API data
 
@@ -52,7 +52,7 @@ This model must **NOT** be used for:
 |-------|--------|
 | **Source** | [ClinicalTrials.gov](https://clinicaltrials.gov/) API v2 |
 | **Access** | Public REST API, no API key required |
-| **Scope** | Cancer-related clinical trials |
+| **Scope** | Drug-related clinical trials across 20 conditions |
 | **Statuses Used** | COMPLETED, TERMINATED, WITHDRAWN, SUSPENDED |
 | **Statuses Excluded** | RECRUITING, NOT_YET_RECRUITING, ACTIVE_NOT_RECRUITING, UNKNOWN, and other ongoing statuses |
 
@@ -62,10 +62,11 @@ No external datasets (AACT, PubMed, FDA, Kaggle) are used.
 
 ## Features
 
-### Categorical (11)
+### Categorical (12)
 - `study_type`, `phases`, `sponsor_class`, `enrollment_type`
 - `intervention_types`, `allocation`, `intervention_model`
 - `masking`, `primary_purpose`, `sex`, `healthy_volunteers`
+- `search_query_source` (broad medical condition query source)
 
 ### Numeric (3)
 - `enrollment_count`, `collaborator_count`, `location_count`
@@ -122,7 +123,7 @@ See [limitations.md](limitations.md) for the full list. Key points:
 1. "Completed" ≠ clinically successful
 2. "Terminated" ≠ medically dangerous
 3. ClinicalTrials.gov metadata can be missing or inconsistent
-4. Trained on cancer trials only — may not generalize
+4. Trained on drug trials only — may not generalize to non-drug interventions (devices, behavioral, etc.)
 5. No temporal features (start date, planned duration)
 6. Text features use simple TF-IDF, not deep NLP
 

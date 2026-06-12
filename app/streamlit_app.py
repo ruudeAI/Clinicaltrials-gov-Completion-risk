@@ -34,13 +34,8 @@ if PROJECT_ROOT not in sys.path:
 
 from src.clinicaltrials_api import flatten_study
 from src.predict import fetch_study_by_nct_id, prepare_for_prediction
+from src.config import DRUG_MODEL_PATH as MODEL_PATH
 
-
-# ==============================================================================
-# CONSTANTS
-# ==============================================================================
-
-MODEL_PATH = os.path.join(PROJECT_ROOT, "models", "clinical_trial_completion_model.joblib")
 
 
 # ==============================================================================
@@ -92,9 +87,10 @@ def main():
 
     st.markdown(
         "This tool uses a machine learning model trained on historical "
-        "[ClinicalTrials.gov](https://clinicaltrials.gov/) cancer trial metadata "
+        "[ClinicalTrials.gov](https://clinicaltrials.gov/) drug-related trial metadata "
         "to estimate completion/termination risk for a trial."
     )
+
 
     # ------------------------------------------------------------------
     # Disclaimer (always visible)
@@ -205,6 +201,7 @@ def main():
         location_display = fmt_val(flat.get("location_count"))
         countries_display = fmt_val(countries_formatted)
         title_display = fmt_val(flat.get("brief_title"))
+        query_source_display = fmt_val(flat.get("search_query_source", "user_input"))
 
         # Trial metadata in two clean columns
         col1, col2 = st.columns(2)
@@ -213,11 +210,13 @@ def main():
             st.markdown(f"**Current Status:** {status_display}")
             st.markdown(f"**Study Type:** {study_type_display}")
             st.markdown(f"**Phase:** {phase_display}")
+            st.markdown(f"**Source Query:** {query_source_display}")
         with col2:
             st.markdown(f"**Sponsor Class:** {sponsor_class_display}")
             st.markdown(f"**Enrollment:** {enrollment_display}")
             st.markdown(f"**Locations:** {location_display}")
             st.markdown(f"**Countries:** {countries_display}")
+
 
         # Title (full width, wraps cleanly)
         st.markdown(f"**Title:** {title_display}")

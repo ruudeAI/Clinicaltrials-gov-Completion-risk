@@ -1,0 +1,1207 @@
+nct_id,brief_title,official_title,overall_status,study_type,phases,enrollment_count,enrollment_type,sponsor_name,sponsor_class,collaborator_count,conditions,intervention_types,intervention_names,allocation,intervention_model,masking,primary_purpose,sex,minimum_age,maximum_age,healthy_volunteers,eligibility_criteria,location_count,countries,brief_summary,primary_outcome_measures,search_query_source
+NCT04729686,The Pericapsular Nerve Block in Total Hip Arthroplasty,"The Pericapsular Nerve Block in Total Hip Arthroplasty: A Randomized, Controlled Trial",RECRUITING,INTERVENTIONAL,PHASE4,78.0,ESTIMATED,LifeBridge Health,OTHER,1,Hip Osteoarthritis|Hip Arthropathy,DRUG,Pericapsular Nerve Block|Fascia Iliaca Nerve Block,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,18 Years,80 Years,False,"Inclusion Criteria:
+
+* Provision of signed and dated informed consent form
+* Stated willingness to comply with all study procedures and availability for the duration of the study
+* Planned primary total hip arthroplasty with anterior (Smith-Peterson) approach
+* ASA score of 1 to 3
+* Indicated for one of the two nerve block groups
+* Must be opioid naïve at screening as defined by the FDA - According to the Food and Drug Administration, opioid-tolerant patients were those currently receiving or who had previously received 60 mg PO morphine per day, 25 mcg transdermal fentanyl per hour, 30 mg PO oxycodone per day, 8 mg PO hydromorphone per day, 25 mg PO oxymorphone per day, 60 mg PO hydrocodone per day, or an equivalent dose of another opioid for a duration of one week or longer (16)
+
+Exclusion Criteria:
+
+* Current or previous diagnosis of ""chronic pain""
+* Opioid tolerant at time of screening (for a week or longer, at least 60 mg of morphine daily, or at least 30 mg of oral oxycodone daily, or at least 8 mg of oral hydromorphone daily or an equianalgesic dose of another opioid.)
+* Diagnosis of ankylosing spondylitis
+* Allergy to any potential medications utilized in any of the two groups
+* Conversion of patient to general anesthesia intraoperatively
+* Treatment with another investigational drug or other intervention for pain
+* Any condition(s) or diagnosis, both physical or psychological, or physical exam finding in the opinion of the investigator that would precludes participation",1,United States,"In order to continue progressing towards outpatient total hip arthroplasty (THA), methods to adequately manage postoperative pain is of paramount importance. The purpose of this study is to quantify the effectiveness of the pericapsular nerve block in total hip arthroplasty in comparison to the fascia iliaca nerve block.",Change in Visual Analog Pain Scale (VAS) Score|Postoperative Opioid Consumption in mg,arthritis
+NCT03858894,Study Assessing the Safety and Efficacy of DE-117 Ophthalmic Solution Once Daily and Twice Daily in Subjects With Primary Open-Angle Glaucoma SPECTRUM 6,"A Randomized, Double-Masked, Parallel-Group, Multicenter Study Assessing the Safety and Efficacy of DE-117 Ophthalmic Solution 0.002% Once Daily and Twice Daily in Subjects With Primary Open-Angle Glaucoma or Ocular Hypertension SPECTRUM 6 Study.",COMPLETED,INTERVENTIONAL,PHASE2,98.0,ACTUAL,Santen Inc.,INDUSTRY,0,Primary Open-angle Glaucoma and Ocular Hypertension,DRUG,DE-117 Ophthalmic Solution QD|DE-117 Ophthalmic Solution BID,RANDOMIZED,PARALLEL,QUADRUPLE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+Provide signed written informed consent
+
+* Have a diagnosis of POAG or OHT in both eyes, or one eye with POAG and the other with OHT.
+* Qualifying corrected visual acuity in each eye
+* Qualifying central corneal thickness in each eye
+* Qualifying Day 1 IOP measurement at 3 time-points in both eyes
+* Qualifying Anterior chamber angle
+
+Exclusion Criteria:
+
+* History of ocular surgery specifically intended to lower IOP
+* Subjects who cannot safely discontinue use of ocular hypotensive medications during the wait/washout period
+* Advanced glaucoma in either eye
+* Any corneal abnormality or other condition interfering with or preventing reliable Goldmann applanation tonometry
+* Any ocular surgery or ocular laser treatment within 180 days prior to Screening and throughout the study in either eye
+* Females who are pregnant, nursing, or planning a pregnancy",13,United States,"This is a randomized, double-masked, parallel-group, multi-center study. Subjects diagnosed with POAG or OHT who meet eligibility criteria at Visit 1 (Screening) will wash out their current topical IOP lowering medication(s), if any. After completing the required washout period, subjects will return for Visit 2 (Baseline, Day 1). Subjects who meet all eligibility criteria at Visit 2 (Baseline, Day 1) will be randomized to receive study medication for up to 6 weeks.
+
+Approximately 100 subjects with POAG or OHT will be randomized in a 1:1 ratio to either:
+
+* DE-117 ophthalmic solution 0.002% QD (Once Daily)
+* DE-117 ophthalmic solution 0.002% BID (Twice Daily)
+
+This study will consist of a screening period of up to 35 days including a washout period of up to 28 days (+ 7 days window), and a 6-week double-masked treatment period.",Intraocular Pressure (IOP) at Week 2|Intraocular Pressure (IOP) at Week 2|Intraocular Pressure (IOP) at Week 2|Intraocular Pressure (IOP) at Week 6|Intraocular Pressure (IOP) at Week 6|Intraocular Pressure (IOP) at Week 6,hypertension
+NCT03623776,"Neoadjuvant JS001, or JS001 in Combination With Pemetrexed and Carboplatin in Resectable NSCLC.","A Multicenter Phase II Trial of Neoadjuvant JS001, or JS001 in Combination With Chemotherapy in Resectable NSCLC.",WITHDRAWN,INTERVENTIONAL,PHASE2,0.0,ACTUAL,Sun Yat-sen University,OTHER,0,Efficacy and Safety,DRUG|PROCEDURE,JS001|Pemetrexed|Carboplatin|Thoracic Surgery,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,18 Years,75 Years,False,"Inclusion Criteria:
+
+* Target population is high risk NSCLC with resection option for potential cure, as assessed by a faculty surgeon at SYSUCC. This may include clinical stage IB (≥4cm), II and IIIA. Subjects with N3 nodal involvement are not included.
+* Subjects should not have a previously detected sensitizing EGFR mutation or ALK fusion oncogene.
+* Written informed consent provided.
+* Male and female patients aged ≥18 years, \< 75 years.
+* Able to comply with the required protocol and follow-up procedures, and able to receive oral medications.
+* Blood and specimens before and after treatment must be provided
+* Eastern Cooperative Oncology Group (ECOG) performance status of 0-1.
+* Life expectancy ≥12 weeks.
+* Adequate hematological function: Absolute neutrophil count (ANC) ≥2.0 x 109/L, and Platelet count ≥100 x 109/L, and Hemoglobin ≥9 g/dL (may be transfused to maintain or exceed this level).
+* Adequate liver function: Total bilirubin ≤ 1.5 x upper limit of normal (ULN), Aspartate aminotransferase (AST), alanine aminotransferase (ALT) ≤ 2.5 x ULN in subjects without liver metastases; ≤ 5 x ULN in subjects with liver metastases.
+* Adequate renal function: Serum creatinine ≤ 1.25 x ULN, or ≥ 60 ml/min.
+* Female subjects should not be pregnant or breast-feeding.
+
+Exclusion Criteria:
+
+* Known severe hypersensitivity to JS001 or any of the excipients of this product.
+* Prior therapy with anti-PD-1, anti-PD-L1, anti-PD-L2, or anti-CTLA-4 antibody (including any other antibody or drug specifically targeting T-cell co-stimulation or checkpoint pathways).
+* Prior chemotherapy or radiotherapy.
+* Subjects with active, known or suspected autoimmune disease. Subjects in conditions not expected to recur in the absence of an external trigger, or not requiring systemic treatment are permitted to enroll.
+* Subjects with a condition requiring systemic treatment with either corticosteroids (\>10 mg daily prednisone equivalent) or other immunosuppressive medications within 14 days of first administration of study treatment. Inhaled or topical steroids, and adrenal replacement steroid doses \> 10 mg daily prednisone equivalent, are permitted in the absence of active autoimmune disease.
+* Inability to comply with protocol or study procedures.
+* A serious concomitant systemic disorder that, in the opinion of the investigator, would compromise the patient's ability to complete the study.
+* A serious cardiac condition, such as myocardial infarction within 6 months, angina, or heart disease.
+* History of another malignancy in the last 5 years with the exception of the following: other malignancies cured by surgery alone and having a continuous disease-free interval of 5 years are permitted. Cured basal cell carcinoma of the skin and cured in situ carcinoma of the uterine cervix are permitted.
+* Any unstable systemic disease (including active infection, uncontrolled hypertension, unstable angina, congestive heart failure, myocardial infarction within the previous year, serious cardiac arrhythmia requiring medication, hepatic, renal, or metabolic disease).
+* Patient who has active serious infection (e.g. pyrexia of or 38.0℃ over)
+* Known history of testing positive for human immunodeficiency virus (HIV) or known acquired immunodeficiency syndrome (AIDS).
+* Known history of active Hepatitis B or C.
+* Women who are pregnant or nursing.
+* Evidence of any other disease, neurological or metabolic dysfunction, physical examination or laboratory finding giving reasonable suspicion of a disease or condition that contraindicated the use of an investigational drug or puts the subject at high risk for treatment-related complications.",1,China,"JS001 (Toripalimab) is a recombinant humanized anti-PD-1 monoclonal antibody, which selectively interferes with the combination of PD-1 with its ligands, PD-L1 and PD-L2. The purpose of this study is to studying neoadjuvant JS001, or JS001 in combination with pemetrexed and carboplatin to see how well it works in treating patients with resectable NSCLC.",3-year Disease Free Survival,cancer
+NCT03526874,Occipital Blocks for Acute Migraine,Occipital Nerve Blocks for Acute Treatment of Pediatric Migraine,COMPLETED,INTERVENTIONAL,PHASE3,63.0,ACTUAL,Children's Hospital of Philadelphia,OTHER,1,"Chronic Migraine, Headache|Episodic Migraine",DRUG,Lidocaine 4% Topical Application Cream [LMX 4]|Lidocaine Hydrochloride 2 mg/mL Injectable Solution|Normal Saline,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,7 Years,21 Years,False,"Inclusion Criteria:
+
+* Children / Adolescents:
+
+  * Males or females, ages 7 - 21, of any gender, race, or ethnicity
+  * Diagnosis of episodic or chronic migraine with acute headache flare lasting up to 3 months unresponsive to acute medications. Patients who report that acute medications were not used during this headache flare because those medications have been ineffective for several prior headache flares will be included
+  * Informed parental consent and subject assent
+  * Girls, who have reached menarche, must have a negative urine or serum pregnancy test
+  * Weight \> 25kg
+* Parents:
+
+  * Parents or guardians of children enrolled, who speak either English or Spanish, and provide parental/guardian permission (informed consent) for their own participation
+  * Subject (child) assent
+
+Exclusion Criteria:
+
+* Children / Adolescents:
+
+  * Previous nerve block less than 3 months ago or more than 2 previous nerve blocks
+  * Allergy to local anesthetics
+  * Skull defect or break in the skin at the planned site of cream application or GON injection
+  * Any investigational drug use within 30 days prior to enrollment, or 90 days prior to enrollment for medications targeted at Calcitonin Gene-Related Peptide
+  * Pregnant or lactating females
+  * Parents/guardians or subjects who, in the opinion of the Investigator, may be non- compliant with study schedules or procedures
+  * Significant adverse event with prior injection or procedure
+  * New abnormalities on physical or neurological examination
+  * Newly reported red flags in headache history which prompt investigation for secondary headache
+  * Non-English and Non-Spanish speaking
+  * Non-English speaking with no Spanish interpreter available
+* Parents:
+
+  * Parents or guardians of children enrolled, who do not speak either English or Spanish
+  * Parental/guardian permission and/or subject (child) assent has been declined
+  * Parents or guardians, who in the opinion of the investigator, may be non-compliant or unable to complete the questionnaires",1,United States,"Migraine affects 10-28% of children and adolescents and yet 20-30% of patients are ineffectively treated with current oral and nasal options. Peripheral nerve blocks (PNBs), injections of local anesthetics over branches of the occipital and/or trigeminal nerves, have been associated with possible benefit for pediatric headaches in case series, and may be useful for both acute and preventive treatment of migraine for children who fail less invasive treatments. In fact, 80% of pediatric headache specialists reported using peripheral nerve blocks and carry low risk of serious side effects; however, peripheral nerve blocks have never been tested, formally, in a randomized pediatric trial.
+
+By applying a novel design that utilizes lidocaine cream as a run-in step, investigators intend to test the efficacy of the most commonly used peripheral nerve block, the greater occipital nerve (GON) block, as an acute treatment for pediatric migraine and determine whether lidocaine cream leads to successful blinding of the injection.
+
+The GON block is expected to prove effective in decreasing the pain of migraine, with lidocaine being superior to saline and lidocaine cream maintaining blinding.",Mean Change in Pain Intensity Scores Measured by the Numeric Analog Scale (NRS)|Mean Change in Pain Intensity Scores Measured by the Visual Analog Scale (VAS)|Mean Change in Pain Intensity Scores Measured by the Numeric Analog Scale (NRS) by Sex|Mean Change in Pain Intensity Scores Measured by the Visual Analog Scale (VAS) by Sex|Mean Change in Pain Intensity Scores Measured by the Numeric Analog Scale (NRS) by Ethnicity|Mean Change in Pain Intensity Scores Measured by the Visual Analog Scale (VAS) by Ethnicity|Mean Change in Pain Intensity Scores Measured by the Numeric Analog Scale (NRS) by Race|Mean Change in Pain Intensity Scores Measured by the Visual Analog Scale (VAS) by Race,migraine
+NCT00609401,Study Comparing Association Between Sorafenib and Interleukin-2 (IL-2) Versus Sorafenib in 1st Line Therapy in Advanced (Adv) Renal Cell Carcinoma (RCC),A Randomized Open Label Multicenter Phase II Study of First Line Therapy With Sorafenib in Association With IL-2 vs Sorafenib Alone in Patients With Unresectable and/or Metastatic Renal Cell Carcinoma,COMPLETED,INTERVENTIONAL,PHASE2,90.0,ACTUAL,Italian Trial in Medical Oncology,OTHER,0,Metastatic Disease|Renal Cell Carcinoma,DRUG,Nexavar (Sorafenib)|IL-2,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Cytohistological diagnosis of RCC
+* Written informed consent
+* Measurable disease according to RECIST criteria
+* Age \>= 18 years
+* Karnofsky PS \>= 60%
+* Life expectancy of greater than 3 months
+
+Exclusion Criteria:
+
+* Prior medical treatment for metastatic RCC
+* Brain metastasis or spinal cord compression
+* Chronic treatment with corticosteroids
+* Uncontrolled hypertension",1,Italy,The ROSORC trial is a randomized study comparing the efficacy of a new association (sorafenib and IL-2) versus the standard therapy (sorafenib) in patients affected by different histotypes of metastatic RCC. This study is a first line therapy for the advanced disease. The primary objective is the progression free survival (PFS) in the 2 arms of therapy and the secondary objective is the overall survival (OS) and the response rate (RR) and the safety profile of the combination compared to sorafenib alone.,PFS,kidney disease
+NCT00410150,Heliox-Powered Albuterol Therapy in the Treatment of Children Admitted With Acute Asthma Exacerbation,"A Prospective, Randomized, Controlled, Single Center Trial of the Use of Heliox in Children Admitted to the Hospital With Status Asthmaticus",TERMINATED,INTERVENTIONAL,PHASE2,42.0,ACTUAL,"Children's Hospital Medical Center, Cincinnati",OTHER,0,Status Asthmaticus,DRUG,Helium-oxygen-driven albuterol nebulizer|Oxygen,RANDOMIZED,PARALLEL,SINGLE,TREATMENT,ALL,24 Months,18 Years,False,"Inclusion Criteria:
+
+* Age 2 -18 years;
+* Previous history of asthma;
+* Hospital admission for acute asthma exacerbation;
+* Clinical asthma score greater than or equal to 3
+
+Exclusion Criteria:
+
+* Less than 2 years old or over 18 years old;
+* Known allergy or hypersensitivity to ß-agonists;
+* Require mechanical ventilation (invasive or non-invasive);
+* Require FiO2 \>0.4;
+* Failure to obtain informed consent;
+* Enrollment in another investigational drug or asthma protocol;
+* Incipient respiratory failure including but limited to respiratory acidosis(pCO2\>60 torr), altered mental status and/or excessive work of breathing.",1,United States,The purpose of this study is to investigate whether heliox-powered albuterol nebulizer therapy will result in reduced inpatient length of stay in children hospitalized with acute asthma exacerbations.,Length of Stay,asthma
+NCT00870883,N-acetylcysteine Plus Deferoxamine for Patients With Hypotension,"Prospective, Randomized, Double-blinded, Placebo-controlled Study of N-acetylcysteine Plus Deferoxamine for Patients With Hypotension as Prophylaxis for Acute Renal Failure",COMPLETED,INTERVENTIONAL,PHASE2,81.0,ACTUAL,Universidade do Extremo Sul Catarinense - Unidade Academica de Ciecias da Saude,OTHER,1,Hypotension|Acute Renal Failure,DRUG,N-acetylcysteine and deferoxamine,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Patients admitted to the ICU
+* Presenting hypothesion (MAP \< 60mm Hg or the needing to use vasoactive drugs) for at least 30 min in the last 12h before study inclusion
+
+Exclusion Criteria:
+
+* Age lower than 18 years old
+* Chronic renal failure
+* A known history of allergy to any of the study drugs
+* Using n-acetylcysteine to paracetamol overdose
+* Pregnant women
+* Patients who used iodinated contrast medium
+* Hemoglobin less than 6.5 mg/dl
+* Cancer patients",1,Brazil,"Oxidative stress is associated with kidney damage in several different situations, including hypotension. In animal models it has been shown that the combination of n-acetylcysteine plus deferoxamine is superior to its isolate use in the treatment of several diseases. Thus the investigators aimed to determine if the administration of n-acetylcysteine plus deferoxamine could prevent renal failure in critical ill patients who develops hypotension.",Development of acute renal failure,kidney disease
+NCT05999084,Georgia Memory Net Anti-Amyloid Monoclonal Antibody Registry,Georgia Memory Net Center for Medicare and Medicaid Services Registry for Anti-Amyloid Monoclonal Antibody Coverage With Evidence Development,RECRUITING,OBSERVATIONAL,,735.0,ESTIMATED,Emory University,OTHER,1,Alzheimer Disease,COMBINATION_PRODUCT|DRUG,Anti-amyloid Monoclonal Antibodies (mAbs)|Standard of Care,,,,,ALL,50 Years,90 Years,False,"Inclusion Criteria:
+
+1. Age 50-90, inclusive
+2. Diagnosis: Mild Cognitive Impairment (MCI) or mild AD dementia with positive cerebrospinal fluid (CSF) or amyloid PET
+3. Objective measurement of baseline cognition and function within past 3 months:
+
+   * Cognitive: Mini-Mental State Examination (MMSE) ≥ 22, MoCA ≥ 16
+   * Function: Independence in basic ADLs
+   * Function: FAQ ≤ 9 may justify inclusion with lower cognitive score if felt to be impacted by prominent language impairment or other factors affecting score
+4. MRI brain within last year and no exclusionary criteria
+5. Complete blood count (CBC), comprehensive metabolic panel (CMP), B12, thyroid stimulating hormone (TSH), prothrombin time (PT), partial thromboplastin time (PTT), and International Normalized Ratio (INR) without clinically significant abnormality
+6. Informant/care partner/family available to attend follow-up visits to provide information regarding patient's cognitive and functional abilities
+7. Agree to MRI, PET, and testing clinical diagnostic requirements and drug label / FDA recommendations to determine drug eligibility and appropriateness, including Apolipoprotein E (APOE) testing
+
+Exclusion Criteria:
+
+1. Any contraindication to MRI
+2. MRI exclusion criteria:
+
+   * Acute or sub-acute hemorrhage
+   * Prior macro hemorrhage (\>1 cm), subarachnoid hemorrhage, or known aneurysm
+   * \>4 microhemorrhages
+   * Superficial siderosis
+   * Any finding that might be a contributing cause of the subject's dementia that could pose a risk to the subject or prevent safety MRIs.
+3. Seizure within the past 6 months or history of refractory epilepsy.
+4. Unstable severe psychiatric illness in past 6 months
+5. History of bleeding disorder, blood clotting, or clinically significant abnormal results on coagulation profile (platelet count \<50,000; INR \>1.5)
+6. Uncontrolled diabetes (HgbA1c \>9%)
+7. Uncontrolled hypertension
+8. History of unstable angina, myocardial infarction (MI), advanced heart failure, or clinically significant conduction abnormalities within past year.
+9. End stage renal disease
+10. Receiving active treatment for cancer (e.g., chemotherapy, biologics, or radiation therapy) with exceptions for maintenance therapies for cancer in remission (e.g., anti-estrogen for breast cancer)
+11. Systemic illness or serious infection, e.g., pneumonia, sepsis, Coronavirus disease 2029 (COVID-19), in past 30 days
+12. Immunological disease requiring immunosuppression, immunoglobulins, monoclonal antibodies, or plasmapheresis
+13. Exclude if breastfeeding or if female patients of childbearing potential unable to practice highly effective contraception
+14. History of severe allergic or anaphylactic reactions or hypersensitivity to inactive ingredients (arginine hydrochloride, histidine, histidine hydrochloride monohydrate, polysorbate 80)",8,United States,The purpose of this registry is to compile information on patients who are receiving FDA-approved anti-amyloid mAbs in the course of their clinic visits in the Emory Cognitive Neurology Clinic and in Georgia Memory Net Memory Assessment Clinics.,Change in Quick Dementia Rating System (QDRS) Score|Montreal Cognitive Assessment (MoCA) Score|Change in Functional Activities Questionnaire (FAQ) Score|Change in Lawton-Brody Activities of Daily Living (ADL) Physical Self-Maintenance Scale (PSMS) Score|Change in Lawton-Brody Instrumental Activities of Daily Living (IADL) Scale Score,alzheimer
+NCT03945643,Is Blood Flow Through IPAVA and PFO Related to Breath-hold and SCUBA Diving-induced Pulmonary Hypertension?,Is Blood Flow Through IPAVA and PFO Related to Breath-hold and SCUBA Diving-induced Pulmonary Hypertension?,COMPLETED,INTERVENTIONAL,EARLY_PHASE1,82.0,ACTUAL,University of Oregon,OTHER,0,Patent Foramen Ovale|Intrapulmonary Arteriovenous Anastamosis,DRUG|OTHER,Sildenafil|Placebo,RANDOMIZED,CROSSOVER,DOUBLE,BASIC_SCIENCE,ALL,18 Years,65 Years,True,"Inclusion Criteria:
+
+* Reside in geographic location near Split, Croatia
+* Elite breath hold divers
+* Experienced SCUBA divers
+
+Exclusion Criteria:
+
+* Previous history of coronary artery disease
+* Currently taking medication or herbal supplement for any heart or respiratory disease that cannot be ceased for 48 hours prior to testing
+* Women who are pregnant or trying to become pregnant
+* Previous history of any condition that would prevent the subject from performing a breath hold
+* Taking sildenafil or products similar to sildenafil
+* Taking Nitrates or other nitric oxide donors
+* Control breath hold divers can't have previous breath hold diving experience",1,United States,"In summary, the investigators propose to study elite Croatian breath-hold and SCUBA divers. The investigators will quantify breath-hold hypoxia- and SCUBA diving-induced pulmonary hypertension and right heart function to investigate the relationships between PFO and IPAVA blood flow. The investigators will use a placebo-controlled intervention (sildenafil) to reduce pulmonary arterial pressure in these subjects to examine the impact of the change in pressure (or absence of change) on the relationships determined above.",Pulmonary Pressure|Concentration of Myoglobin|Concentration of MRP8/14|Concentration of NGAL|Concentration Of CRP|Concentration Of MMP-2|Concentration of OPN|Concentration Of SAA|Concentration of IGFBP-4|Concentration of ICAM-1|Concentration of VCAM-1|Concentration of MMP-9|Concentration of Cystatin C|Change in Q-IPAVA,heart disease
+NCT00699023,Ezetimibe and Statins on Postprandial Lipemia in Type 2 Diabetes,Effects of Ezetimibe in Association With Statins on Postprandial Lipemia in Type 2 Diabetic Patients,COMPLETED,INTERVENTIONAL,PHASE4,13.0,ESTIMATED,Federico II University,OTHER,0,Postprandial Lipemia|Type 2 Diabetes,DRUG,ezetimibe tablets|simvastatin tablets|placebo,RANDOMIZED,CROSSOVER,DOUBLE,TREATMENT,ALL,40 Years,65 Years,False,"Inclusion Criteria:
+
+* Type 2 diabetes since at least two years
+* Stable metabolic control (HbA1c\<8.0%) for at least six months on diet or diet+oral hypoglycemic drugs (insulin secretagogues or metformin), not to be changed during the study period.
+* BMI\<30 kg/m2 and body weight stable during the last six months.
+* Both sexes; only post-menopausal women.
+* LDL-cholesterol \>130 mg/dl, plasma triglycerides \<400 mg/dl.
+* No use of hypolipidemic drugs in the last three months.
+
+Exclusion Criteria:
+
+* Patient with renal (serum creatinine \>1.5 mg/dl) or hepatic (serum transaminases \>three times upper normal values) impairment.
+* Patients with history of cardiovascular disease.
+* Pre-menopausal women.
+* Any other acute or chronic degenerative disease.
+* Anemia (Hb\<12 g/dl).
+* Uncontrolled blood pressure.
+* Use of any drugs able to interfere with the study medications",1,Italy,The purpose of this study is to determine whether ezetimibe in association with statins is more effective than statins alone on postprandial lipemia in type 2 diabetic patients.,Incremental AUC after a fat-rich meal of cholesterol concentration in chylomicron and VLDL fractions,diabetes
+NCT04489888,A Study of Pembrolizumab (MK-3475) Plus Carboplatin and Paclitaxel as First-line Treatment of Recurrent/Metastatic Head and Neck Squamous Cell Carcinoma (MK-3475-B10/KEYNOTE B10),"A Phase 4, Single-arm, Open-label Clinical Study of Pembrolizumab (MK-3475) to Evaluate the Efficacy and Safety of MK-3475 Plus Carboplatin and Paclitaxel as First-line Treatment of Recurrent/Metastatic Head and Neck Squamous Cell Carcinoma (KEYNOTE B10).",COMPLETED,INTERVENTIONAL,PHASE4,101.0,ACTUAL,Merck Sharp & Dohme LLC,INDUSTRY,0,Squamous Cell Carcinoma of Head and Neck,DRUG,Pembrolizumab|Carboplatin|Paclitaxel,NA,SINGLE_GROUP,NONE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Has histologically or cytologically-confirmed diagnosis of R/M HNSCC that is considered incurable by local therapies
+* Male participants refrain from donating sperm plus are abstinent from heterosexual intercourse or agree to use contraception during the intervention period and for at least 95 days after carboplatin/paclitaxel
+* Female participants are not pregnant or breastfeeding and are either not a woman of child-bearing potential (WOCBP) or use a contraceptive method that is highly effective or are abstinent from heterosexual intercourse during the intervention period and for at least 120 days after pembrolizumab or 30 days after paclitaxel or 6 months after carboplatin whichever occurs last, and agree not to donate or freeze eggs during this period
+* Has adequate organ function
+
+Exclusion Criteria:
+
+* Has disease that is suitable for local therapy administered with curative intent
+* Has a life expectancy of less than 3 months and/or has rapidly progressive disease
+* Has a diagnosed and/or treated additional malignancy within 5 years prior to allocation with the exception of curatively treated basal cell carcinoma of the skin, squamous cell carcinoma of the skin, curatively resected in situ cervical cancer and curatively resected in situ breast cancer
+* Has received a live or live-attenuated vaccine within 30 days prior to the first dose of study intervention
+* Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy or any other form of immunosuppressive therapy within 7 days prior to the first dose of study intervention
+* Has known active central nervous system (CNS) metastases and/or carcinomatous meningitis
+* Has a history of or current non-infectious pneumonitis/interstitial lung disease that requires steroids
+* Has an active infection requiring systemic therapy
+* Has a known history of human immunodeficiency virus (HIV) infection
+* Has a known history of Hepatitis B or Hepatitis C virus infection
+* Has had an allogenic tissue/solid organ transplant",35,Argentina|Australia|Brazil|Canada|United States,The goal of this study is to evaluate the efficacy and safety of pembrolizumab combined with carboplatin and paclitaxel as first-line treatment in participants with recurrent/metastatic head and neck squamous cell carcinoma (R/M HNSCC). No statistical hypothesis will be tested in this study.,Objective Response Rate (ORR),parkinson
+NCT01157260,The Effects of AST-120 on Endothelial Dysfunction in Patients With Chronic Kidney Disease,The Effects of AST-120 on Endothelial Dysfunction in Patients With Chronic Kidney Disease,UNKNOWN,INTERVENTIONAL,PHASE4,30.0,ESTIMATED,Ewha Womans University,OTHER,0,"Kidney Failure, Chronic",DRUG,Kremezin,RANDOMIZED,SINGLE_GROUP,NONE,TREATMENT,ALL,20 Years,70 Years,False,"Inclusion Criteria:
+
+* Patients with Chronic kidney disease (Stage3 - Stage4)
+* Patients who are able and willing to understand, sign and date an informed consent document, and authorize access to protected health information
+
+Exclusion Criteria:
+
+* Acute gastric or duodenal ulcer
+* Severe constipation",1,South Korea,"Indoxyl sulfate (IS) is a uremic toxin that accelerates the progression of chronic kidney disease (CKD). AST-120 (Kremezin®; Kureha Corporation, Tokyo, Japan) removes indole, which is the precursor of IS, in the intestine, and reduces the accumulation of IS. This drug has been shown to retard the deterioration of renal function in CKD patients through reducing the levels of IS.
+
+IS was reported to promote aortic calcification and stimulate the proliferation of vascular smooth muscle cells (VSMC). IS also inhibits endothelial proliferation and wound repair. With this background, the investigators will performed the study whether AST-120 improve the endothelial dysfunction in CKD patients.",Changes of FMD(Flow Mediated Dilatation),kidney disease
+NCT00105547,Efficacy Study of MPC-7869 to Treat Patients With Alzheimer's,"Phase 3, Multicenter, Randomized, Double Blind, Placebo Controlled Study of the Effect of Daily Treatment With MPC-7869 on Measures of Cognition, Activities of Daily Living and Global Function in Subjects With Mild Dementia of the Alzheimer's Type",COMPLETED,INTERVENTIONAL,PHASE3,1600.0,ACTUAL,Myrexis Inc.,INDUSTRY,0,Alzheimer Disease|Dementia,DRUG,MPC-7869|MPC-7869,RANDOMIZED,PARALLEL,TRIPLE,TREATMENT,ALL,55 Years,,False,"Inclusion Criteria:
+
+* Have had a diagnosis of probable Alzheimer's disease.
+* Men or women ages 55 years or greater and living in the community at the time of enrollment (i.e., not living in a rest home or nursing care facility).
+* Signed the subject Informed Consent Form and is willing and able to participate for the duration of the study.
+* Ability to read and understand English or Spanish to ensure compliance with cognitive testing and study visit procedures.
+* Female subjects must be surgically sterile or postmenopausal for \> 1 year.
+* Subjects currently taking approved medication for Alzheimer's disease for at least six months prior to day 1 may be enrolled.
+* Subjects must have a reliable caregiver who can read, understand and speak English or Spanish.
+
+Exclusion Criteria:
+
+* Current evidence of other causes of dementia.
+* History or evidence of, active malignancy, except for basal cell carcinoma or squamous cell carcinoma of the skin, within the 24 months prior to entry. Men with prostate cancer may be enrolled at the discretion of the sponsor.
+* Chronic or acute renal, hepatic or metabolic disorder.
+* Use of any investigational therapy within 30 days, or 5 half-lives, whichever is longer, and/or use of AD immunotherapy prior to screening.
+* Major surgery and related complications not resolved within 12 weeks prior to Day 1.",132,United States,The purpose of the study is to evaluate the change in cognitive ability and activities of daily living in patients with Alzheimer's disease (AD) as measured by specific evaluations during 18 months of dosing.,Cognition and activities of daily living,alzheimer
+NCT00700986,Cross-over Study to Investigate Retinal Function Following Administration of a Single Dose of AZD9056,"A Randomised, Double-Blind, Placebo-Controlled, 2-Period Cross-Over Study in Healthy Male Volunteers, to Investigate Retinal Function Following a Single 800mg Oral Dose of AZD9056",COMPLETED,INTERVENTIONAL,PHASE1,12.0,ESTIMATED,AstraZeneca,INDUSTRY,0,Rheumatoid Arthritis,DRUG,AZD9056|Placebo,RANDOMIZED,CROSSOVER,DOUBLE,,MALE,18 Years,65 Years,True,"Inclusion Criteria:
+
+* Volunteers must be able to undergo the Electroretinography assessments
+* Volunteers must have an intra ocular pressure of less than 25mmHg and 6/6 vision
+
+Exclusion Criteria:
+
+* Volunteers must pass a test that assesses whether they are at risk of narrow angle glaucoma
+* Volunteers must not a family history of colour blindness, they must also pass a colour blindness test
+* Volunteers must not have a history or current neurological or opthalmological (eye) disease",1,United Kingdom,"The purpose of the study is to determine whether treatment with a single 800mg dose of AZD9056, a medication which has been developed as a possible treatment for Rheumatoid Arthritis, has an effect on the function of the retina",The effect of a single dose of AZD9056 (800mg) on retinal function will be assessed by Electroretinography,arthritis
+NCT06881472,The Separate and Combined Glucagonotropic Effects of Glucose-dependent Insulinotropic Polypeptide and Alanine in Subjects With and Without Type 1 Diabetes,The Separate and Combined Glucagonotropic Effects of Glucose-dependent Insulinotropic Polypeptide and Alanine in Subjects With and Without Type 1 Diabetes,COMPLETED,INTERVENTIONAL,NA,10.0,ACTUAL,"Asger Lund, MD",OTHER,0,Type 1 Diabetes,DRUG,"Glucose-dependent Insulinotropic Polypeptide (GIP)|alanine|Saline (NaCl 0,9 %) (placebo)",RANDOMIZED,CROSSOVER,TRIPLE,BASIC_SCIENCE,MALE,18 Years,70 Years,False,"Inclusion Criteria:
+
+* Caucasian ethnicity
+* Age between 18 and 70 years
+* T1D (diagnosed according to the criteria of the World Health Organization) with HbA1c \<69 mmol/mol (\<8.5%)
+* Body mass index between 20-27 kg/m2
+* T1D duration of 2-20 years
+* C-peptide negative (arginin-stimulated C-peptide ≤ 100 pmol/l)
+* Treatment with a stable basal-bolus or insulin pump regimen for ≥3 months
+* Informed and written consent
+
+Exclusion Criteria:
+
+* Anaemia (haemoglobin below normal range)
+* Late microvascular complications except mild nonproliferative retinopathy
+* Liver disease (alanine aminotransferase (ALAT) and/or aspartate aminotransferase (ASAT) \>2 times normal values) or history of hepatobiliary disorder
+* Treatment with any glucose-lowering drugs beside insulin
+* Active or recent (within 5 years) malignant disease
+* Active tobacco smoking / use
+* Any condition considered incompatible with participation by the investigators",1,Denmark,"The hormone glucose-dependent insulinotropic polypeptide (GIP) is naturally produced in the intestine during a meal and stimulates insulin secretion from the pancreas. Insulin ensures that nutrients from the meal are transported from the blood into the cells, allowing the body to use it as energy. If blood sugar levels drop too much, the body naturally releases another hormone: glucagon. Glucagon is responsible for the breakdown of nutrients inside the cells, thus causing blood sugar levels to rise again. This occurs, for example, when a person is fasting or in an energy deficit. Unfortunately, glucagon is not released in people with type 1 diabetes when blood sugar levels are low. However, it is known that GIP contributes to the secretion of glucagon during low blood sugar levels in both healthy individuals and those with type 1 diabetes.
+
+Protein intake through the diet is broken down in the body into amino acids. It is known that the ingestion of protein and thus amino acids leads to an increase in glucagon in both healthy individuals and those with type 1 diabetes. This causes the amino acids to be converted into sugar, but also allows potentially harmful waste products from the breakdown to be converted into harmless components. The relationship between GIP and amino acids, as well as their joint effect on glucagon, is still unknown, but studies in mice have shown that if GIP and amino acids are given simultaneously, glucagon secretion will be even higher than if they were administered separately. The purpose of this study is to gain a better understanding of how the three (GIP, amino acids, and glucagon) are interconnected and affect each other and to see if the experiments conducted in mice yield the same results in healthy individuals and those with type 1 diabetes. Moreover, the secretion of glucagon, and thus the increase in blood sugar, might protect individuals with type 1 diabetes from experiencing low blood sugar. This knowledge could potentially be used for new treatment approaches in diabetes in the future.",bsAUC of glucagon concentration,autoimmune disease
+NCT05375942,This is a Retrospective Observational Study Looking at the Characteristics and Outcomes of Participants Taking Inflectra Using the CorEvitas Rheumatoid Arthritis Registry,Characteristics and 6-month Outcomes Among Real-World Rheumatoid Arthritis Patients Initiating Inflectra,COMPLETED,OBSERVATIONAL,,255.0,ACTUAL,Pfizer,INDUSTRY,0,"Arthritis, Rheumatoid",DRUG,Inflectra|Inflectra,,,,,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Be at least 18 years of age
+* Have been diagnosed with RA by a rheumatologist
+* Have initiated treatment with Inflectra
+* Had assessment of effectiveness in patients who have at least one follow up visit.
+
+Exclusion Criteria:
+
+* No additional exclusion criteria",1,United States,This is a retrospective observational study looking at the characteristics and outcomes of participants taking Inflectra using the CorEvitas Rheumatoid Arthritis Registry.,Percentage of Participants Who Achieved Low Disease Activity (LDA) at 6 Months After Inflectra Initiation,arthritis
+NCT03372603,A Study to Assess the Effectiveness and Side Effects of GSK2798745 in Participants With Chronic Cough,"A Placebo-controlled, Double-blind (Sponsor Open), Randomized, Crossover Study to Assess the Efficacy, Safety, and Tolerability of GSK2798745 in Participants With Chronic Cough",TERMINATED,INTERVENTIONAL,PHASE1|PHASE2,17.0,ACTUAL,GlaxoSmithKline,INDUSTRY,1,Cough,DRUG,GSK2798745|Placebo,RANDOMIZED,CROSSOVER,DOUBLE,TREATMENT,ALL,18 Years,75 Years,False,"Inclusion Criteria:
+
+* Age between 18 and 75 years of age inclusive, at the time of signing the informed consent.
+* Chronic idiopathic cough for \>=1 year (before screening), defined as: a cough that is unresponsive to at least 8 weeks of targeted treatment, or a cough for which no objective evidence of an underlying trigger has been determined, despite medical investigations.
+* No significant findings on chest imaging (chest X-ray \[CXR\] or Computed tomography scan) within 12 months before screening (subjects with an abnormal CXR within 12 months, from a temporary process, will be allowed to participate if a repeat CXR is normal).
+* Forced expiratory volume in one second (FEV1) \>=80% of the predicted normal value (at screening), or documented evidence of FEV1 \>=80% within the 6 months before screening.
+* Score of \>=40 millimeters (mm) on the Cough Severity Visual Analogue Scale (VAS) at Screening.
+* Body weight \>=50 kilogram (kg) and body mass index (BMI) within the range 18 to 40 kilogram per meter square (kg/m\^2) (inclusive) at screening.
+* A male participant must agree to follow the contraception requirements stated in the protocol from the time of first dose of study treatment until 2 weeks after last dose of study treatment, and refrain from donating sperm during this period.
+* A female participant is eligible to participate if she is not of childbearing potential.
+* Capable of giving signed informed consent, which includes compliance with the requirements and restrictions listed in the informed consent form (ICF) and in this protocol.
+
+Exclusion Criteria:
+
+* History or current evidence of any serious or clinically significant gastrointestinal, renal, endocrine, neurologic, hematologic or other condition that is uncontrolled on permitted therapies or that would, in the opinion of the investigator or the medical monitor, make the subject unsuitable for inclusion in this study.
+* History or current evidence of chronic productive cough.
+* History of acute coronary syndromes (including unstable angina), coronary angioplasty, or stenting within the 6 months before screening.
+* Active ulcer disease or gastrointestinal bleeding at the time of screening (positive fecal occult blood test \[FOBT\] at screening).
+* History of stroke or seizure disorder within 5 years of screening.
+* Respiratory tract infection within 6 weeks of screening.
+* Subject who, in the investigator's opinion, poses a significant suicide risk. Evidence of serious suicide risk may include any history of suicidal behavior and/or any evidence of suicidal ideation on any questionnaires e.g. Type 4 or 5 on the Columbia Suicidality Severity Rating Scale (C-SSRS) in the last 6 months (assessed at screening).
+* Alanine transferase (ALT) \> twice the upper limit of normal (ULN) at screening.
+* Bilirubin \>1.5 times ULN (isolated bilirubin \>1.5 times ULN is acceptable if bilirubin is fractionated and direct bilirubin \<35%) at screening.
+* Current or chronic history of liver disease, or known hepatic or biliary abnormalities (with the exception of Gilbert's syndrome or asymptomatic gallstones).
+* QT interval corrected (QTc) \>450 milliseconds (msec) or QTc \>480 msec in subjects with bundle branch block at screening.
+* Use of a listed prohibited medication within the restricted timeframe relative to the first dose of study treatment.
+* Use of a strong inhibitors or inducers of cytochrome P450 (CYP) 3A or pglycoprotein.
+* Participation in the study would result in loss of blood or blood products in excess of 500 milliliters (mL) within 3 months of screening.
+* Exposure to more than 4 new chemical entities within 12 months prior to the first dosing day.
+* Current enrollment or past participation within the 3 months before screening in any clinical study involving an investigational study treatment or any other type of medical research.
+* Positive human immunodeficiency virus (HIV) antibody test at screening.
+* Presence of Hepatitis B surface antigen (HBsAg) at screening.
+* Positive Hepatitis C antibody test result at screening or within 3 months prior to starting study treatment.
+* Positive Hepatitis C ribonucleic acid (RNA) test result at screening or within 3 months prior to first dose of study treatment.
+* Cardiac troponin at screening \> ULN for the assay.
+* History of alcohol abuse within 6 months of screening, in the opinion of the investigator.
+* Current smoker or history of smoking within the 6 months before screening, or a cumulative history of \>= 20 pack years. Pack years = (Number of cigarettes smoked/day/20) x (Number of years smoked)
+* Sensitivity to any of the study treatments, or components thereof, or drug or other allergy that, in the opinion of the investigator or Medical Monitor, contraindicates participation in the study.",8,United Kingdom,"GSK2798745 is a potent and selective transient receptor potential vanilloid 4 (TRPV4) channel blocker being investigated for the treatment of chronic cough. This is a multi-center, randomized, placebo-controlled, double-blind, two-period crossover study with a purpose to evaluate efficacy and safety of GSK2798745. Each subject will have 2 treatment periods, and will be randomized to one of the following treatments in each period: A) Placebo matching to GSK2798745 once daily for 7 days. B) 4.8 milligrams (mg) GSK2798745 on Day 1, followed by 2.4 mg GSK2798745 once daily for 6 days. There will be a washout period of 14 to 21 days between the treatment periods. A maximum of 48 subjects will be enrolled in the study and the total duration of participation in the study will be maximum of 10 and a half weeks including follow-up visit.",Total Cough Counts During Day Time Hours Following 7-days of Dosing,liver disease
+NCT01715831,A Long-term Safety Extension Study of Tocilizumab in Brazilian Participants With Rheumatoid Arthritis (RA) Who Completed the Studies ML21530 and MA21488,"A Multicenter, Open-Label, Single-Arm Extension Study to Describe the Safety of Tocilizumab Treatment In Brazilian Patients With DMARDs Refractory Rheumatoid Arthritis Which Completed Studies ML21530 and MA21488 and Presenting an Indication of Maintaining the Tocilizumab Treatment",COMPLETED,INTERVENTIONAL,PHASE4,26.0,ACTUAL,Hoffmann-La Roche,INDUSTRY,0,"Arthritis, Rheumatoid",DRUG,DMARDs|Tocilizumab,NA,SINGLE_GROUP,NONE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Participants who have completed their last visit in the core studies ML21530 and MA21488 and that might benefit from treatment using the study drug according to the investigator's evaluation
+* Absence of an AE or current or recent laboratory finding that would prevent the use of the 8 mg/kg dose of the tocilizumab
+* Receiving outpatient treatment
+* For women who are not postmenopausal and are not surgically sterile: agreement to use at least one adequate method of contraception
+
+Exclusion Criteria:
+
+* Participants who have prematurely discontinued the core studies ML21530 and MA21488 for any reason
+* MA21488 study participants who remained untreated with tocilizumab after it's discontinuation according to the treatment-free remission criteria of MA21488 study
+* Immunization with a live/attenuated vaccine since the last administration of the study drug in the core studies ML21530 and ML21488
+* Diagnosis after the last visit of the study ML21530 or after the last visit of the study MA21488 of a rheumatic autoimmune disease other than RA, including systemic erythematous lupus (SEL), mixed connective tissue disease (MCTD), scleroderma and polymyositis, or a significant systemic involvement secondary to RA (e.g., vasculitis, pulmonary fibrosis or Felty's syndrome). Secondary Sjogren's Syndrome and/or nodulosis with RA are allowed
+* Diagnosis after the last visit of the core study ML21530 or of the study MA21488 of an inflammatory joint disease other than RA
+* Abnormal laboratory parameters at the baseline
+* History of severe allergic or anaphylactic reactions to humanized or murine monoclonal antibodies
+* Evidences of a concomitant, serious and uncontrolled illness
+* Known active condition or a history of recurrent infections by bacteria, viruses, fungi, mycobacteria or other agents
+* Evidence of an active malignant disease, malignancies diagnosed in the last 10 years or breast cancer diagnosed in the last 20 years
+* Uncontrolled disease status, such as asthma or inflammatory bowel disease in which acute crises are usually treated with oral or parenteral corticosteroids
+* Current hepatic disease, as determined by the investigator
+* Active tuberculosis (TB) requiring treatment in the previous three years. Participants should be screened for latent TB according to local practice guidelines and should not be admitted into the study if latent TB is detected. Participants must not present any evidence of active TB infection at the enrollment. Participants treated for tuberculosis without recurrence in three years are allowed
+* History of alcohol, drugs or chemical abuse since the inclusion in the core studies ML21530 and MA21488",9,Brazil,"This multicenter, open-label, single-arm extension study will evaluate the long-term safety of tocilizumab (RoActemra/Actemra) in participants with RA. Participants who have completed the MA21488 (NCT00810199) core study and the ML21530 (NCT00754572) study and who could benefit from the study drug, according to the opinion of the investigator, will receive 8 milligrams per kilogram (mg/kg) of intravenous (IV) tocilizumab every 4 weeks. The anticipated time on study treatment is 104 weeks.",Number of Participants With Serious Adverse Events (SAEs) and Non-Serious Adverse Events (NSAEs)|Number of Participants With AEs Leading to Dose Modification or Study Discontinuation|Number of Participants With AEs of Special Interest,arthritis
+NCT07154901,"Investigation of the Effects of Renal Impairment on the Pharmacokinetics, Safety, and Tolerability of Opemalirsen (AZD2373)","A Single-Dose, Non-Randomised, Open-Label, Parallel-Group Study to Investigate the Effects of Renal Impairment on the Pharmacokinetics, Safety, and Tolerability of Opemalirsen (AZD2373)",ACTIVE_NOT_RECRUITING,INTERVENTIONAL,PHASE1,34.0,ACTUAL,AstraZeneca,INDUSTRY,0,Renal Impairment,DRUG,Opemalirsen (AZD2373),NON_RANDOMIZED,PARALLEL,NONE,OTHER,ALL,18 Years,80 Years,True,"Inclusion Criteria:
+
+* Participants are eligible to be included in the study only if all of the following criteria apply:
+
+Age
+
+1. Participant must be 18 to 80 years of age, inclusive, at the time of signing the informed consent. Type of Participant and Disease Characteristics For all participants, BSA-adjusted eGFR will be determined by the local laboratory, calculated based on serum creatinine using the CKD-EPI equation (see Section 4.1).
+
+   Healthy matched control participants only (Group 1):
+2. Participant must be medically healthy with no clinically significant medical history, physical examination, clinical laboratory profiles, vital signs, or 12-lead ECGs, as deemed by the investigator at screening and Day -1.
+3. Have an eGFR of ≥ 90 mL/min determined at screening.
+
+Participants with renal impairment only (Group 2 and optional Groups 3 and 4):
+
+4 Diagnosis of chronic kidney disease with stable renal function in the 3 months prior to dosing, as determined by the investigator, based on medical history or eGFR, and not requiring dialysis. 5 Participants with renal impairment, as follows, based on CKD-EPI equation (BSA-adjusted eGFR) at screening:
+
+1. Group 2: have severe renal impairment (eGFR \< 30 mL/min), not requiring dialysis.
+2. Group 3 (optional): have moderate renal impairment (eGFR ≥ 30 to \< 60 mL/min)
+3. Group 4 (optional): have mild renal impairment (eGFR ≥ 60 to \< 90 mL/min) 6 Participants on angiotensin-converting enzyme inhibitors/angiotensin II receptor blockers, beta-blocker, diuretics, or on any other cardiorenal relevant treatment should be on a stable dose for at least 2 weeks prior to screening. Weight 7 Body weight of at least 50 kg and body mass index (BMI) within the range 18 to 40 kg/m2 (inclusive). Sex and Contraceptive/Barrier Requirements 8 Male and/or female, assigned at birth, inclusive of all gender identities. 9 Contraceptive use by participants should be consistent with local regulations regarding the methods of contraception for those participating in clinical studies.
+
+(a) Male participants must agree to the following contraception guidance for the duration of the study (from the time of study intervention administration) until 3 months after discharge: (i) Non-sterilised male participants should avoid fathering a child by either true abstinence or by using (together with their female partner/spouse) a highly effective contraception form of birth control in combination with a barrier method, starting from the time of study intervention administration until 3 months after discharge. Acceptable methods of preventing pregnancy include birth control pills, injections, implants, or patches, IUDs, tubal ligation/occlusion, and vasectomy. (ii) Male participants who have been sterilised are required to use one barrier method of contraception (condom) from the time of study intervention administration until after discharge. A barrier method is not necessary if the female partner is sterilised. (iii) Male participants should not donate sperm from the time of study intervention administration until 3 months after discharge. (b) Female participants: must not be pregnant and must have a negative pregnancy test at screening (all female participants) and check-in (WOCBP) and must not be lactating.
+
+Women of Childbearing Potential (WOCBP): A woman is considered of childbearing potential if she is capable of conceiving. While this is typically the case following menarche and up until she becomes post-menopausal, adolescents can ovulate prior to first menarche, and women with irregular menses may also be fertile. Women Not of Childbearing Potential (WNOCBP): Females not of childbearing potential are defined as females who are either permanently sterilised (hysterectomy, bilateral oophorectomy, or bilateral salpingectomy), or who are post-menopausal. Females will be considered post-menopausal if they have been amenorrhoeic for 12 months prior to the planned date of dose administration without an alternative medical cause. The following age-specific requirements apply:
+
+* Females \< 50 years old would be considered postmenopausal if they have been amenorrhoeic for 12 months or more following cessation of exogenous hormonal treatment and follicle stimulating hormone levels in the postmenopausal range.
+* Females ≥ 50 years old would be considered postmenopausal if they have been amenorrhoeic for 12 months or more following cessation of all exogenous hormonal treatment. (i) Female participants should be stable on the chosen method of contraception for a minimum of 3 months before entering the study. (ii) Female participants of childbearing potential must use one highly effective form of birth control. A highly effective method of contraception is defined as one that can achieve a failure rate of less than 1% per year when used consistently and correctly. Females of childbearing potential who are sexually active with a non-sterilised male partner must agree to use one highly effective method of birth control, as defined below, throughout the study and until at least 3 months after discharge. Cessation of contraception after this point should be discussed with a responsible physician. Note: contraception is not required for female participants of non-childbearing potential.
+
+  * Highly effective birth control methods include:
+
+    * Non-hormonal • Total sexual abstinence provided it is the usual lifestyle of the participant (defined as refraining from heterosexual intercourse during the entire period of risk associated with the study treatments) • a vasectomised partner (confirmed absence of sperm in semen) • bilateral tubal occlusion
+
+      • intrauterine device (copper)
+    * Hormonal contraceptives associated with inhibition of ovulation levonorgestrel intrauterine system • medroxyprogesterone injections • combined Oral or transdermal contraceptives (ethinyl estradiol plus progestin) • intravaginal device (eg, EE and etonogestrel) The following are not acceptable methods of contraception: female condom, periodic abstinence (calendar, symptothermal, post-ovulation methods), withdrawal (coitus interruptus), spermicides only, and lactational amenorrhoea.
+
+Exclusion Criteria:
+
+* Medical Conditions
+
+All participants:
+
+1. History of severe allergy/hypersensitivity or ongoing clinically important allergy/hypersensitivity, as judged by the investigator, at screening or Day -1, or history of hypersensitivity to drugs with a similar chemical structure or class to opemalirsen.
+2. History of any major surgical procedure within 30 days prior to study intervention.
+3. Judgement by the investigator that the participant should not participate in the study if they have any ongoing or recent (ie, during the screening period) minor medical complaints that may interfere with the interpretation of study data or if they are considered unlikely to comply with study procedures, restrictions, and requirements.
+4. Liver disease (non-alcoholic and alcoholic steatohepatitis; drug-induced, viral, or autoimmune hepatitis; primary biliary cirrhosis; primary sclerosing cholangitis; hemochromatosis; alpha-1 antitrypsin deficiency; Wilson's disease) including positive results for hepatitis B surface antigen, hepatitis B core antibody or hepatitis C virus antibody.
+5. History of cirrhosis and/or hepatic decompensation, including ascites, hepatic encephalopathy, or variceal bleeding.
+6. QTcF \> 470 ms in participants without bundle branch block and \> 480 ms in participants with bundle branch block.
+7. Any of the following out of range laboratory values:
+
+   1. ALT or AST \> 1.5 × ULN
+   2. TBL \> ULN (an isolated increase in TBL in participants with Gilbert syndrome is not a reason for exclusion)
+   3. INR \> 1.2, unless related to therapeutic anticoagulation
+   4. APTT ≥ 1.3 × normal, unless related to therapeutic anticoagulation
+   5. HbA1c ≥ 10%
+8. Positive test for human immunodeficiency virus at screening.
+9. Known history of drug or alcohol abuse within 1 year of screening.
+
+   Healthy matched control participants only (Group 1):
+10. Any clinically significant disease or disorder (eg, cardiovascular, pulmonary, gastrointestinal, liver, renal, neurological, musculoskeletal including bone fractures, endocrine including adrenal insufficiency, metabolic, malignant, psychiatric, major physical impairment) which, in the opinion of the investigator, may put the participant at risk because of participation in the study, influence the results of the study, or affect the participant's ability to participate in the study.
+11. Abnormal resting vital signs (after resting for 10 minutes) of supine BP \> 150 mmHg or \< 90 mmHg systolic or \> 95 mmHg or \< 50 mmHg diastolic or supine pulse rate ≥ 100 bpm or ≤ 45 bpm. Note: the blood pressure values will be based on the average of the 3 measurements.
+
+    Participants with renal impairment only (Group 2 and optional Groups 3 and 4):
+12. Evidence of rapidly deteriorating renal function.
+13. Presence of unstable medical (eg, diabetes) or psychological conditions which, in the opinion of the investigator, would compromise the participant's safety or successful participation in this study.
+14. Renal transplant patients, that is, participants that have received a kidney transplant or participants waiting for organ transplant scheduled to occur during the study, and those with a history of acute kidney injury occurring within 3 months prior to screening.
+15. Abnormal resting vital signs (after resting for 10 minutes) of supine BP \> 180 mmHg or \< 110 mmHg systolic or \> 110 mmHg or \< 60 mmHg diastolic or supine pulse rate ≥ 100 bpm or ≤ 40 bpm. Note: the blood pressure values will be based on the average of the 3 measurements.
+
+    Prior/Concomitant Therapy
+
+    Healthy matched control participants only (Group 1):
+16. Use of any prescription or non-prescription drugs (including vitamins, recreational drugs, and dietary or herbal supplements) within 7 days (or 14 days if the drug is a potential enzyme inducer) or 5 half-lives (whichever is longer) before study intervention, unless, in the opinion of the investigator and sponsor, the medication will not interfere with the study.
+
+    Participants with renal impairment only (Group 2 and optional Groups 3 and 4):
+17. Use of concurrent medication, which affect creatinine clearance such as cephalosporin antibiotics, ascorbic acid, trimethoprim, cimetidine, quinine within 7 days prior to Day -1.
+
+    Prior/Concurrent Clinical Study Experience
+
+    All participants:
+18. Has received another new chemical entity (defined as a compound which has not been approved for marketing) within 30 days of study intervention in this study or, if known, 5 half-lives from last dose in the previous study to study intervention in this study, whichever is longest.
+19. Previous enrolment in the present study. Note: participants consented and screened, but not receiving study intervention in this study or a previous Phase I study, are not excluded. Other Exclusions
+
+    All participants:
+20. Positive screen for drugs of abuse (unless participant has renal impairment and positive screen is due to medication\[s\] prescribed by physician) and/or alcohol test at screening or Day -1; a positive result for tetrahydrocannabinol and/or cannabinoids is not considered exclusionary.
+21. Receipt of blood products within 2 months prior to Day -1, plasma or platelets donation within 1 month prior to Day -1, or any blood donation/blood loss \> 500 mL within
+
+3 months prior to Day -1. 22 Involvement of any AstraZeneca or clinical unit employee or their close relatives.
+
+23 Vulnerable participants, eg, kept in detention, protected adults under guardianship, trusteeship, or committed to an institution by governmental or juridical order. 24 Judgement by the investigator that the participant should not participate in the study if the participant is unlikely to comply with study procedures, restrictions, and requirements.",2,United States,"This study is being conducted to investigate the PK, safety, and tolerability of opemalirsen in participants with renal impairment, compared to participants with normal renal function.",AUCinf|AUClast|Cmax,kidney disease
+NCT07544953,Amyloid Monoclonal Antibody Treatment in PD Patients With Coexistent AD Pathology,Efficacy of Lecanemab in Patients With Parkinson's Disease With Coexistent Alzheimer's Disease,NOT_YET_RECRUITING,INTERVENTIONAL,NA,60.0,ESTIMATED,Yonsei University,OTHER,0,Parkinson Disease,DRUG|OTHER,Lecanemab|Lecanemab non-administration group,NON_RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,50 Years,90 Years,False,"Inclusion Criteria:
+
+1. Patients diagnosed with Parkinson's disease
+2. Amyloid deposition confirmed by FBB PET
+3. Mild cognitive impairment or early dementia (CDR 0.5 or 1) on neuropsychological tests
+4. Adults aged 50-90 years
+
+Exclusion Criteria:
+
+1. Cases in which lecanemab administration is contraindicated (based on recommendations from the Korean Dementia Association)
+2. Cases in which neuropathologies other than Parkinson's disease or Alzheimer's disease are suspected as the underlying disease",1,South Korea,"This study aimed to determine the efficacy of amyloid clearance of lecanemab in patients with Parkinson's disease (PD) with amyloid co-pathology. Lecanemab, an anti-amyloid monoclonal antibody, was apporoved by the US FDA in July 2023 and in South Korea in May 2024, as a disease-modifying therapy based on its clinical efficacy and reduction of amyloid plaques in patients with early-stage Alzheimer's disease (AD). AD pathology is also common in PD, and approximately 35% of patients with PD dementia have co-existing AD pathology. Currently, no mediations have been developed to slow the progression of PD. Therefore, this study aimed to determine whether reducing the amyloid burden in patients with PD with co-exsistent AD pathology could potentially slow disease progression. To test it, patients with PD with mild cognitive impairment or early dementia, who were confirmed to have amyloid deposition through amyloid imaging, would be enrolled as a treatment arm, and the degree of reduction of amyloid plaque after 18 months of lecanemab administration would be investigated.",Changes in amyloid dposition on amyloid imaging scans,alzheimer
+NCT00394862,Efficacy of Weekly Versus Daily Folic Acid Supplementation,,COMPLETED,INTERVENTIONAL,NA,460.0,,Emory University,OTHER,1,Neural Tube Defects,DRUG,multivitamin,RANDOMIZED,PARALLEL,DOUBLE,PREVENTION,FEMALE,15 Years,49 Years,True,"Inclusion Criteria:
+
+* female
+* aged 15-49
+
+Exclusion Criteria:
+
+* pregnant
+* lactating less than 3 months
+* severely anemic",0,,"Investigate the efficacy of weekly versus daily of folic acid supplementation on improving folate, vitamin B12,",serum folate level|red blood cell folate,depression
+NCT02657031,The CHECK Trial: A Comparison of Headache Treatment in the ED: Compazine Versus Ketamine,"The Check Trial: A Comparison of Headache Treatment in the ED: Compazine Versus Ketamine. A Multi-Center, Randomized Double-Blind, Clinical Control Trial.",COMPLETED,INTERVENTIONAL,PHASE4,54.0,ACTUAL,University Medical Center of Southern Nevada,OTHER,0,Headache,DRUG,Prochlorperazine|Ketamine|Diphenhydramine|Ondansetron|Normal Saline,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,18 Years,65 Years,False,"Inclusion Criteria:
+
+* Age 18 to 65 years
+* Temperature \< 100.4° F
+* Diastolic Blood Pressure \<104 mm Hg
+* Normal neurological exam and mormal mental status
+
+Exclusion Criteria:
+
+* Pregnant or breastfeeding.
+* Meningeal signs are present
+* Acute angle closure glaucoma is suspected.
+* Head trauma within the previous two weeks
+* Lumbar puncture within the previous two weeks
+* Thunderclap onset of the headache
+* Weight more than 150 kg or less than 40 kg.
+* Known allergy to one of the study drugs.
+* History of schizophrenia or bipolar disorder.
+* History of intracranial hypertension.
+* Is a prisoner
+* Patient declined informed consent
+* Non-English speaking patient.
+* Attending provider excludes patient",1,United States,This study compares the efficacy of low dose Ketamine versus Compazine for the control of headache in patients presenting to the Emergency Department.,Headache Following Intervention,migraine
+NCT04097080,"Comparative Controlled Study of Analgesic, Antiasthenic and Anti-Anxiety Effects of Xenon in Patients With Parkinson's Disease","Comparative Controlled Study of Analgesic, Antiasthenic and Anti-Anxiety Effects of Xenon in Patients With Parkinson's Disease",UNKNOWN,INTERVENTIONAL,PHASE1,60.0,ESTIMATED,Nobilis Therapeutics Inc.,INDUSTRY,0,Parkinson Disease,DRUG,NBTX-001|Standard of Care,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* The patient must be male or female over the age of 18.
+* The subject must have idiopathic Parkinson's disease.
+* The subject has Stage III by Hoehn and Yahr in the ""on"" state on a screening visit
+* Subjects suffering from anxiety, depression, cognitive dysfunction
+* Dopaminergic drugs should be taken in a stable dosage for 28 days prior to registration, and throughout the study
+* Patients who have signed an approved consent form and are consistent with both the clinical trial plan and follow-up.
+
+Exclusion Criteria:
+
+* Patients have atypical parkinsonism (eg, neuroleptics, metoclopramide, flunarizin), metabolic neurodegenerative disorders (eg, Wilson's disease), encephalitis, cerebrovascular disease or degenerative disease (e.g. progressive supranuclear palsy)
+* Patients who received deep brain stimulation
+* Patients with cancer, HIV, kidney or liver disease.
+* Patients taking new antipsychotic, antidepressant, anxiolytic or narcotic drugs for less than 3 months",2,Russia,"This study evaluates the hypothesis that the gas mixture with xenon will have a positive effect on the symptoms in patients with Parkinson's Disease. The study will test the hypothesis that the gas mixture with xenon has a symptomatic treatment potential for patients with Parkinson's Disease, as measured by change from baseline in the Unified Parkinson Disease Rating Scale (UPDRS).",Unified Parkinson Disease Rating Scale (UPDRS),parkinson
+NCT01878669,Effects of N-acetyl Cysteine During Percutaneous Coronary Intervention,Effects of N-acetyl Cysteine on Periprocedural Myocardial Infarction and Major Cardiac and Cerebral Events in Patients Undergoing Percutaneous Coronary Intervention,ACTIVE_NOT_RECRUITING,INTERVENTIONAL,PHASE3,390.0,ESTIMATED,Suleyman Demirel University,OTHER,0,Coronary Artery Disease,DRUG,N-acetyl cysteine|Saline,RANDOMIZED,PARALLEL,TRIPLE,PREVENTION,ALL,18 Years,85 Years,False,"Inclusion Criteria:
+
+* Patients \> 18 years old undergoing percutaneous coronary intervention and who have moderate to high risk for contrast induced nephropathy (Mehran Score ≥ 5)
+
+Exclusion Criteria:
+
+* Primary percutaneous coronary intervention
+* Low risk for contrast induced nephropathy (Mehran Score \< 5)
+* Use of nephrotoxic agents (NSAIDs, aminoglycosides,recent contrast injection...)
+* Infection
+* Pregnancy, Lactation
+* Renal failure requiring dialysis
+* Hepatic failure
+* History allergy for NAC
+* History of Asthma
+* Chronic nitrate usage
+* Malignancy
+* Use of corticosteroids
+* Leukocytosis,Thrombocytosis,Anemia
+* Blood pressure of \>180/100mmHg despite anti-hypertensive therapy",1,Turkey (Türkiye),The aim of this study is to evaluate the effects of N-acetyl cysteine on periprocedural myocardial infarction and major cardiac and cerebral events in patients undergoing percutaneous coronary intervention and who have moderate to high risk for contrast induced nephropathy.,periprocedural myocardial infarction,asthma
+NCT04423627,Sympathetic Regulation of Large Artery Stiffness in Humans With ISH,Sympathetic Regulation of Large Artery Stiffness in Humans With Age-Related Isolated Systolic Hypertension,COMPLETED,INTERVENTIONAL,EARLY_PHASE1,100.0,ACTUAL,University of Iowa,OTHER,0,"Hypertension, Systolic|Stiffness, Aortic",DRUG,Clonidine|Hydrochlorothiazide|Placebo,RANDOMIZED,PARALLEL,TRIPLE,TREATMENT,ALL,60 Years,85 Years,True,"Inclusion Criteria:
+
+* age 60-85
+* non-smoking
+* clinically healthy
+* untreated or treated stage 1 isolated systolic hypertension (ISH) (systolic BP 130-139 mmHg; diastolic BP \<90 mmHg) or stage 2 ISH (systolic BP 140-159 mmHg; diastolic BP \<90 mmHg) per 2017 AHA/ACC hypertension guidelines
+* if subject is on antihypertensive medications, they will stop taking medication for a one-week washout period after Visit 1 before they return for Visit 2. They will come in at day 3 and day 7 of the one-week washout for a BP reading, to confirm that systolic BP is \<160 mmHg.
+
+Exclusion Criteria:
+
+* no history of cardiovascular disease (e.g., myocardial infarction, bypass surgery, angioplasty/stent, heart failure, cardiomyopathy, pacemaker/defibrillator, peripheral artery disease), pulmonary disease, liver disease, Type I or II diabetes, cancer (treated by chemotherapy and/or radiation), psychiatric illness, on aspirin or other non-steroidal anti-inflammatory drugs (NSAIDs).
+* aspirin, NSAIDs, vitamins, herbal supplements, omega-3-fatty acids will have to discontinue for at least 1 week before participation and remain discontinued during the study.
+* blood thinners, serotonin reuptake inhibitors (SSRIs), or PDE5 inhibitors will also be excluded.
+* Women must be postmenopausal for at least 6 months (surgical or natural) and not currently on hormone replacement therapy.
+* Subjects not on antihypertensive will not be eligible if their resting clinic systolic BP is \<130 mmHg or \>160 mmHg and diastolic BP \>90 mmHg.",2,United States,"Stiffening of your blood vessels, particularly the large vessels from your heart (called the aorta and carotids) you age contributes to the development of cardiovascular disease (CVD) such as heart attack and stroke. Nerve activity from your brain to your body also increases with advancing age but it is unknown if this nerve activity contributes directly to the stiffening on your blood vessels in older adults in addition to high blood pressure. Therefore, successful completion of the proposed aims will have a significant clinical impact by identifying if nerve activity from your brain could be a novel target for therapies that would lower stiffness of the aorta and carotid arteries in older adults.",Change in carotid-femoral pulse wave velocity,hypertension
+NCT00442936,Study of Telcagepant (MK-0974) in Participants With Moderate to Severe Acute Migraine With or Without Aura (MK-0974-011),"A Multicenter, Double-Blind, Placebo-Controlled, Parallel Group Study to Compare the Response to a Single Treatment With Oral MK0974 With Placebo and Comparator in Subjects With Moderate to Severe Acute Migraine With or Without Aura",COMPLETED,INTERVENTIONAL,PHASE3,1380.0,ACTUAL,Merck Sharp & Dohme LLC,INDUSTRY,0,Migraine,DRUG,Telcagepant potassium 150 mg|Telcagepant potassium 300 mg|Zolmitriptan 5 mg|Placebo to telcagepant 150 mg|Placebo to tecagepant 300 mg|Placebo to zolmitriptan 5 mg|Rescue medication,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Has at least 1 year history of migraine (with or without aura)
+* Females of child bearing potential must use acceptable contraception throughout trial.
+
+Exclusion Criteria:
+
+* Is pregnant/breast-feeding (or is a female expecting to conceive during study period)
+* Has history or evidence of stroke/transient ischemic attacks, heart disease, coronary artery vasospasm, other significant underlying cardiovascular diseases, uncontrolled hypertension (high blood pressure), uncontrolled diabetes, or human immunodeficiency virus (HIV) disease
+* Has major depression, other pain syndromes that might interfere with study assessments, psychiatric conditions, dementia, or significant neurological disorders (other than migraine)
+* Has a history of gastric, or small intestinal surgery, or has a disease that causes malabsorption
+* Has a history of cancer within the last 5 years.",0,,"The purpose of this study is to investigate the efficacy and safety of telcagepant (MK-0974) compared to an approved medication for acute migraine. This study was conducted as a ""triple-dummy"" design; for each dose of study drug, participants each received 3 forms of study drug (2 capsules of active and/or placebo and 1 tablet of active and/or placebo) and were instructed to take one of each form of study drug at dosing time.
+
+The primary hypotheses of this study are that telcagepant is superior to placebo in Pain Freedom at 2 Hours Post-Dose, Pain Relief at 2 Hours Post-Dose, Absence of Photophobia at 2 Hours Post-Dose, Absence of Phonophobia at 2 Hours Post-Dose and Absence of Nausea at 2 Hours Post-Dose.",Number of Participants With Pain Freedom (PF) at 2 Hours Post-Dose|Number of Participants With Pain Relief (PR) at 2 Hours Post-Dose|Number of Participants With Absence of Photophobia at 2 Hours Post-Dose|Number of Participants With Absence of Phonophobia at 2 Hours Post-Dose|Number of Participants With Absence of Nausea at 2 Hours Post-Dose|Number of Participants Who Experience At Least One Adverse Event (AE)|Number of Participants Who Discontinue Study Drug Due to an AE,migraine
+NCT00889603,Non-Interventional Study With Aricept® Evess,Non-Interventional Study With Aricept® Evess In Patients Diagnosed With Mild And Moderate Alzheimer's Disease Or Vascular Dementia,COMPLETED,OBSERVATIONAL,,370.0,ACTUAL,Pfizer,INDUSTRY,0,Alzheimer's Disease|Vascular Dementia,DRUG,Aricept® Evess,,,,,ALL,50 Years,,False,"Inclusion Criteria:
+
+* Outpatients (male / female), older than 50 years.
+* Patients with clinical symptoms of mild and moderate AD and Vascular Dementia.
+* MMSE score between 12 - 24.
+
+Exclusion Criteria:
+
+* Patients with a known hypersensitivity to donepezil clorhydrat, piperidine derivatives or any of the excipients of Aricept® Evess.
+* Patients with severe impaired hepatic function.
+* Patients with pre-existing gastrointestinal ulcer disease.
+* Patients with the history of bronchial asthma or chronic obstructive lung disease.
+* Patients with the history of serious atrioventricular conduction disturbances.",12,Romania,"The Aricept® Evess study is a prospective, non-comparative, non-interventional study on use of Aricept® Evess in the treatment of out-patients with AD and Vascular Dementia. The 24 week length of the study aims to collect data from a large number of patients (n= 400) on the safety and efficacy at the usual dosage of the product providing an overview of Aricept® Evess profile.",Change From Baseline in Mini Mental State Examination (MMSE) Total at Week 24 Last Observation Carried Forward (LOCF),alzheimer
+NCT00329732,Research Study of Greater Occipital Nerve Block As A Treatment For Prolonged Migraine Attacks,"Double-Blind, Placebo Controlled Trial Of Greater Occipital Nerve Block For The Treatment Of Migraine Status",TERMINATED,INTERVENTIONAL,NA,2.0,ACTUAL,Thomas Jefferson University,OTHER,0,Migraine,DRUG,0.5% bupivicaine and 2% lidocaine|Saline placebo,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,18 Years,80 Years,False,"Inclusion Criteria:
+
+* Subjects, male or female, between the ages of 18 and 80 years old (inclusive) with a previous diagnosis fulfilling IHS criteria for episodic migraine
+* Presenting to clinic in migraine status, meaning the migraine has continued for greater than or equal to 3 days but less than 3 months.
+* Pain must be reported as at least moderate pain level at time of injections
+
+Exclusion Criteria:
+
+A subject is ineligible to participate in this study if he/she satisfies any of the following criteria:
+
+* Subjects who have received greater occipital nerve blocks in the past
+* Subjects who in their own or the investigator's opinion are unable to describe their symptoms
+* Subjects who are pregnant or lactating",1,United States,"Greater Occipital Nerve Blocks (GONB) are a common procedure used for the treatment of headache. The GONB procedure involves a series of injections into the greater occipital nerve (a spinal nerve located at the back of your head). The purpose of this study is to determine whether GONB is effective for the treatment of prolonged migraine attacks. This study is placebo controlled, which means that half of the patients participating will receive injections of active study drug (lidocaine plus bupivicaine) and half of the patients will receive injections of saline (placebo). The study is also blinded which means that neither you nor the study staff will know whether you received active study drug or placebo. The study remains blinded only for the first 30 minutes, at which point additional treatments (including GONB) can be administered at the discretion of your treating physician.
+
+40 patients are expected to participate in this research study. This study is being conducted at Thomas Jefferson University only.","Percentage of Patients Experiencing Significant Change on a 4 Point Pain Scale at 30 Minutes Post-injection, Active Drug Versus Placebo. Significant Change is Defined as a Change on the 4 Point Pain Scale From Moderate or Severe to Mild. No Pain Equals 0.",migraine
+NCT00950794,Study of Salmeterol (SN408D) for Adult Asthma,Study of Salmeterol (SN408D) for Adult Asthma - Clinical Study of Salmeterol Compared With Hokunalin (Tulobuterol) Tape -,COMPLETED,INTERVENTIONAL,PHASE4,367.0,ACTUAL,GlaxoSmithKline,INDUSTRY,0,Asthma|Bronchial Asthma,DRUG,Salmeterol(SN408D)|Hokunalin (tulobuterol) tape,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,15 Years,,False,"Inclusion Criteria:
+
+* For entry into run-in period (Visit 1)
+
+A subject will be considered eligible for inclusion in this study only if all of the following criteria apply:
+
+1. Males or females aged \>= 15 years at the time of giving informed consent.
+2. Subjects who are able to give a written informed consent to participation in the study.
+
+   However, if a subject is aged \< 20 years at the time of giving informed consent, a written informed consent should be obtained from the subject and his/her legally acceptable representative.
+3. Outpatients.
+4. Subjects who had been diagnosed as asthma at least 6 months prior to Visit 1.
+5. Subjects who have been receiving ICS 400mcg/day of FP equivalent for at least 8 weeks prior to Visit 1.
+
+   * For entry into the treatment period (Visit 2)
+
+A subject will be considered eligible for entering the treatment period only if he/she completes the run-in period and meets all of the following criteria:
+
+1. Subjects who meet both of the following criteria in terms of pulmonary function.
+
+   * Has a mean morning PEF during the last 7 days (at least 4 days) prior to Visit 2 is \>= 40% of the predicted value.
+   * Has at least 2 days with a diurnal variation in PEF of \>= 15% during the run-in period, or had been confirmed and recorded reversibility of \>= 15% using rapid-acting inhaled beta2 agonists within 3 months prior to Visit 1 (including Visit 1).
+2. Subjects who have \>= 70 % compliance with asthma medication during the run-in period.
+3. Subjects who were able to measure peak flows correctly during the run-in period, in the investigator's/subinvestigator's judgment.
+4. Subjects who were able to keep the asthma diary correctly during the run-in period, in the investigator's/subinvestigator's judgment.
+
+Exclusion Criteria:
+
+* A subject will not be eligible for inclusion in this study if any of the following criteria apply at Visit 1 or Visit 2:
+
+  1. Subjects who have received injected steroids, injected ACTH, or oral steroids within four weeks of Visit1 or during run-in period.
+  2. Subjects who have received xanthines (oral, injected, suppository), beta2 agonists other than rescue medication (rapid-acting inhaled beta2 agonists), or inhaled anti-cholinergics during the run-in period.
+  3. Subjects with respiratory disease other than asthma (e.g., chronic bronchitis, emphysema, bronchiectasis, pulmonary fibrosis, lung cancer, sarcoidosis, and old tuberculosis) which, in the judgment of the investigator/subinvestigator, are likely to affect efficacy evaluation.
+  4. Subjects with uncontrollable diabetes mellitus, hypertension, heart disease, or hyperthyroidism, who are inappropriate for this study in the judgement of the investigator/sub investigator.
+  5. Subjects who are unsuitable for this study in the judgment of the investigator/subinvestigator based on 12-lead ECG findings at Visit 1.
+  6. Subjects who are regularly using medications containing the following ingredients:
+
+     beta-blockers, alpha/beta-blockers
+  7. Subjects who have received immunosuppressive medications excluding Tacrolimus ointment.
+  8. Subjects who are receiving catecholamines.
+  9. Subjects with atopic dermatitis who are inappropriate for this study in the judgment of the investigator/subinvestigator.
+  10. Subjects who had or are suspected to have had hypersensitivity to any of the investigational products.
+  11. Subjects who received the last dose of other investigational drugs in the past 30 days.
+  12. Subject who are currently pregnant, possibly pregnant, lactating or willing to become pregnant during the study period.
+  13. Subjects who consume alcohol or drugs excessively the opinion of the investigator/subinvestigator.
+  14. Subjects who are judged by the investigator/subinvestigator to have Step 4 asthma (severe persistent), referring to ""GINA2002"" and ""J-GL2003""．
+  15. Subjects who are judged by the investigator/subinvestigator to be inappropriate for this study for any other reasons.",0,,"To demonstrate the efficacy (non-inferiority) of Salmeterol 50mcg bid (100mcg/day), compared with Hokunalin (tulobuterol) tape 2mg once a day, in terms of improvement in pulmonary function (peak expiratory flow: PEF) in a randomized, double-blind, parallel-group comparative study in adult patients with bronchial asthma on ICS 400mcg/day of FP equivalent.",Change in morning PEF,asthma
+NCT04176172,Optimizing Tobacco Use Treatment for PLWHA,Testing Novel Pharmacogenetic and Adherence Optimization Treatments to Improve the Effectiveness of Smoking Cessation Treatments for Smokers With HIV,ACTIVE_NOT_RECRUITING,INTERVENTIONAL,PHASE3,340.0,ESTIMATED,University of Pennsylvania,OTHER,2,HIV/AIDS|Nicotine Dependence,BEHAVIORAL|DRUG,Varenicline|Nicotine patch|Standard treatment|Standard treatment + Managed Problem Solving (MAPS) adherence intervention,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,18 Years,,False,"Key Inclusion Criteria:
+
+* \>18 years, smoke daily for the past 30 days
+* Confirmed HIV+ (exhibit viral load of \<1000 copies/mL)
+* Residing in the geographic area close to one of the sites for at least 7 months
+* Able to use varenicline/TN patch safely
+
+Key Exclusion Criteria:
+
+* Current untreated and unstable diagnosis of substance abuse/dependence
+* Current diagnosis of unstable and untreated major depression, psychosis or bipolar disorder
+* Suicide risk as measured by the C-SSRS
+* Current use or discontinuation within last 14 days of quit smoking medications
+* Cancer, heart disease, stroke or MI within the past 6 months requires study physician approval
+* Uncontrolled hypertension
+* History of epilepsy or seizure disorder requires study physician approval
+* Women who are pregnant, planning a pregnancy, or lactating
+* Use of e-cigarettes, chewing tobacco, snuff or snus
+* Generalized eczema or psoriasis
+* A reaction or sensitivity to a nicotine patch or any other transdermal medication requires study physician approval
+* Currently participating in a smoking cessation program",2,United States,"The advent of anti-retroviral therapy (ART) for people living with HIV/AIDS (PLWHA) substantially improved life expectancy but has also led to the critical need to address modifiable risk factors associated with cancer and cardiovascular disease, such as tobacco smoking. HIV-infected smokers lose more life-years due to tobacco use than they do to their HIV infection.
+
+There have been relatively few studies of tobacco use treatments for PLWHA and systematic reviews show that there are insufficient data to conclude that tobacco dependence interventions that are efficacious in the general population are efficacious for PLWHA. Further, many studies in this area have lacked randomization and a control group, infrequently used an intent-to-treat (ITT) approach and biological verification of tobacco abstinence, and lacked post-treatment follow-up.10 What investigators do know thus far is that behavioral interventions and the nicotine patch yield moderate effects on cessation; and 2 recent placebo-controlled trials - one in France and one by this lab - found that varenicline is safe and effective for treating tobacco use among PLWHA, but yield quit rates that are substantially lower than those reported in the general population. Thus, there is a critical need to rigorously test novel ways to optimize tobacco cessation treatment for smokers with HIV.",Point-prevalence abstinence,hiv
+NCT02089529,Treatment of Axial Spondyloarthritis With Reduced Doses of NSAIDs,Treatment of Axial Spondyloarthritis With Reduced Doses of NSAIDs: Application of Pharmacotherapeutic Conditioning in Clinical Practice.,COMPLETED,INTERVENTIONAL,NA,8.0,ACTUAL,University Hospital of North Norway,OTHER,1,Axial Spondyloarthritis,DRUG,Ibuprofen|Placebo,RANDOMIZED,CROSSOVER,DOUBLE,TREATMENT,ALL,20 Years,,False,"Inclusion Criteria:
+
+* Patients must have been diagnosed with radiographic Axial Spondyloarthritis, also called Ankylosing Spondylitis, OR
+* Patients must have been diagnosed with non-radiographic Axial Spondyloarthritis with a positive magnetic resonance (MR).
+* Patients must have been successfully treated with NSAIDs for at least three months
+* Patients must be above 20 years old
+* Patients must satisfy the Norwegian Summary of Product Characteristics (SPC) for Ibumetin 400 mg
+* All patients must sign a consent form describing that they will receive placebo during the study period. The Informed Consent Form and The Data Release Form must be signed before inclusion in the studies.
+
+Exclusion Criteria:
+
+* Patients cannot participate in other clinical studies parallel to the current study. Previous study participations must be completed more than one year, prior to participating in the current study.
+* Patients not satisfying the Norwegian Summary of Product Characteristics (SPC) for Ibumetin 400 mg:
+* Patients who previously have experienced allergic reactions to NSAIDs
+* Patients with previous or currant ulcers and/or gastrointestinal conditions - or bleeding
+* Patients with previous or currant cardiovascular conditions, or have experienced cardiovascular episodes
+* Patients with previous or currant renal failure
+* Patients with acetaminophen - or NSAID-induced asthma, urticarial or rhinitic
+* Patients with previous or current other serious conditions apart from rheumatoid arthritis
+* Female patients trying to or having trouble getting pregnant cannot participate in the study
+* Pregnant and/or nursing patients cannot participate in the study
+* Patients on a treatment plan with Prednisolon
+* Patients on a treatment plan with substances inflicting with Ibumetin. All substances will be investigated on www.interaksjoner.no",1,Norway,"The following study investigates the role of information/expectancies in the response to Ibumetin and placebo.
+
+The study is a double-blind randomized controlled trial with crossover, within subjects repeated measurements. The symptoms are measured by questionnaires. 40 patients will be included in the study. The administrated drug is Ibumetin 400 mg.
+
+The study does not require patients to meet in the clinic. Patients will be instructed in how to report pain, tension and nervousness via mobile phone (Checkware AS, Trondheim, Norway).Three days a week for 12 weeks the patients are instructed to report at 0900 AM, and thereafter at 0910, 1100, 1300, 1500, 1700, and 1900 hrs each study day. At these times the patients will receive a sms where they are instructed to immediately rate their pain and stress level and report back.",Change in level of pain,arthritis
+NCT07446855,Study of AZD4956 as Monotherapy and in Combination With Anti-Cancer Agents in Participants With Advanced/Metastatic Homologous Recombination Deficient Solid Tumours,"A Modular Open-label, Phase I/IIa Study to Assess the Safety, Tolerability, Pharmacokinetics, Pharmacodynamics, and Preliminary Efficacy of Ascending Doses of AZD4956 as Monotherapy, and in Combination With Anti-Cancer Agents in Participants With Advanced/Metastatic Homologous Recombination Repair Defective Solid Tumours",RECRUITING,INTERVENTIONAL,PHASE1|PHASE2,180.0,ESTIMATED,AstraZeneca,INDUSTRY,0,Solid Tumours,DRUG,AZD4956|Saruparib,RANDOMIZED,SEQUENTIAL,NONE,TREATMENT,ALL,18 Years,130 Years,False,"Core Inclusion Criteria:
+
+* Documented locally advanced or metastatic solid tumour malignancy.
+* Eastern cooperative oncology group (ECOG) performance status of 0 or 1 with no deterioration over the previous 2 weeks prior to screening and first day of dosing.
+* Minimum life expectancy ≥ 12 weeks.
+* Adequate organ and marrow function.
+* Female participants must not breastfeed and must not donate or retrieve ova for their own use from screening to approximately 6 months after the last dose of study intervention.
+
+Module 1 Inclusion Criteria:
+
+* Demonstrated evidence of disease progression.
+* Participants must have advanced or metastatic solid tumours.
+* Participants may have received up to one prior line of therapy with a poly (adenosine diphosphate-ribose) polymerase inhibitor (PARPi)-based regimen (either as a treatment or as maintenance).
+
+Module 2 Inclusion Criteria:
+
+Part A (AZD4956 in Combination with Saruparib Dose Escalation) and Part A-PD (PD Backfill Cohorts):
+
+* Participants must have one of the following conditions-
+
+  1. Histologically or cytologically confirmed carcinoma of the breast with recurrent locally advanced or metastatic disease and evidence of a predicted loss of function germline or somatic mutation.
+  2. Histologically or cytologically confirmed advanced ovarian, fallopian tube, or primary peritoneal cancer.
+  3. Histologically or cytologically confirmed adenocarcinoma of the prostate and advanced/metastatic castrate resistant prostate cancer (CRPC).
+  4. Histologically or cytologically confirmed advanced/metastatic pancreatic cancer.
+* Participants must have evaluable disease.
+* Participants in PD backfill cohorts must not have received prior therapy with a PARPi-based regimen (either as a treatment or as maintenance).
+
+Part A (PD Backfill Cohorts) - Participants Undergoing Paired Biopsies:
+
+\- Participants must have a tumour suitable for biopsy.
+
+Part A-Non-PD (Non-PD Backfill Cohorts) and Part B (Dose Expansion Cohorts):
+
+* Participants must have histologically or cytologically confirmed adenocarcinoma of the prostate and advanced/metastatic CRPC.
+* Participants must have documented metastatic disease by clear evidence of ≥ 1 bone lesion (defined as one lesion with positive uptake on bone scan) and/or ≥ 1 soft tissue lesion (measurable or non-measurable).
+* Participants must have received the prior approved systemic therapies for metastatic prostate cancer.
+* Participants must not have received prior therapy with a PARPi-based regimen (either as a treatment or as maintenance).
+
+Core Exclusion Criteria:
+
+* Any significant laboratory finding or any severe and uncontrolled medical condition.
+* Participants with any known predisposition to bleeding.
+* Spinal cord compression or symptomatic and unstable brain metastases or leptomeningeal disease.
+* Allogenic organ transplantation.
+* Known to have active infection, including hepatitis B virus (HBV) or hepatitis C virus (HCV).
+* Known history of infection with human immunodeficiency virus (HIV).
+* Active gastrointestinal disease or other condition that will interfere significantly with the swallowing, absorption, distribution, metabolism or excretion of oral therapy.
+* Participants with history of myelodysplastic syndrome (MDS)/acute myeloid leukaemia (AML) or with features suggestive of MDS/AML.
+* Participants with a known hypersensitivity to the investigational product(s) or any of the excipients of the product(s).
+* Previous dosing with AZD4956.",18,Australia|Japan|South Korea|Spain|United Kingdom|United States,"The purpose of this modular, first trial in human study is to assess the safety, tolerability, pharmacokinetics (PK), pharmacodynamics (PD), and preliminary efficacy of ascending dose levels (DLs) of AZD4956 monotherapy and in combination with other anti-cancer agents in participants with advanced/metastatic solid tumours with homologous recombination repair (HRR) deficiencies.",Parts A and B: Number of participants with adverse events (AEs) and serious adverse events (SAEs)|Part B: Progression free survival (PFS)|Part A - Number of participants with dose-limiting toxicities (DLTs),cancer
+NCT01966107,Evaluate the Effect of Aclidinium Bromide on Long-term Cardiovascular Safety and Exacerbations in Moderate to Very Severe COPD Patients.,"Double-blind, Randomized, Placebo-controlled, Parallel-group, Phase IV Study to Evaluate the Effect of Aclidinium Bromide on Long-term Cardiovascular Safety and COPD Exacerbations in Patients With Moderate to Very Severe COPD (ASCENT COPD)",COMPLETED,INTERVENTIONAL,PHASE4,3635.0,ACTUAL,AstraZeneca,INDUSTRY,0,COPD|Chronic Obstructive Pulmonary Disease|Moderate to Very Severe COPD,DRUG,Aclidinium Bromide|Placebo,RANDOMIZED,PARALLEL,QUADRUPLE,TREATMENT,ALL,40 Years,130 Years,False,"Inclusion Criteria:
+
+* 1\. Male or female outpatients ≥ 40 years of age
+* 2\. Current or former cigarette smokers with a smoking history of at least 10 pack-years
+* 3\. A diagnosis of stable, moderate to very severe COPD (GOLD, 2015) with a post-bronchodilator FEV \< 80% FEV1/forced vital capacity (FVC) ratio \< 70%
+* 4\. Must have at least one of the following 4 criteria:
+
+  1. Documented cerebrovascular disease (stroke or transient ischemic attack, carotid stenosis)
+  2. Documented coronary artery disease (angina, MI, angioplasty/stent/bypass)
+  3. Documented peripheral vascular disease or history of claudication
+  4. At least 2 of the following atherothrombotic risk factors as determined by the PI:
+
+     1. Male ≥ 65 years or female ≥ 70 years
+     2. Diabetes
+     3. Dyslipidemia
+     4. Hypertension
+     5. Waist circumference inches males ≥ 40 in or in females ≥ 38 inches
+     6. Evidence of renal dysfunction (eGFR \< 60) and microalbuminuria (eGFR is based on modification of diet in renal disease \[MDRD\] equation, microalbuminuria is defined as ≥ 30-300 mcg/mg creatinine on a spot urine or ≥30 mg creatinine on a 24hr urine test)
+* 5\. Maintained stable respiratory medications for 2 weeks prior to randomization (Appendix II)
+* 6\. Able to perform pulmonary function test (PFT) maneuvers and follow study procedures
+* 7\. Women of childbearing potential must have a negative serum β-human chorionic gonadotropin (HCG) pregnancy test at Visit 1A and be practicing medically acceptable method of contraception. Otherwise, female patients should be at least 1 year postmenopausal, surgically sterile (defined as having a hysterectomy or tubal ligation).
+* 8\. Should understand study procedures and be willing to participate in the study as indicated by signing the ICF
+
+Exclusion Criteria:
+
+* 1\. Significant diseases other than COPD or cardiovascular disease (e.g., metastatic cancer) which, in the opinion of the PI, may either put the patient at risk because of participation in the study or a disease which may influence the results of the study or the patient's ability to participate in the study
+* 2\. Unstable or life threatening cardiovascular disease or COPD as determined by the PI
+* 3\. Patients with comorbid lung disease such as asthma, cystic fibrosis, bronchiectasis, interstitial lung disease, or pulmonary thromboembolic disease
+* 4\. Planned lung transplant or lung volume reduction surgery
+* 5\. Currently treated with a combination of LAMA and LABA/ICS therapy.
+* 6\. Malignancy for which patient has undergone resection, radiation therapy or chemotherapy within 5 years prior to screening. Patients with treated basal cell and squamous cell (skin) carcinoma are allowed
+* 7\. Respiratory infection or COPD exacerbation at Screening and/or within 4 weeks prior to screening
+* 8\. Uncontrolled infection resulting from human immunodeficiency virus (HIV) and/or active hepatitis
+* 9\. Reported history of drug or alcohol abuse within the past 12 months
+* 10\. History of hypersensitivity reaction to inhaled anticholinergics, sympathomimetic amines, or inhaled medication or any component thereof (including report of paradoxical bronchospasm)
+* 11\. History of acute urinary retention, treatment refractory benign prostatic hyperplasia (BPH), bladder neck obstruction, or narrow-angle glaucoma (Note: Patients with controlled, stable BPH are not excluded)
+* 12\. Patients unable to use a multidose DPI or a pressurized metered-dose inhaler
+* 13\. Treatment with any other investigational drug within 30 days (or 6 half-lives, whichever is longer) before Visit 1A
+* 14\. Women who are pregnant or breastfeeding
+* 15\. Use of any prohibited medication listed in Appendix II
+* 16\. Employee or immediate relative of an employee of AstraZeneca, any of its affiliates or partners, or the study center",468,Canada|United States,"The Objectives of this study are to assess the safety of Aclidinium bromide on major adverse cardiovascular events (MACE), to assess the overall safety of Aclidinium bromide and to assess whether Aclidinium bromide reduces moderate or severe COPD exacerbations. This study is a double-blind, randomized, placebo controlled, parallel-group study to evaluate the effect of Aclidinium bromide on the cardiovascular safety and COPD exacerbations in patients with moderate to very severe COPD, as defined by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) criteria.",Rate of Moderate or Severe Chronic Obstructive Pulmonary Disease (COPD) Exacerbations Per Subject Per Year During the First Year of Treatment|Number of Participants With Major Adverse Cardiovascular Event (MACE) - on Study Analysis,asthma
+NCT04343963,Pyridostigmine in Severe SARS-CoV-2 Infection,Pyridostigmine in Patients With Severe Acute Respiratory Syndrome Secondary to SARS-CoV-2 Infection,UNKNOWN,INTERVENTIONAL,PHASE2|PHASE3,436.0,ESTIMATED,Instituto Nacional de Ciencias Medicas y Nutricion Salvador Zubiran,OTHER,0,COVID-19|SARS-CoV-2,DRUG,Pyridostigmine Bromide|Placebo,RANDOMIZED,PARALLEL,QUADRUPLE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+1. Adult patients (≥18 years old)
+2. Signed informed consent by the patient or designated legal representative
+3. Confirmatory laboratory test for SARS-CoV-2 / COVID-19 infection
+4. Pneumonia confirmed by imaging studies
+5. Agree to venous blood collection according to the protocol
+6. Need for hospitalization with increased mortality criteria according to published observations, including one or more of the following severity criteria according to the treating medical team:
+
+   * a. Dyspnoea
+   * b. Lung infiltrates\> 50% of lung fields by CT
+   * c. A ratio of partial pressure arterial oxygen (PaO2) to the fraction of inspired oxygen (FiO2) \<300 mmHg
+   * d. Pulse oximetry \<90% to ambient air, or a 3% drop in baseline oximetry, or need to increase supplemental oxygen due to chronic hypoxia, as well as the need for supplemental oxygen according to medical judgment
+
+And, alteration of one or more of the following laboratory studies at the time of hospital admission:
+
+* i. D-dimer \>1 ug/mL
+* ii. Ferritin level \>300 ng/mL
+* iii. C-reactive protein (CRP) \>3mg/L
+* iv. Lactate dehydrogenase (LDH) \>245 U/L
+* v. Lymphopenia \<800 cells/uL
+* vi. Creatine kinase (CK) level \>800 IU/L
+
+Exclusion Criteria:
+
+1. Pyridostigmine allergy
+2. If female, pregnancy or breastfeeding
+3. Meet the following critical illness criteria before signing informed consent and taking the first dose of study medication:
+
+   1. . Need for mechanical ventilation
+   2. . Admission to the ICU for any reason
+   3. . Meet criteria for sepsis or septic shock
+4. Concomitant autoimmune diseases
+5. Known immunodeficiency (including HIV infection)
+6. Need for mechanical ventilation before signing informed consent and taking the first dose of study medication
+7. Inability to administer orally / enterally
+8. Use of immunosuppressants or immuno-modulators in the preceding 28 days, including chemotherapeutics and steroids, unless recommended by the treatment medical team as part of the therapeutic approach for SARS-CoV-2 infection
+9. Participation in interventional clinical trials in the preceding 28 days (however, participation in observational trials or those with no therapeutic intervention, is allowed)",1,Mexico,"We will evaluate low-dose pyridostigmine as add-on therapy to best medical care in patients with Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2) infection and its related Coronavirus Disease 2019 (COVID-19) who require hospitalization. Our hypothesis is that, in comparison to the placebo, pyridostigmine will reduce in at least 10% a composite outcome \[death; mechanical ventilation; \>2 point-increase in the SOFA score) by day 28. We will also evaluate interleukin (IL)-6 kinetics during the first 14 days of in-hospital stay.
+
+It is estimated that 25-33% of patients hospitalized for COVID-19 are admitted to intensive care units (ICU) for severe hypoxemia. The reported mortality in those with severe disease ranges between 38% and 49%. So far, there is no pharmacological therapeutic (or else) strategy known to reduce morbidity and mortality in these patients. Mortality in COVID-19 appears to be mediated not necessarily by the direct effect of the infection, but by the disproportionate inflammatory response of the host.
+
+Pyridostigmine is an old drug that, by inhibiting acetylcholine-esterase, the enzymatic machinery that degrades acetylcholine (ACh), results in increased ACh bioavailability. ACh, in turn, ligates to nicotinic-alpha7 receptors in macrophages and T cells, resulting in reduced overactivation of these immune cells. In experimental murine sepsis, this family of drugs has resulted in reduced inflammation and mortality. Human evidence is scarce for severe inflammatory conditions. However, recent evidence from our group and others indicates that pyridostigmine has an immunomodulatory effect in people living with HIV, resulting in elevation of CD4+ T cell counts, decreased immune activation, and reduction in inflammatory mediators. Altogether, this suggests that ACh-esterase inhibitors may act as immunomodulators during viral infections, potentially reducing the inflammatory cascade (the so-called ""cytokine storm"") observed in critically ill COVID-19 patients.
+
+At the proposed dose (60mg/d), the rate of minor adverse events is less than 5% with no reported serious adverse effects. From that perspective, we consider that pyridostigmine can function as an immuno-modulator and reduce morbidity and mortality in COVID-19-stricken patients, with the added value of a safe pharmacological profile. Moreover, as an old drug, re-purposing it for a novel indication may be a simpler, more efficient approach than developing a novel one from the ground up.",Critical condition or death|IL-6,covid
+NCT05626634,"Open-label, Long-term Safety Study of LP352 in Subjects With Developmental and Epileptic Encephalopathy","A Phase 2, Multicenter, Open-label, Long-term Safety Study of LP352 in Subjects With Developmental and Epileptic Encephalopathy Who Completed Study LP352-201 and Are Candidates for Continuous Treatment for Up to 52 Weeks",COMPLETED,INTERVENTIONAL,PHASE2,41.0,ACTUAL,Longboard Pharmaceuticals,INDUSTRY,0,Developmental and Epileptic Encephalopathy|Dravet Syndrome|Lennox-Gastaut Syndrome,DRUG,"LP352, bexicaserin",NA,SINGLE_GROUP,NONE,TREATMENT,ALL,12 Years,65 Years,False,"Inclusion Criteria:
+
+1. Male or non-pregnant, non-lactating female, age 12 to 65 years who have satisfactorily completed study LP352-201
+2. Diagnosis of Dravet syndrome, Lennox-Gastaut syndrome, or other developmental and epileptic encephalopathy
+3. The patient/parent/caregiver is able and willing to attend study visits, complete the diary and take study drug as instructed
+
+Exclusion Criteria:
+
+1. Had an SAE in Study LP352-201 that was definitely, probably, or possibly related to exposure to study drug
+2. Current or past history of cardiovascular or cerebrovascular disease, such as cardiac valvulopathy, myocardial infarction, stroke, pulmonary arterial hypertension or abnormal blood pressure
+3. Has glaucoma, renal impairment, liver disease or any other medical condition that would affect study participation or pose a risk to the subject
+4. Current or recent history of moderate or severe depression, anorexia nervosa, bulimia or at risk of suicidal behavior
+5. Currently taking anorectic agents, monoamine oxidase inhibitors; serotonin agonists or antagonists including fenfluramine, atomoxetine, vortioxetine, or other medications for weight loss
+6. Positive test result on the drug screen, except tetrahydrocannabinol (THC) for patients taking prescribed cannabidiol",28,Australia|United States,"The objective of this study is to assess the long-term safety, tolerability, and efficacy of adjunctive therapy of LP352 in subjects with developmental and epileptic encephalopathies who completed participation in Study LP352-201.",Treatment-emergent Adverse Events|Columbia-Suicide Severity Rating Scale (C-SSRS) Response|Patient Health Questionnaire-9 Total Score and Question 9 Score,epilepsy
+NCT05446727,Quadratus Lumborum Block vs Erector Spinal Block for Post Abdomen Surgery Analgesia,Quadratus Lumborum Block Versus Erector Spinal Block - Comparison of the Effectiveness of the Analgesic Effect in Patients After Abdominal Surgery,COMPLETED,INTERVENTIONAL,NA,100.0,ACTUAL,Jagiellonian University,OTHER,0,"Pain, Acute|Postoperative Pain|Anesthetics, Local",DRUG,Ropivacaine injection,RANDOMIZED,PARALLEL,SINGLE,TREATMENT,ALL,18 Years,90 Years,False,"Inclusion Criteria:
+
+* Patients requiring abdomen surgery
+* Patients of age 18 and over
+* BMI \< 40
+* Patients who are expected to stay in-hospital overnight after surgery
+
+Exclusion Criteria:
+
+* Patient refusal
+* Contraindications to paravertebral blocks: Infection at the site of needle insertion, empyema, allergy to local anesthetic drugs, and tumor occupying the thoracic paravertebral space, coagulopathy, bleeding disorder or therapeutic anticoagulation
+* Known allergy to local anesthetics
+* Inability to provide informed consent
+* Inability to use a PCA due to languate or comprehension barriers
+* BMI \>= 40
+* Any patient on opioids for greater than or equal to 3 months duration prior to surgery
+* Patients with chronic pain syndromes",1,Poland,"Prior to surgery, patients will be stratified into groups according to the type of surgical procedure. The anticipated groups are as follows:
+
+Patients with colorectal cancer
+
+Patients with prostate cancer
+
+Patients with renal cancer
+
+Patients undergoing surgery for gallbladder cholelithiasis. The Erector Spinal Block (ESP) is based on the deposition of the local anesthetic in the inter-fascial space between the dorsal extensor muscle and the intercostal muscles at the height of the transverse processes. The scope of the blockade covers the dorsal and ventral branches of the thoracic spinal nerves, but also in most cases the investigetors are able to obtain a wide distribution of the drug into the paravertebral space by ""permeating"" the local anesthetic through the fascial compartments. The clinical effect of the blockade is due to blocking the nerve structures of the paravertebral space (spinal nerve branches and the sympathetic trunk). The scope of the blockade, after its execution at the level of Th5, most often includes the segments from Th1 to L1.
+
+Currently, the Quadratus Lumborum block (QL block) is performed as one of the perioperative pain management procedures for all generations (pediatrics, pregnant, and adult) undergoing abdominal surgery. The local anesthetic injected via the approach of the anterior QL block ( QL1 block ) can more easily extend beyond the TAP to the thoracic paravertebral space or the thoracolumbar plane, the posterior QL block entails a broader sensory-level analgesic and may generate analgesia from T7 to L1.",Total long acting opioid consumption in oxycodone equivalents,cancer
+NCT03815084,A Study of PD1 Combined With DC-NK Cell in the Treatment of Solid Tumors,Clinical Study on the Safety and Efficacy of PD1 Combined With DC-NK Cell in the Treatment of Solid Tumors,UNKNOWN,INTERVENTIONAL,EARLY_PHASE1,100.0,ESTIMATED,"Allife Medical Science and Technology Co., Ltd.",INDUSTRY,3,Solid Tumor,DRUG,pd-1 and DC-NK cells,NA,SINGLE_GROUP,NONE,HEALTH_SERVICES_RESEARCH,ALL,18 Years,60 Years,False,"Inclusion Criteria:
+
+1. Previously receiving ≥ first-line regimen chemotherapy;
+2. Age over 3 years old and less than 14 years old;
+3. The expected survival period is more than 3 months;
+4. ECOG≤2;
+5. Vital organ function is satisfied: cardiac ultrasound indicates cardiac ejection fraction ≥ 50%, no obvious abnormality in ECG; blood oxygen saturation ≥ 90%; creatinine clearance calculated by Cockcroft-Gault formula ≥ 40ml/min; ALT and AST ≤ 3 times the normal range, total bilirubin ≤ 2.0 mg / dl;
+6. Blood routine: Hgb≥80g/L, ANC≥1×109/L, PLT≥50×109/L; There are measurable target lesions.
+
+Exclusion Criteria:
+
+1. Liver and kidney function:
+
+   * Total bilirubin \> 2 x ULN (Gilbert syndrome \> 3 x ULN)
+   * Aspartate aminotransferase (AST) and alanine aminotransferase (ALT) \> 3 × ULN
+   * Serum creatinine clearance \>60mL/min
+2. Serological examination:
+
+   * Absolute neutrophil count (ANC) \<0.75x109/L
+   * Platelet count (PLT) \<50x109/L
+3. Active hepatitis B (HBV-DNA \> 1000 copies / ml), hepatitis C, or uncontrolled infection;
+4. The number of days of chemotherapy medication and the administration of hormones below 5mg is ≤3, and the number of days of withdrawal of hormones greater than 5mg is ≤5;
+5. Active CNS disease (tumor cells in CSF);
+6. Intracranial hypertension or unconsciousness; respiratory failure; diffuse vascular internal coagulation;
+7. creatinine \> 1.5 times the upper limit of normal or ALT / AST \> 3 times the upper limit of normal or bilirubin \> 2 times the upper limit of normal;
+8. The New York Heart Association (NYHA) is classified as Level III or higher;
+9. Uncontrolled diabetes;
+10. With other uncontrolled diseases, the investigator believes that it is not suitable for joining;
+11. Any situation that the investigator believes may increase the risk of the subject or interfere with the test results.",0,,clinical study on the safety and efficacy of PD1 combined with dc-Nk in the treatment of solid tumors,occurrence of treatment related adverse events,parkinson
+NCT06282783,Studying Topiramate for Re-Activating the HIV-1 Reservoir,A Phase I/II Clinical Trial Investigating the Effect of Topiramate on the Reactivation of the HIV-1 Reservoir in People Living With HIV on Antiretroviral Therapy,UNKNOWN,INTERVENTIONAL,PHASE1|PHASE2,12.0,ESTIMATED,Erasmus Medical Center,OTHER,0,HIV-1-infection|Hiv|HIV Infections|HIV I Infection,DRUG,Topiramate,NON_RANDOMIZED,SINGLE_GROUP,NONE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Documented HIV-1, subtype B or C
+* Aged 18 or over
+* On ART for a minimum of 2 consecutive years and a maximum of 12 consecutive years
+* HIV-1 RNA plasma level \<30 copies/mL for at least two consecutive measurements prior to inclusion (viral blips with a detectable HIVRNA 30-200 c/mL preceded and followed by HIV-RNA \<30 are allowed)
+* CD4+ T cell count ≥200 cells/mm\^3 at screening
+* Able to understand the information and give informed consent
+
+Exclusion Criteria:
+
+* Any major acute medical condition requiring hospitalisation within the past 4 weeks.
+* Presence of an active opportunistic infection that defines Acquired Immunodeficiency Syndrome (AIDS).
+* Any medical condition deemed by the investigator to hinder compliance with the study treatment.
+* The following laboratory values at the screening phase (available before baseline (T0)): hepatic transaminases (AST or ALT) ≥3 times the upper limit of normal (ULN), serum total bilirubin ≥3 times the ULN, estimated glomerular filtration rate (eGFR) ≤60 mL/min based on CKD-EPI, haemoglobin \<6.5 mmol/L (males) or \<6.0 mmol/L (females), leucocytes \<2.5 x10\^9/L, absolute neutrophil count \<1000 cells/mm\^3, thrombocytes \<100 x10\^9/L
+* Active malignancy during the past year except for basal carcinoma of the skin, stage 0 cervical carcinoma, Kaposi Sarcoma treated with ART alone, or other indolent malignancies.
+* Participants who are unwilling or unable to use barrier contraception during sexual intercourse during the study.
+* History of suicide or suicidal ideation.
+* History of ophthalmological medical problems leading to glaucoma or visual field disturbances (e.g. macula oedema). Refraction abnormalities that can be corrected by lenses are acceptable.
+* History of any medical condition with a causal relationship with hyperammonemia.
+* Participants using phenytoin, carbamazepine, digoxin, lithium, or valproic acid throughout the trial period.
+* Any concurrent medicine use associated with hyperammonemia (e.g. valproic acid).
+* Participants with active substance abuse.
+* Participants who have registered allergies to the investigational medical product.",1,Netherlands,"Even with current HIV treatments, HIV is still a lifelong disease because it hides in some long-lasting cells in the body. One of the strategies to find a cure for HIV works by finding the virus in these cells, making it visible, and then getting rid of it. This is called the 'shock and kill' approach.
+
+So far, the drugs tested can find the virus, but they don't get rid of it completely. That's why there need to be new drugs that can do this more effectively. The Erasmus MC HIV Eradication Group (EHEG) has been testing new drugs in the lab and found a drug called topiramate can wake up the virus without harming the cells. The aim of this study is to test topiramate in people living with HIV.
+
+Most of the people that participate in HIV cure studies are men, even though most people living with HIV around the world are women. Previous research has shown that men and women might respond differently to these treatments. So, in this study, topiramate will be investigated in both men and women. This could help us find a cure that works for everyone.",Effect of topiramate as measured by cell-associated HIV RNA|Number of treatment-related adverse events as assessed by CTCAE v4.0,infectious disease
+NCT01204203,Pilot Study of Bisphosphonate Therapy (Zoledronic Acid) in Patients With Malignant Mesothelioma (UAB 0901),A Pilot Phase 2 Study of Bisphosphonate Therapy (Zoledronic Acid) in Patients With Advanced Malignant Mesothelioma,COMPLETED,INTERVENTIONAL,PHASE2,8.0,ACTUAL,University of Alabama at Birmingham,OTHER,1,Mesothelioma,DRUG,Zometa,NA,SINGLE_GROUP,NONE,TREATMENT,ALL,19 Years,,False,"Inclusion Criteria:
+
+* Males and females \> 18 years of age
+* Life expectancy of at least 2 months
+* Histologically confirmed unresectable malignant pleural mesothelioma (MPM)
+* Measurable disease by CT Scan criteria and/or positive metabolic activity of 18F-FDG PET Scan criteria at screening
+* ECOG Performance Status of 0-2
+* Laboratory and clinical results within 2 weeks prior to Day 1 must be as follows:
+
+  1. ANC ≥ 1.5 x 109/L
+  2. Platelet Count ≥ 100 x 109/L
+  3. Hemoglobin ≥ 9g/dL
+  4. Serum bilirubin ≤ 1.5 x upper limit of normal (ULN)
+  5. AST ≤ 2.5 x ULN
+  6. ALT ≤ 2.5 x ULN
+  7. ALK-P ≤ 3 x ULN
+  8. Serum creatinine ≤ 1.8mg/dL
+  9. Calculated Serum Creatinine Clearance 40 - \> 60ml/min
+* Female subjects of childbearing potential and all male subjects must be surgically sterile or consent to use a medically acceptable method of contraception throughout the trial.
+* Willing and able to provide written informed consent.
+
+Exclusion Criteria:
+
+* Known central nervous system (CNS) tumor involvement
+* Evidence of other active malignancy requiring treatment
+* Clinically significant heart disease (e.g., congestive heart failure of New York Heart Association Class 3 or 4 angina not well controlled by medication, or myocardial infarction within 6 months)
+* Known infection with HIV or hepatitis
+* Clinically significant arrhythmias demonstrated on electrocardiogram (ECG). Note: subjects with chronic atrial arrhythmia, i.e., atrial fibrillation or paroxysmal supraventricular tachycardia (SVT) are eligible.
+* Active, serious systemic disease, including active bacterial or fungal infection.
+* Subjects undergoing invasive dental procedures, significant periodontal disease or history of osteonecrosis of the jaw.
+* Treatment within 4 weeks of the start of the trial with other systemic anticancer therapy.
+* Breastfeeding, pregnant, or likely to become pregnant during the clinical trial.",1,United States,The primary objective of this trial is to determine the response rate of single agent zoledronic acid using a composite of criteria including the EORTC modified RECIST criteria and the EORTC tumor response criteria for 18F-FDG PET scans.,Tumor Response Rate Following Zoledronic Acid (Zometa),cancer
+NCT00835679,Cetuximab and/or Dasatinib in Patients With Colorectal Cancer and Liver Metastases That Can Be Removed by Surgery,"A Preoperative Biological Trial of Cetuximab, Dasatinib or the Combination in Colorectal Cancer Patients With Resectable Liver Metastases",TERMINATED,INTERVENTIONAL,EARLY_PHASE1,9.0,ACTUAL,National Cancer Institute (NCI),NIH,0,Liver Metastases|Mucinous Adenocarcinoma of the Colon|Mucinous Adenocarcinoma of the Rectum|Recurrent Colon Cancer|Recurrent Rectal Cancer|Signet Ring Adenocarcinoma of the Colon|Signet Ring Adenocarcinoma of the Rectum|Stage IV Colon Cancer|Stage IV Rectal Cancer,BIOLOGICAL|DRUG|OTHER|PROCEDURE,cetuximab|dasatinib|therapeutic conventional surgery|laboratory biomarker analysis,RANDOMIZED,PARALLEL,NONE,BASIC_SCIENCE,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Patients must have histologically confirmed adenocarcinoma arising from the large intestine that has metastasized to the liver; liver metastases may be synchronous or metachronous
+* The liver metastases must be considered surgically resectable prior to the initiation of study drugs
+* Prior chemotherapy or chemoradiotherapy for colorectal cancer is allowed provided that toxicities from prior therapy have resolved to Grade 1 or less; no prior anti-EGFR or anti-Src therapy is allowed
+* Eastern Cooperative Oncology Group (ECOG) performance status =\< 1 (Karnofsky \>= 70%)
+* Absolute neutrophil count \>= 1.5 x 10\^9/L
+* Hemoglobin ≥ 9.0 Gm/dL
+* Platelets \>= 100 x 10\^9/L
+* Total bilirubin ≤ 1.5 x institutional upper limit of normal (IULN)
+* Aspartate aminotransferase (AST)(serum glutamic oxaloacetic transaminase \[SGOT\])/alanine transaminase (ALT)(serum glutamic pyruvic transaminase \[SGPT\]) =\< 5 x institutional upper limit of normal
+* Creatinine =\< 1.5 institutional ULN
+* Women must have a negative pregnancy test; women of child-bearing potential and men must agree to use adequate contraception (hormonal or barrier method of birth control; abstinence) prior to study entry and for the duration of study participation; should a woman become pregnant or suspect she is pregnant while participating in this study, she should inform her treating physician immediately
+* Ability to understand and the willingness to sign a written informed consent document
+* Although KRAS status will be evaluated in the tumor, wild type KRAS status is not an eligibility criterion
+
+Exclusion Criteria:
+
+* Patients who have had chemotherapy or radiotherapy within 4 weeks (6 weeks for nitrosoureas or mitomycin C) prior to entering the study or those who have not recovered from adverse events due to agents administered more than 4 weeks earlier
+* Patients receiving any other investigational agents
+* History of allergic reactions attributed to compounds of similar chemical or biologic composition to cetuximab or dasatinib
+* Uncontrolled intercurrent illness including, but not limited to ongoing or active infection, symptomatic congestive heart failure, unstable angina pectoris, cardiac arrhythmia, or psychiatric illness/social situations that would limit compliance with study requirements
+* Pregnant women are excluded from this study because of the potential for teratogenic or abortifacient effects; because there is an unknown but potential risk for adverse events in nursing infants secondary to treatment of the mother with cetuximab or dasatinib, breastfeeding should be discontinued if the mother is treated with cetuximab or dasatinib
+* Patients with immune deficiency are at increased risk of lethal infections when treated with marrow-suppressive therapy; therefore, HIV-positive patients receiving combination anti-retroviral therapy are excluded from the study because of possible pharmacokinetic interactions with cetuximab or dasatinib; appropriate studies will be undertaken in patients receiving combination anti-retroviral therapy when indicated
+* Patients on potent CYP3A4 inducers and inhibitors",2,United States,"This phase 0 trial is studying whether 2 weeks of cetuximab and dasatinib will change tumor cells in patients with colorectal cancer and liver metastases that can be removed by surgery. Monoclonal antibodies, such as cetuximab, can block tumor growth in different ways. Some block the ability of tumor cells to grow and spread. Others find tumor cells and help kill them or carry tumor-killing substances to them. Dasatinib may stop the growth of tumor cells by blocking some of the enzymes needed for cell growth.",Patients With a Biologic Response,liver disease
+NCT04611776,"A Study Evaluating the Efficacy and Safety of Adjuvant Platinum-Doublet Chemotherapy, With or Without Atezolizumab, in Patients Who Are ctDNA Positive After Complete Surgical Resection of Stage IB to Select IIIB Non-Small Cell Lung Cancer","A Phase II, Randomized, Double-Blind, Placebo-Controlled Study Evaluating the Efficacy and Safety of Adjuvant Platinum-Doublet Chemotherapy, With or Without Atezolizumab, in Patients Who Are ctDNA Positive After Complete Surgical Resection of Stage IB to Select IIIB Non-Small Cell Lung Cancer",WITHDRAWN,INTERVENTIONAL,PHASE2,0.0,ACTUAL,Hoffmann-La Roche,INDUSTRY,0,"Carcinoma, Non-Small Cell Lung",DRUG,Atezolizumab|Placebo|Carboplatin|Cisplatin|Pemetrexed|Gemcitabine|Paclitaxel,RANDOMIZED,PARALLEL,DOUBLE,TREATMENT,ALL,18 Years,,False,"Inclusion Criteria:
+
+* Complete resection (R0) and pathologically confirmed Stage IB to select IIIB NSCLC (8th edition)
+* Submission of pre-surgery blood sample and surgically resected tumor tissue slides or block
+* Eastern Cooperative Oncology Group (ECOG) Performance Status of 0 or 1
+* Normal life expectancy excluding lung cancer mortality risk
+* Positive ctDNA status in plasma confirmed by central laboratory testing after surgical resection and prior to start of adjuvant therapy.
+
+Exclusion Criteria:
+
+* Resected NSCLC with positive margins (R1 or R2)
+* NSCLC with histology of large cell neuroendocrine carcinoma or sarcomatoid carcinoma
+* Mixed NSCLC and SCLC histology
+* Any prior therapy for lung cancer, including neoadjuvant therapy, or radiotherapy
+* NSCLC with an activating EGFR mutation or ALK fusion oncogene
+* Prior treatment with CD137 agonists or immune checkpoint blockade therapies, including anti-CTLA-4, anti-PD-1, and anti-PD-L1 therapeutic antibodies",0,,"This is a Phase II, multicenter, double-blind, randomized study designed to evaluate the efficacy and safety of adjuvant treatment with atezolizumab in combination with platinum-doublet chemotherapy followed by atezolizumab compared with adjuvant placebo in combination with platinum-doublet chemotherapy followed by placebo in patients with Stage IB to IIIB (T3N2) NSCLC following surgical resection who are positive for ctDNA.",ctDNA Clearance Rate at 6 Months|Disease-Free Survival (DFS),cancer
+NCT00662649,Long-term Efficacy and Safety of Fingolimod (FTY720) in Patients With Relapsing-remitting Multiple Sclerosis,"An Extension of the 24-month, Double-blind, Randomized, Multicenter, Placebo-controlled, Parallel-group Study Comparing Efficacy and Safety of Fingolimod (FTY720) 1.25 mg and 0.5 mg Administered Orally Once Daily Versus Placebo in Patients With Relapsing-remitting Multiple Sclerosis",COMPLETED,INTERVENTIONAL,PHASE3,920.0,ACTUAL,Novartis,INDUSTRY,0,Multiple Sclerosis,DRUG,Fingolimod 0.5 mg|Fingolimod 1.25 mg,RANDOMIZED,PARALLEL,TRIPLE,TREATMENT,ALL,20 Years,58 Years,False,"Inclusion Criteria:
+
+* Patients should complete the 24 month core study
+
+Exclusion Criteria:
+
+* Patients with other chronic disease of the immune system, malignancies, acute pulmonary disease, cardiac failure, etc.
+* Pregnant or nursing women
+
+Other protocol-defined inclusion/exclusion criteria may apply.",103,Australia|Belgium|Canada|Czechia|Estonia|Finland|France|Germany|Greece|Hungary|Ireland|Israel|Netherlands|Poland|Romania|Russia|Slovakia|South Africa|Sweden|Switzerland|Turkey (Türkiye)|United Kingdom,"This extension study of was designed to evaluate the long-term safety, tolerability, and efficacy of fingolimod (FTY720) in patients with multiple sclerosis. The Extension study was an extension to the 24-month Core study (CFTY720D2301/NCT00289978).",Annualized Aggregate Relapse Rate (ARR) During Months 0 to End of Study(Core [CFTY720D2301/NCT00289978] and Extension Study)|Time to First Confirmed Relapse up to End of Study: Kaplan-Meier Estimate of Percentage of Patients Relapse-free|Annualized Aggregate Relapse Rate (ARR) During Months 0-24 (Core Study) and Months 24-48 (Extension Study)|Change (Expressed as Ratio) in the Annualized Aggregate Relapse Rate (ARR) From Months 0-24 (Core Study) to Months 24-48 (Extension Study),infectious disease
+NCT07497854,A Study to Learn About the Study Medicine NURTEC® ODT 75 mg After it is Released Into the Markets in Korea,A Post-marketing Surveillance (PMS) Study to Evaluate the Safety and Effectiveness of NURTEC® ODT 75 mg (Rimegepant Sulfate) in Adult Migraine Patients in Korea.,NOT_YET_RECRUITING,OBSERVATIONAL,,3000.0,ESTIMATED,Pfizer,INDUSTRY,0,Migraine With or Without Aura,DRUG,Rimegepant sulfate,,,,,ALL,19 Years,,False,"Patients must meet all of the following inclusion criteria to be eligible for inclusion in the study:
+
+1. Subjects aged 19 years or older
+2. Subjects who administered NURTEC® ODT 75 mg (Rimegepant sulfate) according to the approved label
+3. Evidence of a personally signed and dated informed consent document indicating that the patient (or a legally acceptable representative) has been informed of all pertinent aspects of the study.",0,,The purpose of this study is to evaluate safety and effectiveness of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine during the PMS period as required by the Korean ministry of food and drug safety (MFDS).,To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.|To evaluate the safety of NURTEC® ODT 75 mg (Rimegepant sulfate) in adult patients with acute treatment of migraine with or without aura and with preventive treatment of episodic migraine.,migraine
+NCT02092597,Safety Evaluation of Adverse Reactions in Diabetes,,COMPLETED,INTERVENTIONAL,PHASE4,42.0,ACTUAL,"Charles University, Czech Republic",OTHER,0,Type 2 Diabetes Mellitus,DRUG,Exenatide|Linagliptin|Gliclazide,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,35 Years,70 Years,False,"Inclusion Criteria:
+
+* Type 2 diabetes mellitus
+* Metformin monotherapy - stable dose during last 3 months
+* HbA1C 48-75 mmol/mol (IFCC)
+* BMI 25-40 kg/m2
+* Age 35-70 years (women postmenopausal)
+* Use of ACE inhibitors or ATII receptor blockers for at least 3 months before enrollment
+
+Exclusion Criteria:
+
+* eGFR\<30 ml/min/1.73m2 (MDRD)
+* Treatment with incretin mimetics during 3 months before enrollment
+* Chronic insulin therapy
+* Chronic use of loop diuretics, glucocorticoids, NSAID, immune suppressants, antimicrobial agents, chemotherapeutics, bile acid sequestrants (colestyramin, colesevelam)
+* History of pancreatic disease or impaired pancreatic function (defined as the need to use pancreatic enzymes)
+* Active liver disease or a 3-fold elevation of liver transaminases (ALT, AST)
+* Active malignancy
+* History of severe cardiovascular disease including acute coronary syndrome, stroke or transient ischemic neurologic disorder during previous 6 months, atrial fibrillation or other arrhythmia requiring chronic antiarrhythmic medication, chronic heart failure (New York Heart Association grade III/IV)
+* History of alcohol abuse, defined as \>4 units of alcohol/day (32 g or 40 ml of 100% alcohol)
+* History of allergy for GLP-1 receptor agonists or DPP-4 inhibitors
+* Any disease that could interfere with study procedures (e.g. decreased mobility, mental incapacity)
+* Inability to give informed consent",1,Czechia,"The purpose of this study is to assess the effects of incretin-based antidiabetic therapies (DPP-4 inhibitors and GLP-1 agonists) on cardiovascular, gastrointestinal and renal system and to detail the mechanisms underlying their action in these systems.",Heart rate|Gastric evacuation velocity|Blood pressure|Left ventricular ejection fraction|Intimomedial thickness|Pulse wave velocity|Glomerular filtration rate|Tubular function|KIM-1|Exocrine pancreas function,diabetes
+NCT00605059,Evaluation of [123I] AV94 and SPECT in Subjects With Alzheimer Disease in Comparison to Healthy Subjects,Evaluation of [123I] AV94 and SPECT as a Marker of Beta-amyloid Protein Deposition in Subjects With Alzheimer Disease in Comparison to Healthy Subjects,TERMINATED,INTERVENTIONAL,PHASE1,3.0,ACTUAL,Institute for Neurodegenerative Disorders,OTHER,0,Alzheimer Disease,DRUG,[123I]AV94,NON_RANDOMIZED,SINGLE_GROUP,NONE,DIAGNOSTIC,ALL,50 Years,,True,"INCLUSION CRITERIA: ALZHEIMER DISEASE
+
+* The participant is 50 years or older.
+* Written informed consent is obtained.
+* Participants have a clinical diagnosis of Alzheimer's disease based on National Institute of Neurological and Communicative Disorders and Stroke/Alzheimer's Disease and Related Disorders Association (NINCDS/ADRDA) criteria.
+* Mini-Mental Status Exam score \< 25.
+* Modified Hachinski Ischemia Scale score of ≤ 4.
+* Geriatric Depression Scales (GDS) ≤ 10.
+* For females, non-child bearing potential or negative urine or blood pregnancy test on day of 123-I AV94 injection.
+
+EXCLUSION CRITERIA: ALZHEIMER DISEASE
+
+* The subject has signs or symptoms of another neurodegenerative disease including Parkinson's disease, diffuse Lewy body dementia, or history of significant cerebrovascular disease.
+* The subject has a clinically significant abnormal laboratory value and/or clinically significant unstable medical or psychiatric illness
+* The subject has any disorder that may interfere with drug absorption distribution, metabolism, or excretion (including gastrointestinal surgery).
+* The subject has evidence of clinically significant gastrointestinal, cardiovascular, hepatic, renal, hematological, neoplastic, endocrine, neurological, immunodeficiency, pulmonary, or other disorder or disease.
+* Pregnancy
+
+Concomitant therapy Patients may remain on a stable dose of anticholinesterase medication during the study. Use of donepezil (Aricept®), rivastigmine (Exelon®), galantamine (Razadyne®), tacrine (Cognex®), and memantine (Namenda®) are permitted during the study. Doses of these compounds must be stable for 2 months prior to the study. At each visit after the screening visit, the investigator will ask the patient whether any medications including OTC medications, were taken since the previous visit.
+
+Use of antipsychotics for agitation and benzodiazepines for insomnia or anxiety is permitted. However, the use of these agents is not permitted within the 8 hours prior to administration of cognitive testing.
+
+INCLUSION CRITERIA: HEALTHY VOLUNTEERS
+
+* The participant is 50 years or older.
+* Written informed consent is obtained.
+* Negative history of neurological or psychiatric illness based on evaluation by a research physician.
+* Mini-Mental Status Exam score ≥28.
+* For females, non-child bearing potential or negative urine or blood pregnancy test on day of 123-I AV94 injection.
+
+EXCLUSION CRITERIA: HEALTHY VOLUNTEERS
+
+* The subject has a clinically significant abnormal laboratory value and/or clinically significant unstable medical or psychiatric illness.
+* The subject has any disorder that may interfere with drug absorption distribution, metabolism, or excretion (including gastrointestinal surgery).
+* The subject has evidence of clinically significant gastrointestinal, cardiovascular, hepatic, renal, hematological, neoplastic, endocrine, neurological, immunodeficiency, pulmonary, or other disorder or disease.
+* Pregnancy",2,United States,"The main objectives of this proposal are as follows:
+
+To assess the dynamic uptake and washout of 123-I AV94, a potential imaging biomarker for β-amyloid burden in brain, using single photon emission computed tomography (SPECT) in similarly aged healthy controls and Alzheimer's (AD) subjects
+
+To perform blood metabolite characterization of 123-I AV94 in healthy and AD subjects to determine the metabolic fate and nature of metabolites in assessment of 123-I AV94 as a single photon computed tomography (SPECT) brain imaging agent
+
+Evaluate the test/retest reproducibility of 123-I AV94 and SPECT in AD subjects and healthy controls","To assess the dynamic uptake and washout of 123-I AV94, a potential imaging biomarker for β-amyloid burden in brain, using single photon emission computed tomography (SPECT) in similarly aged healthy controls and Alzheimer's (AD) subjects",alzheimer
+NCT01195805,The Effects of Amiloride and Spironolactone on Renophysiological and Cardiovascular Variables,"The Effect of Amiloride and Spironolactone on Renovascular and Cardiovascular Variables in Patients With Essential Hypertension in a Doubleblinded, Randomized, Placebo-controlled, Crossover Study.",COMPLETED,INTERVENTIONAL,NA,25.0,ESTIMATED,Regional Hospital Holstebro,OTHER,0,Essential Hypertension,DRUG|OTHER,Spironolactone|Placebo|Amiloride,RANDOMIZED,CROSSOVER,TRIPLE,TREATMENT,ALL,40 Years,70 Years,False,"Inclusion Criteria:
+
+* hypertension,
+* BMI 18,5-30,
+* non-smoker
+
+Exclusion Criteria:
+
+* Smoking
+* Not using contraceptives
+* Other illnesses
+* Drug or alcohol abuse",1,Denmark,"The investigators wish to study the effect of retaining potassium. The participants have essential hypertension. The test substances are Amiloride, Spironolactone and placebo. The participants will ingest tablets for 28 days before being examined. We will perform a 24 hours urine collection, 24-hours bloodpressure measurement, blood and urine samples and we also examine the patient using a SphygmoCor.",Bloodpressure,hypertension
+NCT07280572,RECLAIM Adaptive Platform Trial for PCC Treatments,RECLAIM: an Adaptive Platform Trial for the Evaluation of Treatments for Post-Acute Sequelae of SARS-CoV-2 Infection (PASC),ENROLLING_BY_INVITATION,INTERVENTIONAL,PHASE3,1250.0,ESTIMATED,Janneke van de Wijgert,OTHER,1,Post COVID Condition,DRUG,Metformin|colchicine,RANDOMIZED,PARALLEL,NONE,TREATMENT,ALL,18 Years,,False,"Inclusion criteria
+
+1. Adults aged 18 years or older.
+2. Residing in the Netherlands (but excluding the Carribbean parts of the Netherlands) for the duration of trial participation.
+3. Persistent PCC symptoms, including fatigue and/or PEM, for a period of at least 12 weeks after the onset of a SARS-CoV-2 infection. The symptoms were not present prior to the infection, but may have partially subsided and resurged after the infection.
+4. Self-reported confirmation of having had a SARS-CoV-2 infection by:
+
+   1. Positive SARS-CoV-2 nucleic acid amplification test, such as PCR;
+   2. Positive SARS-CoV-2 rapid diagnostic test, including home-administered tests;
+   3. COVID-19 diagnosis by a medical specialist (GP or in-hospital), based on the above or other clinical tests and assessments.
+
+   The above information will not be verified in medical records.
+5. Willing and able to provide informed consent.
+6. Willing and able to perform trial procedures.
+7. Allowing their GP/treating physicians/pharmacy and the RECLAIM trial team to exchange medical information that is relevant for the participant's safety and trial assessments.
+
+Exclusion criteria:
+
+1. Having been diagnosed with (exacerbation of) a chronic disease that can account for the onset of the PCC-like symptoms.
+2. Being hospitalized or institutionalized at screening. Patients can be rescreened after discharge.
+3. Presence of a serious medical condition that would prevent completion of follow-up.
+4. Currently enrolled, or having been enrolled within the last 30 days, in any other study where that study's interventions or procedures may affect RECLAIM outcomes or procedures. Individuals can be rescreened after at least 30 days have passed since participation in such a study has been completed.
+
+   The following exclusion criteria will apply to all potential participants WITHIN ONE TRIAL DOMAIN (these patients may still qualify for another trial domain):
+5. The participant cannot be randomized to at least one IP arm and its control arm within a trial domain due to:
+
+   1. Known hypersensitivity to an active IP ingredient or IP/placebo excipient;
+   2. Receiving a treatment that is contraindicated to a trial IP;
+   3. Already using a trial IP, or a drug in the same drug class as a trial IP, outside of the trial;
+   4. Any other reason why a trial IP cannot be used, such as (risk of) pregnancy or breastfeeding or renal insufficiency.
+
+During screening, these criteria will be assessed by licensed trial physicians. They will question the patient and verify prescription drug and contraceptive use, and other medical exclusion criteria, in each individual patient's medical and/or pharmacy records. The absence of pregnancy in women of childbearing potential has to be confirmed by a negative urine or serum pregnancy test.
+
+Additional IP-specific in- and exclusion criteria, if any, are listed in relevant treatment-specific appendices to the core protocol. These also describe the latest information about drug interactions and contraindications as per the IP's SmPC/PIL.",1,Netherlands,"RECLAIM is a Phase III, multi-domain, randomized, controlled, adaptive platform trial, designed to evaluate efficacy and safety of repurposed medications in patients with post-COVID condition (PCC). The trial started in the Netherlands in February 2025, comparing metformin, colchicine and usual care in an open-label domain. The information in this registration concerns that first domain in the Netherlands. A second domain, comparing minocyclin to a matching placebo, is expected to start in January 2026, also in the Netherlands. Trial-arms, additional domains and implementing countries may be introduced or terminated as the trial progresses. Participation is fully remote, using electronic consenting, video consultations and home delivery of medication. Default IP use is 12 weeks with biweekly online follow-up questionnaires between Day-1 and Week-12, and one final follow-up questionnaire at week-24.",Physical health-related quality of life (HRQoL),covid
+NCT01665677,Atorvastatin as GVHD Prophylaxis for Allogeneic Hematopoietic Cell Transplantation,"Phase II Study of Atorvastatin, Micro-dose Methotrexate and Tacrolimus Administered Only to Transplant Recipients for the Prophylaxis of Acute Graft-versus-host Disease Following Allogeneic Hematopoietic Cell Transplantation",COMPLETED,INTERVENTIONAL,PHASE2,69.0,ACTUAL,Mehdi Hamadani,OTHER,1,Graft vs Host Disease,DRUG,Atorvastatin calcium,NON_RANDOMIZED,SINGLE_GROUP,NONE,PREVENTION,ALL,18 Years,75 Years,False,"Inclusion Criteria:
+
+* Patients with a history of a hematological malignancy or bone marrow failure syndrome suitable for allogeneic stem cell transplantation in the opinion of treating transplant physician.
+* Patients aged 18-75 years of age are eligible. Patients with age \> 18 and ≤ 50 years will be eligible for myeloablative conditioning (MAC), while patients \> 50 years of age, or those with previous history of autologous transplantation, high hematopoietic cell transplant comorbidity index (HCT-CI) score (\>2), and baseline diagnosis of hodgkin's lymphoma, chronic lymphocytic leukemia and follicular lymphoma will be suitable for reduced intensity conditioning (RIC) transplantation (however intensity of conditioning regimen will remain at the discretion of treating physician).
+* All patients must have at least one suitable human leukocyte antigen (HLA)-matched sibling or unrelated donor according to transplant center's guidelines (for selection of appropriate sibling donor).
+* Patient must provide informed consent.
+* Left ventricular ejection fraction ≥ 40%.
+* Bilirubin ≤ 2 x the upper limit of normal (ULN) and aspartate aminotransferase (AST), and alanine aminotransferase (ALT) ≤ 3 x ULN; and absence of hepatic cirrhosis. For patients with Gilbert's syndrome, bilirubin ≤ 3 x ULN is permitted.
+* Adequate renal function as defined by a serum creatinine clearance of ≥ 40% of normal calculated by Cockcroft-Gault equation.
+* Carbon monoxide diffusing capacity (DLCOcor) corrected for hemoglobin or forced expiratory volume at one second (FEV1) or DL/VA ≥ 40% of predicted (a pulmonary function test).
+* Karnofsky performance status \> 70.
+* A negative pregnancy test will be required for all women of child bearing potential. Breast feeding is not permitted.
+* Patients with positive HIV serology are eligible.
+* Patients who have previously been taking atorvastatin or any other statin drug will be eligible as long as there is no contraindication to switch to atorvastatin (40mg/day) in the opinion of the treating physician.
+* Method of stem-cell collection from the sibling donor will be at the discretion of the treating physician. Although it is anticipated that majority of sibling donors will undergo Granulocyte colony-stimulating factor(G-CSF) induced stem cell mobilization; however donors undergoing bone marrow harvest or stem cell mobilization with experimental agents (e.g. plerixafor) will remain eligible for the study.
+
+Exclusion Criteria:
+
+* Uncontrolled arrhythmias or uncontrolled New York Heart Association class III-IV heart failure.
+* Evidence of active bacterial, viral or fungal infection at the time of transplant conditioning.
+* History of intolerance or allergic reactions with atorvastatin will not be eligible.
+* Undergoing a T-cell depleted allogeneic transplantation
+* Receiving conditioning regimens containing anti-thymocyte globulin, and/or campath",2,United States,"Hematopoietic stem cell transplantation is a procedure in which a person receives blood forming stem cells from a person called a ""donor."" The stem cells can be obtained from the hollow part of the hip bone or from blood.
+
+A serious problem with this treatment is graft-versus-host disease (GVHD). This happens when stem cells from the donor attack normal cells of the recipient. Currently, there is no universal standard of care in the United States to prevent GVHD.
+
+This study is being done to see if a medicine that is used to lower cholesterol can also help in reducing GVHD.
+
+Patients will receive atorvastatin daily by mouth starting 14 days before stem cell transplant. They will continue to take atorvastatin until 180 days after transplant. This medicine may be stopped earlier if there is a bad side effect or a severe GVHD. Patients will also receive standard treatment to prevent GVHD. Patients will undergo many tests that are standard for their treatment at West Virginia University (WVU), including blood tests to check blood counts, kidney function and HIV status; blood test to check for pregnancy; Multi Gated Acquisition Scan (MUGA scan)or echocardiogram to test heart function; lung function testing; and bone marrow aspirate or biopsy. Patients will also have the option to provide blood samples for optional research related to the study.",Matched Related Transplants Who Develop Grade II-IV Acute Graft Versus Host Disease (GVHD).|Matched Unrelated Donors Transplants Who Develop Grade II-IV Acute GVHD.,multiple sclerosis
+NCT03093324,A Tolerability Study of ALKS 8700 in Subjects With Relapsing Remitting Multiple Sclerosis (RRMS) EVOLVE-MS-2,A Phase 3 Study in Subjects With Relapsing Remitting Multiple Sclerosis to Evaluate the Tolerability of ALKS 8700 and Dimethyl Fumarate,COMPLETED,INTERVENTIONAL,PHASE3,506.0,ACTUAL,Biogen,INDUSTRY,1,Relapsing Remitting Multiple Sclerosis,DRUG,ALKS 8700|Dimethyl Fumarate,RANDOMIZED,PARALLEL,QUADRUPLE,TREATMENT,ALL,18 Years,65 Years,False,"Key Inclusion Criteria:
+
+* Capable of understanding and complying with the protocol
+* Has a confirmed diagnosis of RRMS
+* Neurologically stable with no evidence of relapse within 30 days prior to randomization
+* Agrees to use an acceptable method of contraception for the duration of the study and for 30 days after any study drug administration, or is surgically sterile or post-menopausal
+
+Key Exclusion Criteria:
+
+* Have any finding(s) that would compromise the safety of the subject, affect the subject's ability to adhere to the protocol visit schedule or to fulfill visit requirements, or would make the subject unsuitable for participation in the study
+* Diagnosis of primary progressive, secondary progressive, or progressive relapsing MS
+* History of clinically significant cardiovascular, pulmonary, GI, dermatologic, psychiatric, neurologic (other than MS), endocrine, renal, and/or other major disease that would preclude participation in a clinical trial
+* History of GI surgery (except appendectomy that occurred more than 6 months prior to screening
+* History of clinically significant recurring or active gastrointestinal symptoms (eg, nausea, diarrhea, dyspepsia, constipation) within 3 months of screening
+* Chronic use (7 days) of medical therapy to treat any GI symptoms within 1 month of screening Has a clinically significant medical condition or observed abnormality at screening
+* History of a myocardial infarction, including a silent myocardial infarction or unstable angina
+* History of clinically significant drug or alcohol abuse within the past year prior to screening
+* Clinically significant history of suicidal ideation or suicidal behavior in the last 12 months
+* Subject is pregnant or breastfeeding or plans to become pregnant or begin breastfeeding at any point during the study and for 30 days after any study drug administration
+* Prior use of Dimethyl Fumarate (DMF)
+
+NOTE: Other protocol defined Inclusion/Exclusion criteria may apply.",67,Germany|Poland|United States,"The objectives of this study are to evaluate the utility of two gastrointestinal (GI) symptom scales (Individual GI Symptom and Impact Scale {IGISIS} and Global GI Symptom and Impact Scale {GGISIS}) in assessing GI tolerability in adult subjects with RRMS after administration of ALKS 8700 or Dimethyl Fumarate (DMF) in Part A, to compare the GI tolerability of ALKS 8700 and DMF in adult subjects with RRMS using IGISIS and GGISIS in Part B, and to Evaluate the safety and tolerability of ALKS 8700 in adult subjects with RRMS in Parts A and B.",Number of Days With Any Individual Gastrointestinal Symptom and Impact Scale (IGISIS) Individual Symptom Intensity Score ≥2 Relative to Exposure Days in Parts A and B,multiple sclerosis
+NCT04744207,A Study to Investigate Safety of GS-248 and Efficacy on Raynauds' Phenomenon in Systemic Sclerosis,"A Phase II, Randomized, Multi-center, Placebo-controlled, Double-blind Study to Investigate the Safety of GS-248, and Efficacy on Raynaud's Phenomenon (RP) and Peripheral Vascular Blood Flow, in Subjects With Systemic Sclerosis (SSc)",COMPLETED,INTERVENTIONAL,PHASE2,94.0,ACTUAL,Gesynta Pharma AB,INDUSTRY,1,Systemic Sclerosis,DRUG,GS-248|Placebo,RANDOMIZED,PARALLEL,TRIPLE,TREATMENT,ALL,18 Years,75 Years,False,"Inclusion Criteria:
+
+* Subjects must provide signed and dated written informed consent before the conduct of any study-specific procedures.
+* Male and female subjects aged 18-75 years inclusive.
+* Systemic Sclerosis diagnosed according to European League Against Rheumatism (EULAR)/American College of Rheumatology (ACR) criteria (van den Hoogen F et al. 2013). Subjects with signs of other autoimmune diseases (e.g. Sjögren's syndrome, myositis, rheumatoid arthritis) could be included if SSc is the dominating phenotype.
+* Raynaud attacks typically ≥7 times per week during the last 4 weeks prior to screening despite background medication (only allowed vasodilatory therapy is calcium channel blockers or PDE-5 inhibitors).
+* Women of childbearing potential must be using a highly effective method of contraception to avoid pregnancy throughout the study and for 4 weeks after the last dose of Investigational Medicinal Product in such manner that the risk of pregnancy is minimised.
+* Women must not be pregnant or breastfeeding.
+* Male subjects to agree to use condom in combination with use of contraceptive methods with a failure rate of \<1% to prevent pregnancy and drug exposure of a partner, and refrain from donating sperm from the first date of dosing until 3 months after last dosing of the IMP.
+* Ability of subjects to participate fully in all aspects of this clinical trial.
+
+Exclusion Criteria:
+
+* Systemic Sclerosis disease duration of greater than 120 months from first non-Raynaud manifestation
+* Current smokers or stopped smoking \<3 months prior to Visit 1.
+* Dose-change or initiation of vasodilating substances (calcium blockers or PDE-5 inhibitors) within 4 weeks prior to Visit 1.
+* Use of iloprost or other intravenous (iv) or po prostacyclin receptor agonist within 4 weeks prior to Visit 1.
+* Ongoing treatment with immunosuppressive therapies (other than mycophenolate) including, but not restricted to; cyclophosphamide, azathioprine, methotrexate, or cyclosporine, or use of those medications within 4 weeks of trial entry.
+* Use of systemic corticosteroids during 4 weeks before screening and during the course of the study.
+* Concurrent serious medical condition, with special attention to cardiovascular conditions, which in the opinion of the Investigator makes the subject not suitable for this study.
+* Prolonged QTcF interval defined as a mean QTcF \>450 msec.
+* Creatinine clearance \<50 mL/min (determined by Cockcroft-Gault equation) at Screening.
+* Active digital ulcer (DU) within 4 weeks prior to Visit 1.
+* Clinically meaningful laboratory abnormalities at Screening (Visit 1), as determined and documented by the Investigator.",12,Belgium|Netherlands|Poland|United Kingdom,"The primary objective of this study is to determine the safety, and evaluate the efficacy of GS-248 versus placebo on Raynaud's Phenomenon (RP) in subjects with Systemic Sclerosis (SSc).",Mean Change From Baseline to Week 4 in the Number of Raynaud Attacks Per Week.,multiple sclerosis

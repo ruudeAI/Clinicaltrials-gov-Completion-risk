@@ -56,25 +56,31 @@ from sklearn.metrics import (
 )
 
 
-# ==============================================================================
-# CONSTANTS — must match train_model.py exactly!
-# ==============================================================================
+# Ensure project root is in sys.path
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
-PROCESSED_CSV_PATH = os.path.join("data", "processed", "cancer_trials_processed.csv")
-MODEL_PATH = os.path.join("models", "clinical_trial_completion_model.joblib")
+# Import settings and paths from config.py
+from src.config import (
+    DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH,
+    DRUG_MODEL_PATH as MODEL_PATH,
+    RANDOM_SEED,
+    TEST_SIZE
+)
+
 FIGURES_DIR = os.path.join("reports", "figures")
-
-RANDOM_SEED = 42
-TEST_SIZE = 0.2
 
 CATEGORICAL_FEATURES = [
     "study_type", "phases", "sponsor_class", "enrollment_type",
     "intervention_types", "allocation", "intervention_model",
     "masking", "primary_purpose", "sex", "healthy_volunteers",
+    "search_query_source",
 ]
 NUMERIC_FEATURES = ["enrollment_count", "collaborator_count", "location_count"]
 TEXT_FEATURE = "combined_text"
 TARGET = "target_completed"
+
 
 
 # ==============================================================================

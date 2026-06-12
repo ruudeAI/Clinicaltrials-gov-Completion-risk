@@ -64,12 +64,9 @@ if PROJECT_ROOT not in sys.path:
 from src.clinicaltrials_api import flatten_study
 
 
-# ==============================================================================
-# CONSTANTS
-# ==============================================================================
-
-MODEL_PATH = os.path.join("models", "clinical_trial_completion_model.joblib")
+from src.config import DRUG_MODEL_PATH as MODEL_PATH
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/studies"
+
 
 
 # ==============================================================================

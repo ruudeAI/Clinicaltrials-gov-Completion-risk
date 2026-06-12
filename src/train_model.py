@@ -80,19 +80,21 @@ from sklearn.metrics import (
 )
 
 
-# ==============================================================================
-# CONSTANTS
-# ==============================================================================
+# Ensure project root is in sys.path
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+# Import settings and paths from config.py
+from src.config import (
+    DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH,
+    DRUG_MODEL_PATH as MODEL_SAVE_PATH,
+    RANDOM_SEED,
+    TEST_SIZE
+)
 
 # File paths
-PROCESSED_CSV_PATH = os.path.join("data", "processed", "cancer_trials_processed.csv")
-MODEL_SAVE_PATH = os.path.join("models", "clinical_trial_completion_model.joblib")
 REPORT_SAVE_PATH = os.path.join("reports", "results_summary.md")
-
-# Reproducibility — using the same random seed means you get the same
-# train/test split and results every time you run this script.
-RANDOM_SEED = 42
-TEST_SIZE = 0.2  # 20% of data held out for testing
 
 # ------------------------------------------------------------------
 # FEATURE DEFINITIONS
@@ -113,7 +115,9 @@ CATEGORICAL_FEATURES = [
     "primary_purpose",      # TREATMENT, PREVENTION, DIAGNOSTIC, etc.
     "sex",                  # ALL, FEMALE, MALE
     "healthy_volunteers",   # True / False
+    "search_query_source",  # Condition area that fetched this trial (diabetes, cancer, heart disease, etc.)
 ]
+
 
 # NUMERIC FEATURES: Columns with actual numbers.
 # Missing values are filled with the median.

@@ -57,19 +57,17 @@ Our model handles missing values with imputation (median for numbers,
 
 ---
 
-## 4. Cancer Trials Only (MVP Scope)
+## 4. Drug-Related Trials Only (Across 20 Conditions)
 
-The current model is trained exclusively on **cancer-related clinical trials**.
-It may not generalize well to:
+The model is trained exclusively on **drug-related clinical trials** across 20 conditions (cancer, diabetes, heart disease, covid, etc.). It may not generalize well to:
 
-- Cardiovascular trials
-- Infectious disease trials
-- Rare disease trials
-- Mental health trials
-- Device trials (vs. drug trials)
+- Medical device clinical trials
+- Behavioral or lifestyle intervention studies
+- Surgical procedure trials
+- Diagnostic or screening trials that do not use drug interventions
 
-Each disease area has different trial dynamics, regulatory requirements, and
-failure patterns.
+Intervention dynamics, patient compliance, and trial termination reasons differ significantly between drug and non-drug studies.
+
 
 ---
 

@@ -123,10 +123,37 @@ CV_FOLDS = 5
 # ==============================================================================
 # 6. DATA COLLECTION SCOPE
 # ==============================================================================
-# We start with cancer trials (MVP scope). This can be expanded later.
+# We fetch drug-related trials across 20 broad medical areas.
+# search_query_source represents the query that retrieved the trial, not necessarily the official disease category.
+SEARCH_QUERIES = [
+    "cancer",
+    "diabetes",
+    "heart disease",
+    "hypertension",
+    "asthma",
+    "depression",
+    "alzheimer",
+    "arthritis",
+    "covid",
+    "infectious disease",
+    "autoimmune disease",
+    "kidney disease",
+    "liver disease",
+    "pain",
+    "epilepsy",
+    "obesity",
+    "migraine",
+    "multiple sclerosis",
+    "parkinson",
+    "hiv"
+]
 
-DEFAULT_CONDITION = "cancer"
+# Configurable number of trials to fetch per condition (MVP default: 200)
+TRIALS_PER_CONDITION = 200
 
-# How many trials to collect per status category.
-# Aim for ~2000 completed + ~1000 at-risk for a balanced-enough dataset.
-MAX_TRIALS_PER_STATUS = 2000
+# Centralized paths for drug-related trials
+DRUG_RAW_CSV_PATH = os.path.join(DATA_RAW_DIR, "drug_trials_raw.csv")
+DRUG_PROCESSED_CSV_PATH = os.path.join(DATA_PROCESSED_DIR, "drug_trials_processed.csv")
+DRUG_SAMPLE_CSV_PATH = os.path.join(DATA_SAMPLE_DIR, "drug_trials_sample.csv")
+DRUG_MODEL_PATH = os.path.join(MODELS_DIR, "drug_trial_completion_model.joblib")
+
