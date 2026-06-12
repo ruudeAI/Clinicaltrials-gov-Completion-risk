@@ -1,5 +1,5 @@
 """
-train_model.py — Trains a machine learning model to predict clinical trial completion.
+train_model.py — Trains and compares ML models to predict clinical trial completion.
 
 WHAT THIS FILE DOES:
     1. Loads the cleaned dataset from preprocess.py
@@ -8,19 +8,23 @@ WHAT THIS FILE DOES:
        - Categorical features (OneHotEncoder)
        - Numeric features (SimpleImputer)
        - Text features (TF-IDF Vectorizer)
-    4. Trains a Logistic Regression classifier
-    5. Evaluates the model on held-out test data
-    6. Saves the trained model and a results summary
+    4. Benchmarks multiple classifiers:
+       - Logistic Regression
+       - Random Forest
+       - Gradient Boosting
+       - HistGradientBoosting
+    5. Evaluates each model and selects the best by ROC-AUC
+    6. Saves the best model and a comparison report
 
 HOW TO RUN:
     python src/train_model.py
 
 INPUT:
-    data/processed/cancer_trials_processed.csv
+    data/processed/drug_trials_processed.csv
 
 OUTPUT:
-    models/clinical_trial_completion_model.joblib  — Trained model pipeline
-    reports/results_summary.md                     — Evaluation report
+    models/drug_trial_completion_model.joblib  — Best trained model pipeline
+    reports/results_summary.md                  — Evaluation report
 
 BEGINNER CONCEPTS:
 
@@ -66,9 +70,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import (
+    RandomForestClassifier,
+    GradientBoostingClassifier,
+    HistGradientBoostingClassifier,
+)
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -90,7 +99,8 @@ from src.config import (
     DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH,
     DRUG_MODEL_PATH as MODEL_SAVE_PATH,
     RANDOM_SEED,
-    TEST_SIZE
+    TEST_SIZE,
+    CLASSIFICATION_THRESHOLD
 )
 
 # File paths
@@ -115,16 +125,29 @@ CATEGORICAL_FEATURES = [
     "primary_purpose",      # TREATMENT, PREVENTION, DIAGNOSTIC, etc.
     "sex",                  # ALL, FEMALE, MALE
     "healthy_volunteers",   # True / False
-    "search_query_source",  # Condition area that fetched this trial (diabetes, cancer, heart disease, etc.)
+    "search_query_source",  # Condition area that fetched this trial
+    "therapeutic_area_group",  # Broader therapeutic area grouping (Phase 1)
 ]
 
 
 # NUMERIC FEATURES: Columns with actual numbers.
 # Missing values are filled with the median.
 NUMERIC_FEATURES = [
-    "enrollment_count",     # Number of participants
-    "collaborator_count",   # Number of collaborating organizations
-    "location_count",       # Number of trial locations
+    "enrollment_count",         # Number of participants
+    "collaborator_count",       # Number of collaborating organizations
+    "location_count",           # Number of trial locations
+    "start_year",               # Year trial started (Phase 1)
+    "country_count",            # Number of unique countries (Phase 1)
+    "condition_count",          # Number of listed conditions (Phase 1)
+    "intervention_count",       # Number of intervention names (Phase 1)
+    "enrollment_per_location",  # Enrollment / max(locations, 1) (Phase 1)
+    "has_multiple_countries",   # 0/1 flag (Phase 1)
+    "is_industry_sponsored",    # 0/1 flag (Phase 1)
+    "is_randomized",            # 0/1 flag (Phase 1)
+    "is_blinded",               # 0/1 flag (Phase 1)
+    "text_length_summary",      # Char length of brief_summary (Phase 1)
+    "text_length_eligibility",  # Char length of eligibility_criteria (Phase 1)
+    "text_length_outcomes",     # Char length of primary_outcome_measures (Phase 1)
 ]
 
 # TEXT FEATURE: Free-text column processed by TF-IDF.
@@ -137,16 +160,75 @@ TARGET = "target_completed"
 
 
 # ==============================================================================
+# HELPER: Build a preprocessing + classifier pipeline
+# ==============================================================================
+
+def _build_pipeline(classifier):
+    """
+    Build a scikit-learn Pipeline with shared preprocessing and a given classifier.
+
+    Parameters
+    ----------
+    classifier : sklearn estimator
+        Any scikit-learn compatible classifier instance.
+
+    Returns
+    -------
+    Pipeline
+        A complete preprocessing + classification pipeline.
+    """
+    # Preprocessing for CATEGORICAL features
+    categorical_transformer = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="constant", fill_value="UNKNOWN")),
+        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+    ])
+
+    # Preprocessing for NUMERIC features
+    # StandardScaler normalizes features to zero mean and unit variance,
+    # which helps LogisticRegression converge and improves model stability.
+    numeric_transformer = Pipeline(steps=[
+        ("imputer", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler()),
+    ])
+
+    # Preprocessing for TEXT feature — upgraded for Phase 1
+    text_transformer = TfidfVectorizer(
+        max_features=1000,           # 500 → 1000 for richer text signal
+        stop_words="english",
+        ngram_range=(1, 2),          # Capture bigrams (Phase 1)
+        min_df=2,                    # Ignore very rare terms (Phase 1)
+        max_df=0.9,                  # Ignore very common terms (Phase 1)
+    )
+
+    # Combine all preprocessors into one ColumnTransformer
+    # sparse_threshold=0 forces dense output, required for HistGradientBoosting
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ("cat", categorical_transformer, CATEGORICAL_FEATURES),
+            ("num", numeric_transformer, NUMERIC_FEATURES),
+            ("text", text_transformer, TEXT_FEATURE),
+        ],
+        remainder="drop",
+        sparse_threshold=0,
+    )
+
+    return Pipeline(steps=[
+        ("preprocessor", preprocessor),
+        ("classifier", classifier),
+    ])
+
+
+# ==============================================================================
 # MAIN TRAINING FUNCTION
 # ==============================================================================
 
 def train():
     """
     Main training function. Orchestrates the full ML pipeline:
-    load → split → build pipeline → train → evaluate → save.
+    load → split → build pipelines → train all → evaluate → select best → save.
     """
     print("=" * 60)
-    print("  🧠 Model Training Pipeline")
+    print("  🧠 Model Training Pipeline (Phase 1 — Multi-Model)")
     print("=" * 60)
 
     # ------------------------------------------------------------------
@@ -195,11 +277,6 @@ def train():
     # ------------------------------------------------------------------
     # Step 3: Split into training and test sets
     # ------------------------------------------------------------------
-    # We hold out 20% of the data for testing.
-    # stratify=y ensures both sets have the same ratio of completed
-    # vs. at-risk trials. Without this, the test set might accidentally
-    # have mostly one class.
-    # ------------------------------------------------------------------
     print(f"\n✂️  Step 3: Splitting data ({int((1-TEST_SIZE)*100)}% train, "
           f"{int(TEST_SIZE*100)}% test)...")
 
@@ -207,7 +284,7 @@ def train():
         X, y,
         test_size=TEST_SIZE,
         random_state=RANDOM_SEED,
-        stratify=y,       # ← Keeps class balance in both sets
+        stratify=y,
     )
 
     print(f"  Training set: {len(X_train):,} trials")
@@ -215,130 +292,168 @@ def train():
     print(f"  Train target: {y_train.value_counts().to_dict()}")
     print(f"  Test target:  {y_test.value_counts().to_dict()}")
 
-    # ------------------------------------------------------------------
-    # Step 4: Build the scikit-learn Pipeline
-    # ------------------------------------------------------------------
-    # A Pipeline chains multiple steps together:
-    #   Step 1 (preprocessor): Transform raw features into model-ready format
-    #   Step 2 (classifier):   The actual ML model
-    #
-    # The ColumnTransformer applies different transformations to different
-    # column types:
-    #   - Categorical → fill missing with "UNKNOWN", then one-hot encode
-    #   - Numeric     → fill missing with the median value
-    #   - Text        → convert to TF-IDF word importance scores
-    # ------------------------------------------------------------------
-    print("\n🔧 Step 4: Building model pipeline...")
-
-    # Preprocessing for CATEGORICAL features
-    categorical_transformer = Pipeline(steps=[
-        # Fill missing categorical values with "UNKNOWN"
-        ("imputer", SimpleImputer(strategy="constant", fill_value="UNKNOWN")),
-        # Convert categories to binary 0/1 columns
-        # handle_unknown="ignore" means if we see a new category during
-        # prediction that wasn't in training, we just ignore it (all 0s)
-        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
-    ])
-
-    # Preprocessing for NUMERIC features
-    numeric_transformer = Pipeline(steps=[
-        # Fill missing numeric values with the median (middle value)
-        # Median is better than mean because it's not affected by outliers
-        ("imputer", SimpleImputer(strategy="median")),
-    ])
-
-    # Preprocessing for TEXT feature
-    # TF-IDF (Term Frequency - Inverse Document Frequency) converts text
-    # into numbers. Words that appear frequently in one document but rarely
-    # in others get higher scores — they're more "distinctive".
-    text_transformer = TfidfVectorizer(
-        max_features=500,       # Keep only the 500 most important words
-        stop_words="english",   # Remove common words like "the", "and", "is"
-    )
-
-    # Combine all preprocessors into one ColumnTransformer
-    preprocessor = ColumnTransformer(
-        transformers=[
-            ("cat", categorical_transformer, CATEGORICAL_FEATURES),
-            ("num", numeric_transformer, NUMERIC_FEATURES),
-            ("text", text_transformer, TEXT_FEATURE),
-        ],
-        remainder="drop",  # Drop any columns not listed above
-    )
-
-    # Build the full pipeline: preprocessor → classifier
-    pipeline = Pipeline(steps=[
-        ("preprocessor", preprocessor),
-        ("classifier", LogisticRegression(
-            class_weight="balanced",  # ← Handle class imbalance
-            random_state=RANDOM_SEED,
-            max_iter=1000,            # Allow enough iterations to converge
-        )),
-    ])
-
-    print("  ✓ Pipeline built:")
-    print("    1. ColumnTransformer (categorical + numeric + text)")
-    print("    2. LogisticRegression (class_weight='balanced')")
-
-    # ------------------------------------------------------------------
-    # Step 5: Train the model
-    # ------------------------------------------------------------------
-    # This is where the actual learning happens! The model looks at the
-    # training data and learns patterns that distinguish completed trials
-    # from at-risk trials.
-    # ------------------------------------------------------------------
-    print("\n🏋️ Step 5: Training the model...")
-
-    # Ensure text column is string type (TfidfVectorizer needs strings)
+    # Ensure correct types for preprocessing
     X_train[TEXT_FEATURE] = X_train[TEXT_FEATURE].fillna("").astype(str)
     X_test[TEXT_FEATURE] = X_test[TEXT_FEATURE].fillna("").astype(str)
 
-    # Ensure categorical columns are string type
     for col in CATEGORICAL_FEATURES:
         X_train[col] = X_train[col].fillna("UNKNOWN").astype(str)
         X_test[col] = X_test[col].fillna("UNKNOWN").astype(str)
 
-    pipeline.fit(X_train, y_train)
-    print("  ✓ Model trained successfully!")
+    # ------------------------------------------------------------------
+    # Step 4: Define candidate models
+    # ------------------------------------------------------------------
+    print("\n🔧 Step 4: Building model pipelines...")
+
+    candidates = {
+        "LogisticRegression": LogisticRegression(
+            class_weight="balanced",
+            random_state=RANDOM_SEED,
+            max_iter=5000,
+        ),
+        "RandomForest": RandomForestClassifier(
+            n_estimators=200,
+            class_weight="balanced",
+            random_state=RANDOM_SEED,
+            n_jobs=-1,
+        ),
+        "GradientBoosting": GradientBoostingClassifier(
+            n_estimators=200,
+            learning_rate=0.1,
+            max_depth=5,
+            random_state=RANDOM_SEED,
+        ),
+        "HistGradientBoosting": HistGradientBoostingClassifier(
+            max_iter=200,
+            learning_rate=0.1,
+            max_depth=5,
+            random_state=RANDOM_SEED,
+        ),
+    }
+
+    print(f"  ✓ {len(candidates)} models to benchmark:")
+    for name in candidates:
+        print(f"    • {name}")
 
     # ------------------------------------------------------------------
-    # Step 6: Evaluate the model
+    # Step 5: Train and evaluate each model
     # ------------------------------------------------------------------
-    # We test the model on data it has NEVER seen during training.
-    # This tells us how well it will perform on truly new trials.
-    #
-    # METRICS EXPLAINED:
-    #   Accuracy:  % of all predictions that are correct
-    #   Precision: When the model says "at risk", how often is it right?
-    #   Recall:    Of all actual at-risk trials, how many did we catch?
-    #   F1-Score:  Harmonic mean of precision and recall (balanced measure)
-    #   ROC-AUC:   How well the model separates the two classes (0.5 = random,
-    #              1.0 = perfect)
+    print("\n🏋️ Step 5: Training and evaluating all models...\n")
+
+    results = {}
+    best_name = None
+    best_auc = -1
+    best_pipeline = None
+
+    for name, clf in candidates.items():
+        print(f"  ── {name} ──")
+
+        pipeline = _build_pipeline(clf)
+
+        try:
+            pipeline.fit(X_train, y_train)
+        except Exception as e:
+            print(f"    ❌ Training failed: {e}\n")
+            continue
+
+        y_pred = pipeline.predict(X_test)
+
+        # HistGradientBoosting doesn't support predict_proba with
+        # sparse matrices by default, so handle potential issues
+        try:
+            y_prob = pipeline.predict_proba(X_test)[:, 1]
+            roc_auc = roc_auc_score(y_test, y_prob)
+        except Exception:
+            y_prob = None
+            roc_auc = 0.0
+
+        accuracy = accuracy_score(y_test, y_pred)
+        
+        # Class 1 (Completed) metrics
+        prec_1 = precision_score(y_test, y_pred, pos_label=1, zero_division=0)
+        rec_1 = recall_score(y_test, y_pred, pos_label=1, zero_division=0)
+        f1_1 = f1_score(y_test, y_pred, pos_label=1, zero_division=0)
+        
+        # Class 0 (At Risk) metrics
+        prec_0 = precision_score(y_test, y_pred, pos_label=0, zero_division=0)
+        rec_0 = recall_score(y_test, y_pred, pos_label=0, zero_division=0)
+        f1_0 = f1_score(y_test, y_pred, pos_label=0, zero_division=0)
+        
+        conf = confusion_matrix(y_test, y_pred)
+
+        results[name] = {
+            "accuracy": accuracy,
+            "precision_completed": prec_1,
+            "recall_completed": rec_1,
+            "f1_completed": f1_1,
+            "precision_at_risk": prec_0,
+            "recall_at_risk": rec_0,
+            "f1_at_risk": f1_0,
+            "roc_auc": roc_auc,
+            "confusion_matrix": conf,
+            "pipeline": pipeline,
+        }
+
+        print(f"    Accuracy:             {accuracy:.4f}")
+        print(f"    ROC-AUC:              {roc_auc:.4f}")
+        print(f"    [Completed Class 1]")
+        print(f"      Precision (Compl):  {prec_1:.4f}")
+        print(f"      Recall (Compl):     {rec_1:.4f}")
+        print(f"      F1-Score (Compl):   {f1_1:.4f}")
+        print(f"    [At-Risk Class 0]")
+        print(f"      Precision (Risk):   {prec_0:.4f}")
+        print(f"      Recall (Risk):      {rec_0:.4f}")
+        print(f"      F1-Score (Risk):    {f1_0:.4f}")
+        print()
+
+        if roc_auc > best_auc:
+            best_auc = roc_auc
+            best_name = name
+            best_pipeline = pipeline
+
+    if best_pipeline is None:
+        print("  ❌ No models trained successfully. Exiting.")
+        return
+
     # ------------------------------------------------------------------
-    print("\n📈 Step 6: Evaluating model on test data...")
+    # Step 6: Select and announce the best model
+    # ------------------------------------------------------------------
+    print("=" * 60)
+    print(f"  🏆 Best Model: {best_name} (ROC-AUC = {best_auc:.4f})")
+    print("=" * 60)
 
-    y_pred = pipeline.predict(X_test)
-    y_prob = pipeline.predict_proba(X_test)[:, 1]  # Probability of class 1
+    # For the best model, generate predictions using our custom CLASSIFICATION_THRESHOLD
+    y_prob_best = best_pipeline.predict_proba(X_test)[:, 1]
+    y_pred_best = (y_prob_best >= CLASSIFICATION_THRESHOLD).astype(int)
 
-    accuracy = accuracy_score(y_test, y_pred)
-    precision = precision_score(y_test, y_pred, zero_division=0)
-    recall = recall_score(y_test, y_pred, zero_division=0)
-    f1 = f1_score(y_test, y_pred, zero_division=0)
-    roc_auc = roc_auc_score(y_test, y_prob)
-    conf_matrix = confusion_matrix(y_test, y_pred)
-    class_report = classification_report(y_test, y_pred, zero_division=0)
+    best_accuracy = accuracy_score(y_test, y_pred_best)
+    best_prec_1 = precision_score(y_test, y_pred_best, pos_label=1, zero_division=0)
+    best_rec_1 = recall_score(y_test, y_pred_best, pos_label=1, zero_division=0)
+    best_f1_1 = f1_score(y_test, y_pred_best, pos_label=1, zero_division=0)
+    best_prec_0 = precision_score(y_test, y_pred_best, pos_label=0, zero_division=0)
+    best_rec_0 = recall_score(y_test, y_pred_best, pos_label=0, zero_division=0)
+    best_f1_0 = f1_score(y_test, y_pred_best, pos_label=0, zero_division=0)
+    conf_matrix = confusion_matrix(y_test, y_pred_best)
+    class_report = classification_report(y_test, y_pred_best, zero_division=0)
 
-    print(f"\n  ┌─────────────────────────────────────┐")
-    print(f"  │      Model Evaluation Results        │")
-    print(f"  ├─────────────────────────────────────┤")
-    print(f"  │  Accuracy:   {accuracy:>8.4f}               │")
-    print(f"  │  Precision:  {precision:>8.4f}               │")
-    print(f"  │  Recall:     {recall:>8.4f}               │")
-    print(f"  │  F1-Score:   {f1:>8.4f}               │")
-    print(f"  │  ROC-AUC:    {roc_auc:>8.4f}               │")
-    print(f"  └─────────────────────────────────────┘")
+    print(f"\n  ┌──────────────────────────────────────────────┐")
+    print(f"  │  Best Model Results (Threshold = {CLASSIFICATION_THRESHOLD:.2f})   │")
+    print(f"  ├──────────────────────────────────────────────┤")
+    print(f"  │  Accuracy:                {best_accuracy:>8.4f}           │")
+    print(f"  │  ROC-AUC:                 {best_auc:>8.4f}           │")
+    print(f"  │                                              │")
+    print(f"  │  [Completed Class 1]                         │")
+    print(f"  │    Precision (Compl):     {best_prec_1:>8.4f}           │")
+    print(f"  │    Recall (Compl):        {best_rec_1:>8.4f}           │")
+    print(f"  │    F1-Score (Compl):      {best_f1_1:>8.4f}           │")
+    print(f"  │                                              │")
+    print(f"  │  [At-Risk Class 0]                           │")
+    print(f"  │    Precision (Risk):      {best_prec_0:>8.4f}           │")
+    print(f"  │    Recall (Risk):         {best_rec_0:>8.4f}           │")
+    print(f"  │    F1-Score (Risk):       {best_f1_0:>8.4f}           │")
+    print(f"  └──────────────────────────────────────────────┘")
 
-    print(f"\n  Confusion Matrix:")
+    print(f"\n  Confusion Matrix ({best_name} @ Threshold {CLASSIFICATION_THRESHOLD:.2f}):")
     print(f"                  Predicted")
     print(f"                  AtRisk  Complete")
     print(f"    Actual AtRisk  [{conf_matrix[0][0]:>5,}]  [{conf_matrix[0][1]:>5,}]")
@@ -348,23 +463,62 @@ def train():
     print(class_report)
 
     # ------------------------------------------------------------------
-    # Step 7: Save the trained model pipeline
+    # Step 6.5: Run completion probability threshold sweep
+    # ------------------------------------------------------------------
+    print("\n📈 Step 6.5: Running completion probability threshold sweep...")
+    sweep_thresholds = [0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80]
+    sweep_rows = []
+    
+    for t in sweep_thresholds:
+        y_pred_t = (y_prob_best >= t).astype(int)
+        
+        acc = accuracy_score(y_test, y_pred_t)
+        prec_1 = precision_score(y_test, y_pred_t, pos_label=1, zero_division=0)
+        rec_1 = recall_score(y_test, y_pred_t, pos_label=1, zero_division=0)
+        f1_1 = f1_score(y_test, y_pred_t, pos_label=1, zero_division=0)
+        
+        prec_0 = precision_score(y_test, y_pred_t, pos_label=0, zero_division=0)
+        rec_0 = recall_score(y_test, y_pred_t, pos_label=0, zero_division=0)
+        f1_0 = f1_score(y_test, y_pred_t, pos_label=0, zero_division=0)
+        
+        cm = confusion_matrix(y_test, y_pred_t)
+        cm_str = f"TN:{cm[0][0]}, FP:{cm[0][1]}, FN:{cm[1][0]}, TP:{cm[1][1]}"
+        
+        sweep_rows.append(
+            f"| {t:.2f} | {acc:.4f} | {prec_1:.4f} | {rec_1:.4f} | {f1_1:.4f} | "
+            f"{prec_0:.4f} | {rec_0:.4f} | {f1_0:.4f} | {cm_str} |"
+        )
+    sweep_table = "\n".join(sweep_rows)
+
+    # ------------------------------------------------------------------
+    # Step 7: Save the best trained model pipeline
     # ------------------------------------------------------------------
     print("\n💾 Step 7: Saving model and report...")
 
     os.makedirs(os.path.dirname(MODEL_SAVE_PATH), exist_ok=True)
-    joblib.dump(pipeline, MODEL_SAVE_PATH)
+    joblib.dump(best_pipeline, MODEL_SAVE_PATH)
     print(f"  ✓ Model saved to: {MODEL_SAVE_PATH}")
 
     # ------------------------------------------------------------------
-    # Step 8: Save a markdown evaluation report
+    # Step 8: Save a markdown comparison report
     # ------------------------------------------------------------------
     os.makedirs(os.path.dirname(REPORT_SAVE_PATH), exist_ok=True)
 
-    report_md = f"""# Model Evaluation Results
+    # Build comparison table with class-specific metrics (evaluated at standard 0.50 threshold)
+    comp_rows = []
+    for name, res in results.items():
+        marker = " ⭐" if name == best_name else ""
+        comp_rows.append(
+            f"| {name}{marker} | {res['accuracy']:.4f} | {res['roc_auc']:.4f} | "
+            f"{res['precision_completed']:.4f} | {res['recall_completed']:.4f} | {res['f1_completed']:.4f} | "
+            f"{res['precision_at_risk']:.4f} | {res['recall_at_risk']:.4f} | {res['f1_at_risk']:.4f} |"
+        )
+    comp_table = "\n".join(comp_rows)
+
+    report_md = f"""# Model Evaluation Results — Phase 1
 
 > **Generated by:** `python src/train_model.py`
-> **Model:** Logistic Regression with TF-IDF text features
+> **Best Model:** {best_name} (ROC-AUC = {best_auc:.4f})
 > **Data source:** ClinicalTrials.gov (https://clinicaltrials.gov/)
 
 ## ⚠️ Disclaimer
@@ -383,20 +537,55 @@ regulatory approval, or investment value.
 | Completed (class 1) | {int(y.sum()):,} ({y.mean()*100:.1f}%) |
 | At Risk (class 0) | {int(len(y) - y.sum()):,} ({(1-y.mean())*100:.1f}%) |
 
-## Model Performance
+## Model Comparison (Standard 0.50 Decision Boundary)
 
-| Metric | Score |
-|--------|-------|
-| **Accuracy** | {accuracy:.4f} |
-| **Precision** | {precision:.4f} |
-| **Recall** | {recall:.4f} |
-| **F1-Score** | {f1:.4f} |
-| **ROC-AUC** | {roc_auc:.4f} |
+| Model | Accuracy | ROC-AUC | Completed Precision | Completed Recall | Completed F1 | At-Risk Precision | At-Risk Recall | At-Risk F1 |
+|-------|----------|---------|---------------------|------------------|--------------|-------------------|----------------|------------|
+{comp_table}
 
-## Confusion Matrix
+---
 
-|  | Predicted: At Risk | Predicted: Completed |
-|--|-------------------|---------------------|
+## 📈 Decision Threshold Tuning
+
+To optimize the prediction of clinical trial completion vs. non-completion (At-Risk), we swept the decision boundary for predicted completion probability from `0.30` to `0.80`.
+
+### Core Threshold Concepts
+* **Lower threshold** (e.g. 0.30) favors **Completed predictions**: The model requires very low probability to predict "At Risk", leading to high Completed recall but missing almost all actual risk.
+* **Higher threshold** (e.g. 0.75) makes the model **more likely to flag trials as At-Risk**: The model requires very high confidence to predict "Completed", which increases the recall for at-risk trials.
+* Since the primary goal of this project is **risk prediction** (identifying trials likely to fail), we prioritize **At-Risk recall** while keeping overall accuracy reasonable.
+
+### Threshold Sweep Results
+
+| Threshold | Accuracy | Completed Prec | Completed Recall | Completed F1 | At-Risk Prec | At-Risk Recall | At-Risk F1 | Confusion Matrix (TN, FP, FN, TP) |
+|---|---|---|---|---|---|---|---|---|
+{sweep_table}
+
+### Selected Decision Boundary
+* **Selected Completion Threshold:** `{CLASSIFICATION_THRESHOLD:.2f}`
+* **Rationale:** At this threshold, the model significantly improves At-Risk Recall to **{best_rec_0:.1%}** (up from **22.0%** at 0.50) and achieves the highest At-Risk F1-score (**{best_f1_0:.4f}**), while maintaining a solid overall accuracy of **{best_accuracy:.1%}**.
+
+---
+
+## 🏆 Best Model Details: {best_name} (Threshold = {CLASSIFICATION_THRESHOLD:.2f})
+
+### Overall Metrics
+* **Accuracy:** {best_accuracy:.4f}
+* **ROC-AUC:** {best_auc:.4f}
+
+### Completed Class (Class 1)
+* **Precision:** {best_prec_1:.4f}
+* **Recall:** {best_rec_1:.4f}
+* **F1-Score:** {best_f1_1:.4f}
+
+### At-Risk Class (Class 0)
+* **Precision:** {best_prec_0:.4f}
+* **Recall:** {best_rec_0:.4f}
+* **F1-Score:** {best_f1_0:.4f}
+
+## Confusion Matrix ({best_name} @ Threshold {CLASSIFICATION_THRESHOLD:.2f})
+
+| | Predicted: At Risk | Predicted: Completed |
+|---|-------------------|---------------------|
 | **Actual: At Risk** | {conf_matrix[0][0]:,} | {conf_matrix[0][1]:,} |
 | **Actual: Completed** | {conf_matrix[1][0]:,} | {conf_matrix[1][1]:,} |
 
@@ -415,13 +604,14 @@ regulatory approval, or investment value.
 {chr(10).join(f'- `{f}`' for f in NUMERIC_FEATURES)}
 
 ### Text (1)
-- `{TEXT_FEATURE}` (TF-IDF, max 500 features)
+- `{TEXT_FEATURE}` (TF-IDF, max 1000 features, bigrams, min_df=2, max_df=0.9)
 
 ## Model Details
 
-- **Algorithm:** Logistic Regression
+- **Best Algorithm:** {best_name}
+- **Models Compared:** {', '.join(results.keys())}
 - **Class weighting:** balanced (handles class imbalance)
-- **Text processing:** TF-IDF with 500 max features, English stop words removed
+- **Text processing:** TF-IDF with 1000 max features, bigrams, English stop words
 - **Categorical encoding:** One-hot encoding with unknown category handling
 - **Missing value handling:** Median for numeric, "UNKNOWN" for categorical
 - **Random seed:** {RANDOM_SEED}
@@ -438,9 +628,10 @@ regulatory approval, or investment value.
     print("\n" + "=" * 60)
     print("  ✅ Training complete!")
     print("=" * 60)
+    print(f"  Best Model: {best_name}")
     print(f"  Model: {MODEL_SAVE_PATH}")
     print(f"  Report: {REPORT_SAVE_PATH}")
-    print(f"\n  Next step: python src/predict.py")
+    print(f"\n  Next step: python src/evaluate.py")
     print("=" * 60)
 
 

@@ -64,7 +64,12 @@ if PROJECT_ROOT not in sys.path:
 from src.clinicaltrials_api import flatten_study
 
 
-from src.config import DRUG_MODEL_PATH as MODEL_PATH
+from src.config import (
+    DRUG_MODEL_PATH as MODEL_PATH,
+    THERAPEUTIC_AREA_MAP,
+    INDUSTRY_KEYWORDS,
+    CLASSIFICATION_THRESHOLD,
+)
 API_BASE_URL = "https://clinicaltrials.gov/api/v2/studies"
 
 
@@ -117,7 +122,8 @@ def prepare_for_prediction(study_dict):
     that the trained model can process.
 
     This reuses flatten_study() from clinicaltrials_api.py so the data
-    is processed exactly the same way as during training.
+    is processed exactly the same way as during training, then applies
+    the same Phase 1 feature engineering as preprocess.py.
 
     Parameters
     ----------
@@ -131,6 +137,10 @@ def prepare_for_prediction(study_dict):
     """
     # Flatten the nested JSON into a simple dictionary
     flat = flatten_study(study_dict)
+
+    # For single NCT ID prediction, set search_query_source to "user_input"
+    if not flat.get("search_query_source") or flat["search_query_source"] == "user_input":
+        flat["search_query_source"] = "user_input"
 
     # Convert to a one-row DataFrame
     df = pd.DataFrame([flat])
@@ -147,6 +157,83 @@ def prepare_for_prediction(study_dict):
         df["eligibility_criteria"] + " " +
         df["primary_outcome_measures"]
     ).str.strip()
+
+    # ------------------------------------------------------------------
+    # Phase 1 Feature Engineering (must match preprocess.py exactly)
+    # ------------------------------------------------------------------
+
+    # start_year
+    if "start_date" in df.columns:
+        df["start_date_parsed"] = pd.to_datetime(df["start_date"], errors="coerce")
+        df["start_year"] = df["start_date_parsed"].dt.year
+        df.drop(columns=["start_date_parsed"], inplace=True)
+    else:
+        df["start_year"] = None
+    df["start_year"] = pd.to_numeric(df["start_year"], errors="coerce")
+
+    # Ensure numeric types
+    df["enrollment_count"] = pd.to_numeric(df["enrollment_count"], errors="coerce")
+    df["location_count"] = pd.to_numeric(df["location_count"], errors="coerce")
+    df["collaborator_count"] = pd.to_numeric(df["collaborator_count"], errors="coerce")
+
+    # country_count
+    df["country_count"] = df["countries"].fillna("").apply(
+        lambda x: len([c for c in str(x).split("|") if c.strip()]) if x else 0
+    )
+
+    # condition_count
+    df["condition_count"] = df["conditions"].fillna("").apply(
+        lambda x: len([c for c in str(x).split("|") if c.strip()]) if x else 0
+    )
+
+    # intervention_count
+    df["intervention_count"] = df["intervention_names"].fillna("").apply(
+        lambda x: len([n for n in str(x).split("|") if n.strip()]) if x else 0
+    )
+
+    # enrollment_per_location
+    df["enrollment_per_location"] = (
+        df["enrollment_count"] / df["location_count"].clip(lower=1)
+    )
+    df["enrollment_per_location"] = df["enrollment_per_location"].fillna(0)
+
+    # has_multiple_countries
+    df["has_multiple_countries"] = (df["country_count"] > 1).astype(int)
+
+    # is_industry_sponsored
+    def _check_industry(name):
+        if pd.isna(name) or not name:
+            return 0
+        name_lower = str(name).lower()
+        return int(any(kw in name_lower for kw in INDUSTRY_KEYWORDS))
+
+    df["is_industry_sponsored"] = df["sponsor_name"].apply(_check_industry)
+
+    # is_randomized
+    df["is_randomized"] = (
+        df["allocation"].fillna("").str.upper().str.contains("RANDOM")
+    ).astype(int)
+
+    # is_blinded
+    df["is_blinded"] = (
+        df["masking"].fillna("").str.upper().apply(
+            lambda x: 0 if x in ("", "NONE") else 1
+        )
+    ).astype(int)
+
+    # therapeutic_area_group
+    df["therapeutic_area_group"] = (
+        df["search_query_source"]
+        .fillna("unknown")
+        .str.lower()
+        .map(THERAPEUTIC_AREA_MAP)
+        .fillna("other")
+    )
+
+    # text length features
+    df["text_length_summary"] = df["brief_summary"].fillna("").astype(str).str.len()
+    df["text_length_eligibility"] = df["eligibility_criteria"].fillna("").astype(str).str.len()
+    df["text_length_outcomes"] = df["primary_outcome_measures"].fillna("").astype(str).str.len()
 
     return df, flat
 
@@ -237,14 +324,13 @@ def predict_nct_id(nct_id):
     print(f"  ├─────────────────────────────────────┤")
     print(f"  │  Completion Probability: {completion_prob:>8.1%}    │")
     print(f"  │  Risk Probability:       {risk_prob:>8.1%}    │")
+    print(f"  │  Decision Threshold:     {CLASSIFICATION_THRESHOLD:>8.1%}    │")
     print(f"  └─────────────────────────────────────┘")
 
-    if completion_prob >= 0.7:
-        print(f"\n  💚 The model predicts this trial is LIKELY TO COMPLETE.")
-    elif completion_prob >= 0.4:
-        print(f"\n  🟡 The model predicts MODERATE RISK for this trial.")
+    if completion_prob >= CLASSIFICATION_THRESHOLD:
+        print(f"\n  💚 The model predicts this trial is LIKELY TO COMPLETE (Low Risk).")
     else:
-        print(f"\n  🔴 The model predicts this trial is AT HIGH RISK.")
+        print(f"\n  🔴 The model predicts this trial is AT RISK of non-completion.")
 
     # ------------------------------------------------------------------
     # Disclaimer

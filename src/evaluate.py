@@ -66,7 +66,8 @@ from src.config import (
     DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH,
     DRUG_MODEL_PATH as MODEL_PATH,
     RANDOM_SEED,
-    TEST_SIZE
+    TEST_SIZE,
+    CLASSIFICATION_THRESHOLD
 )
 
 FIGURES_DIR = os.path.join("reports", "figures")
@@ -75,9 +76,16 @@ CATEGORICAL_FEATURES = [
     "study_type", "phases", "sponsor_class", "enrollment_type",
     "intervention_types", "allocation", "intervention_model",
     "masking", "primary_purpose", "sex", "healthy_volunteers",
-    "search_query_source",
+    "search_query_source", "therapeutic_area_group",
 ]
-NUMERIC_FEATURES = ["enrollment_count", "collaborator_count", "location_count"]
+NUMERIC_FEATURES = [
+    "enrollment_count", "collaborator_count", "location_count",
+    "start_year", "country_count", "condition_count",
+    "intervention_count", "enrollment_per_location",
+    "has_multiple_countries", "is_industry_sponsored",
+    "is_randomized", "is_blinded",
+    "text_length_summary", "text_length_eligibility", "text_length_outcomes",
+]
 TEXT_FEATURE = "combined_text"
 TARGET = "target_completed"
 
@@ -143,9 +151,9 @@ def evaluate():
     # ------------------------------------------------------------------
     print("\n🔮 Step 3: Generating predictions...")
 
-    y_pred = model.predict(X_test)
     y_prob = model.predict_proba(X_test)[:, 1]
-    print(f"  ✓ Predictions generated")
+    y_pred = (y_prob >= CLASSIFICATION_THRESHOLD).astype(int)
+    print(f"  ✓ Predictions generated (using decision threshold = {CLASSIFICATION_THRESHOLD:.2f})")
 
     # ------------------------------------------------------------------
     # Step 4: Create output directory
@@ -176,12 +184,19 @@ def evaluate():
     # ------------------------------------------------------------------
     # Plot 2: ROC Curve
     # ------------------------------------------------------------------
-    fpr, tpr, _ = roc_curve(y_test, y_prob)
+    fpr, tpr, thresholds = roc_curve(y_test, y_prob)
     roc_auc = auc(fpr, tpr)
+
+    # Find the index of the threshold closest to the selected classification threshold
+    idx = np.argmin(np.abs(thresholds - CLASSIFICATION_THRESHOLD))
+    operating_fpr = fpr[idx]
+    operating_tpr = tpr[idx]
 
     fig, ax = plt.subplots(figsize=(7, 6))
     ax.plot(fpr, tpr, color="#2563eb", lw=2.5,
-            label=f"Logistic Regression (AUC = {roc_auc:.3f})")
+            label=f"Best Model (AUC = {roc_auc:.3f})")
+    ax.plot(operating_fpr, operating_tpr, "ro", markersize=8,
+            label=f"Operating Point (Thresh={CLASSIFICATION_THRESHOLD:.2f})")
     ax.plot([0, 1], [0, 1], color="#94a3b8", lw=1.5, linestyle="--",
             label="Random Baseline (AUC = 0.500)")
     ax.fill_between(fpr, tpr, alpha=0.1, color="#2563eb")
@@ -189,8 +204,8 @@ def evaluate():
     ax.set_ylim([0.0, 1.05])
     ax.set_xlabel("False Positive Rate", fontsize=12)
     ax.set_ylabel("True Positive Rate", fontsize=12)
-    ax.set_title("ROC Curve — Test Set", fontsize=14, fontweight="bold")
-    ax.legend(loc="lower right", fontsize=11)
+    ax.set_title(f"ROC Curve — Test Set (Threshold = {CLASSIFICATION_THRESHOLD:.2f})", fontsize=14, fontweight="bold")
+    ax.legend(loc="lower right", fontsize=10)
     ax.grid(True, alpha=0.3)
     fig.tight_layout()
     path = os.path.join(FIGURES_DIR, "roc_curve.png")
@@ -199,24 +214,35 @@ def evaluate():
     print(f"  ✓ Saved {path}")
 
     # ------------------------------------------------------------------
-    # Plot 3: Top Feature Coefficients
+    # Plot 3: Top Feature Importances
     # ------------------------------------------------------------------
+    # Supports both linear models (coef_) and tree-based (feature_importances_).
     try:
         classifier = model.named_steps["classifier"]
         preprocessor = model.named_steps["preprocessor"]
         feature_names = preprocessor.get_feature_names_out()
-        coefficients = classifier.coef_[0]
 
-        # Get top 20 features by absolute coefficient value
-        top_n = min(20, len(coefficients))
-        top_indices = np.argsort(np.abs(coefficients))[-top_n:]
+        # Determine importances based on model type
+        if hasattr(classifier, "coef_"):
+            importances = classifier.coef_[0]
+            importance_label = "Coefficient Value"
+            use_sign_colors = True
+        elif hasattr(classifier, "feature_importances_"):
+            importances = classifier.feature_importances_
+            importance_label = "Feature Importance"
+            use_sign_colors = False
+        else:
+            raise AttributeError("Model has no coef_ or feature_importances_")
+
+        # Get top 20 features by absolute importance
+        top_n = min(20, len(importances))
+        top_indices = np.argsort(np.abs(importances))[-top_n:]
         top_names = [str(feature_names[i]) for i in top_indices]
-        top_coefs = [coefficients[i] for i in top_indices]
+        top_values = [importances[i] for i in top_indices]
 
         # Shorten long feature names for readability
         short_names = []
         for name in top_names:
-            # Remove transformer prefixes like "cat__", "num__", "text__"
             for prefix in ["cat__", "num__", "text__"]:
                 name = name.replace(prefix, "")
             if len(name) > 40:
@@ -224,21 +250,29 @@ def evaluate():
             short_names.append(name)
 
         fig, ax = plt.subplots(figsize=(10, 8))
-        colors = ["#ef4444" if c < 0 else "#22c55e" for c in top_coefs]
-        bars = ax.barh(range(len(short_names)), top_coefs, color=colors, height=0.7)
+        if use_sign_colors:
+            colors = ["#ef4444" if c < 0 else "#22c55e" for c in top_values]
+        else:
+            colors = ["#2563eb"] * len(top_values)
+        bars = ax.barh(range(len(short_names)), top_values, color=colors, height=0.7)
         ax.set_yticks(range(len(short_names)))
         ax.set_yticklabels(short_names, fontsize=9)
-        ax.set_xlabel("Coefficient Value", fontsize=12)
+        ax.set_xlabel(importance_label, fontsize=12)
         ax.set_title("Top 20 Most Influential Features", fontsize=14, fontweight="bold")
         ax.axvline(x=0, color="#64748b", linewidth=0.8)
         ax.grid(True, axis="x", alpha=0.3)
 
         # Add legend
         from matplotlib.patches import Patch
-        legend_elements = [
-            Patch(facecolor="#22c55e", label="Increases completion probability"),
-            Patch(facecolor="#ef4444", label="Decreases completion probability"),
-        ]
+        if use_sign_colors:
+            legend_elements = [
+                Patch(facecolor="#22c55e", label="Increases completion probability"),
+                Patch(facecolor="#ef4444", label="Decreases completion probability"),
+            ]
+        else:
+            legend_elements = [
+                Patch(facecolor="#2563eb", label="Feature importance (higher = more predictive)"),
+            ]
         ax.legend(handles=legend_elements, loc="lower right", fontsize=10)
 
         fig.tight_layout()

@@ -56,7 +56,9 @@ if sys.platform.startswith("win"):
 # Import settings and paths from config.py
 from src.config import (
     DRUG_RAW_CSV_PATH as RAW_CSV_PATH,
-    DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH
+    DRUG_PROCESSED_CSV_PATH as PROCESSED_CSV_PATH,
+    THERAPEUTIC_AREA_MAP,
+    INDUSTRY_KEYWORDS,
 )
 
 
@@ -202,12 +204,105 @@ def preprocess():
           f"({df['collaborator_count'].notna().sum():,} valid values)")
 
     # ------------------------------------------------------------------
-    # Step 6: Create combined text column
+    # Step 6: Feature Engineering (Phase 1)
+    # ------------------------------------------------------------------
+    # Add derived features that help the model learn patterns.
+    # IMPORTANT: None of these use leakage fields (overall_status,
+    # completion_date, primary_completion_date, why_stopped, last_update_date).
+    # ------------------------------------------------------------------
+    print("\n⚙️  Step 6: Engineering new features...")
+
+    # --- 6a. start_year: extract year from start_date ---
+    if "start_date" in df.columns:
+        df["start_date_parsed"] = pd.to_datetime(df["start_date"], errors="coerce")
+        df["start_year"] = df["start_date_parsed"].dt.year
+        df.drop(columns=["start_date_parsed"], inplace=True)
+    else:
+        df["start_year"] = None
+    df["start_year"] = pd.to_numeric(df["start_year"], errors="coerce")
+    valid_start_years = df["start_year"].notna().sum()
+    print(f"  ✓ start_year: {valid_start_years:,} valid values")
+
+    # --- 6b. country_count: number of unique countries ---
+    df["country_count"] = df["countries"].fillna("").apply(
+        lambda x: len([c for c in str(x).split("|") if c.strip()]) if x else 0
+    )
+    print(f"  ✓ country_count: mean={df['country_count'].mean():.1f}")
+
+    # --- 6c. condition_count: number of listed conditions ---
+    df["condition_count"] = df["conditions"].fillna("").apply(
+        lambda x: len([c for c in str(x).split("|") if c.strip()]) if x else 0
+    )
+    print(f"  ✓ condition_count: mean={df['condition_count'].mean():.1f}")
+
+    # --- 6d. intervention_count: number of intervention names ---
+    df["intervention_count"] = df["intervention_names"].fillna("").apply(
+        lambda x: len([n for n in str(x).split("|") if n.strip()]) if x else 0
+    )
+    print(f"  ✓ intervention_count: mean={df['intervention_count'].mean():.1f}")
+
+    # --- 6e. enrollment_per_location ---
+    df["enrollment_per_location"] = (
+        df["enrollment_count"] / df["location_count"].clip(lower=1)
+    )
+    df["enrollment_per_location"] = df["enrollment_per_location"].fillna(0)
+    print(f"  ✓ enrollment_per_location: mean={df['enrollment_per_location'].mean():.1f}")
+
+    # --- 6f. has_multiple_countries (boolean → 0/1) ---
+    df["has_multiple_countries"] = (df["country_count"] > 1).astype(int)
+    print(f"  ✓ has_multiple_countries: {df['has_multiple_countries'].sum():,} trials")
+
+    # --- 6g. is_industry_sponsored ---
+    def _check_industry(name):
+        if pd.isna(name) or not name:
+            return 0
+        name_lower = str(name).lower()
+        return int(any(kw in name_lower for kw in INDUSTRY_KEYWORDS))
+
+    df["is_industry_sponsored"] = df["sponsor_name"].apply(_check_industry)
+    print(f"  ✓ is_industry_sponsored: {df['is_industry_sponsored'].sum():,} trials")
+
+    # --- 6h. is_randomized ---
+    df["is_randomized"] = (
+        df["allocation"].fillna("").str.upper().str.contains("RANDOM")
+    ).astype(int)
+    print(f"  ✓ is_randomized: {df['is_randomized'].sum():,} trials")
+
+    # --- 6i. is_blinded ---
+    df["is_blinded"] = (
+        df["masking"].fillna("").str.upper().apply(
+            lambda x: 0 if x in ("", "NONE") else 1
+        )
+    ).astype(int)
+    print(f"  ✓ is_blinded: {df['is_blinded'].sum():,} trials")
+
+    # --- 6j. therapeutic_area_group ---
+    df["therapeutic_area_group"] = (
+        df["search_query_source"]
+        .fillna("unknown")
+        .str.lower()
+        .map(THERAPEUTIC_AREA_MAP)
+        .fillna("other")
+    )
+    print(f"  ✓ therapeutic_area_group: {df['therapeutic_area_group'].nunique()} groups")
+
+    # --- 6k. text length features ---
+    df["text_length_summary"] = df["brief_summary"].fillna("").astype(str).str.len()
+    df["text_length_eligibility"] = df["eligibility_criteria"].fillna("").astype(str).str.len()
+    df["text_length_outcomes"] = df["primary_outcome_measures"].fillna("").astype(str).str.len()
+    print(f"  ✓ text_length_summary: mean={df['text_length_summary'].mean():.0f}")
+    print(f"  ✓ text_length_eligibility: mean={df['text_length_eligibility'].mean():.0f}")
+    print(f"  ✓ text_length_outcomes: mean={df['text_length_outcomes'].mean():.0f}")
+
+    print(f"\n  ✓ Feature engineering complete — added 13 new features")
+
+    # ------------------------------------------------------------------
+    # Step 7: Create combined text column
     # ------------------------------------------------------------------
     # We combine three text fields into one for the TF-IDF vectorizer.
     # This gives the model a richer text signal about each trial.
     # ------------------------------------------------------------------
-    print("\n📝 Step 6: Creating combined_text column...")
+    print("\n📝 Step 7: Creating combined_text column...")
 
     # Fill missing text with empty strings first (so we can concatenate)
     text_columns = ["brief_summary", "eligibility_criteria", "primary_outcome_measures"]
@@ -230,9 +325,9 @@ def preprocess():
     print(f"  ✓ combined_text created (avg length: {avg_len:,.0f} characters)")
 
     # ------------------------------------------------------------------
-    # Step 7: Fill remaining missing text columns
+    # Step 8: Fill remaining missing text columns
     # ------------------------------------------------------------------
-    print("\n🩹 Step 7: Filling missing values in text columns...")
+    print("\n🩹 Step 8: Filling missing values in text columns...")
 
     other_text_cols = [
         "brief_title", "official_title", "conditions",
@@ -246,7 +341,7 @@ def preprocess():
                 print(f"  ✓ {col}: filled {missing} missing values with ''")
 
     # ------------------------------------------------------------------
-    # Step 8: Print summary statistics
+    # Step 9: Print summary statistics
     # ------------------------------------------------------------------
     print("\n" + "=" * 60)
     print("  📊 Preprocessing Summary")
@@ -267,7 +362,8 @@ def preprocess():
     important_fields = [
         "enrollment_count", "location_count", "phases", "sponsor_class",
         "study_type", "allocation", "masking", "primary_purpose",
-        "combined_text",
+        "combined_text", "start_year", "country_count", "condition_count",
+        "intervention_count", "therapeutic_area_group",
     ]
     print(f"\n  Missing values in key fields:")
     for col in important_fields:
@@ -278,7 +374,7 @@ def preprocess():
             print(f"    {status} {col:<30s} {missing:>5,} missing ({pct:5.1f}%)")
 
     # ------------------------------------------------------------------
-    # Step 9: Save cleaned data
+    # Step 10: Save cleaned data
     # ------------------------------------------------------------------
     print(f"\n💾 Saving processed data...")
 

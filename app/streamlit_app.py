@@ -34,7 +34,7 @@ if PROJECT_ROOT not in sys.path:
 
 from src.clinicaltrials_api import flatten_study
 from src.predict import fetch_study_by_nct_id, prepare_for_prediction
-from src.config import DRUG_MODEL_PATH as MODEL_PATH
+from src.config import DRUG_MODEL_PATH as MODEL_PATH, CLASSIFICATION_THRESHOLD
 
 
 
@@ -274,13 +274,13 @@ def main():
 
         st.markdown("<br>", unsafe_allow_html=True)
 
-        # Risk level indicator (professional, clean, clear spacing)
-        if completion_prob >= 0.7:
-            st.success("**Low Risk** — The model predicts this trial is likely to complete.")
-        elif completion_prob >= 0.4:
-            st.info("**Moderate Risk** — The model sees some risk factors for this trial.")
+        # Risk level indicator (using the tuned CLASSIFICATION_THRESHOLD)
+        st.markdown(f"**Tuned Classification Boundary:** `completion probability >= {CLASSIFICATION_THRESHOLD:.2%}` is predicted as **Low Risk** (Completed).")
+        
+        if completion_prob >= CLASSIFICATION_THRESHOLD:
+            st.success(f"💚 **Low Risk** — The model predicts this trial is likely to complete (probability {completion_prob:.1%} is above the tuned decision boundary of {CLASSIFICATION_THRESHOLD:.1%}).")
         else:
-            st.error("**High Risk** — The model predicts elevated risk of non-completion.")
+            st.error(f"🔴 **At Risk / High Risk** — The model predicts elevated risk of non-completion (probability {completion_prob:.1%} is below the tuned decision boundary of {CLASSIFICATION_THRESHOLD:.1%}).")
 
         # Concise explanation box under the prediction (modern, elegant style)
         st.markdown("""

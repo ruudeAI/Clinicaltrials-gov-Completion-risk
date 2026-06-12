@@ -120,6 +120,12 @@ TEST_SIZE = 0.2
 # Number of cross-validation folds (5 is a good default).
 CV_FOLDS = 5
 
+# The classification threshold for predicting trial completion.
+# If completion_probability >= CLASSIFICATION_THRESHOLD, we predict Completed (1).
+# If completion_probability < CLASSIFICATION_THRESHOLD, we predict At Risk (0).
+# A higher threshold makes the model more likely to flag at-risk trials (increasing recall).
+CLASSIFICATION_THRESHOLD = 0.70
+
 # ==============================================================================
 # 6. DATA COLLECTION SCOPE
 # ==============================================================================
@@ -148,8 +154,37 @@ SEARCH_QUERIES = [
     "hiv"
 ]
 
-# Configurable number of trials to fetch per condition (MVP default: 200)
-TRIALS_PER_CONDITION = 200
+# Configurable number of trials to fetch per condition.
+# Increase to 1000 for larger datasets (API max per query).
+TRIALS_PER_CONDITION = 500
+
+# ==============================================================================
+# 7. THERAPEUTIC AREA GROUPING
+# ==============================================================================
+# Maps each search_query_source to a broader therapeutic area group.
+# Used as a feature for the ML model.
+THERAPEUTIC_AREA_MAP = {
+    "cancer": "oncology",
+    "diabetes": "metabolic",
+    "heart disease": "cardiovascular",
+    "hypertension": "cardiovascular",
+    "asthma": "respiratory",
+    "depression": "neuropsychiatric",
+    "alzheimer": "neuropsychiatric",
+    "arthritis": "musculoskeletal",
+    "covid": "infectious",
+    "infectious disease": "infectious",
+    "autoimmune disease": "immunology",
+    "kidney disease": "renal",
+    "liver disease": "hepatic",
+    "pain": "pain_anesthesia",
+    "epilepsy": "neuropsychiatric",
+    "obesity": "metabolic",
+    "migraine": "neuropsychiatric",
+    "multiple sclerosis": "neuropsychiatric",
+    "parkinson": "neuropsychiatric",
+    "hiv": "infectious",
+}
 
 # Centralized paths for drug-related trials
 DRUG_RAW_CSV_PATH = os.path.join(DATA_RAW_DIR, "drug_trials_raw.csv")

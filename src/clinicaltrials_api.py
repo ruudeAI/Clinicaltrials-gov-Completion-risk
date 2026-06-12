@@ -260,6 +260,10 @@ def flatten_study(study):
     status_module = safe_get(protocol, "statusModule", default={})
     overall_status = status_module.get("overallStatus")
 
+    # Start date: when the trial began (used for start_year feature)
+    start_date_struct = status_module.get("startDateStruct", {}) or {}
+    start_date = start_date_struct.get("date")
+
     # ------------------------------------------------------------------
     # 3. DESIGN — How is the trial structured?
     # ------------------------------------------------------------------
@@ -383,6 +387,7 @@ def flatten_study(study):
         "brief_title": brief_title,
         "official_title": official_title,
         "overall_status": overall_status,
+        "start_date": start_date,
         "study_type": study_type,
         "phases": phases,
         "enrollment_count": enrollment_count,
