@@ -10,6 +10,8 @@
 # We keep data/sample/ tracked (small demo dataset).
 data/raw/*
 data/processed/*
+data/interim/*
+data/cache/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
